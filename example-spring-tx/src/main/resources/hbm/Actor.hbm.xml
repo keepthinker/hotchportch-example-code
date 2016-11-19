@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.keepthinker.example.model.Actor"
+           table="actor">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        
+        <property name="firstName" type="string">
+            <column name="firstname"/>
+        </property>
+
+        <property name="lastName" type="string">
+            <column name="lastname"/>
+        </property>
+    </class>
+</hibernate-mapping>

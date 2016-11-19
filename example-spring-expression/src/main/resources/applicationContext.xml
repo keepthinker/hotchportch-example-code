@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context.xsd">
+		
+	<!-- <context:annotation-config /> 
+	context:component-scan This tag implies the effects of the 'annotation-config' tag-->
+	<context:component-scan base-package="com.keepthinker.example.spring.expression" />
+	
+	<bean id="numberGuess" class="com.keepthinker.example.spring.expression.model.NumberGuess">
+		<property name="randomNumber" value="#{ T(java.lang.Math).random() * 100.0 }" />
+		<!-- other properties -->
+	</bean>
+
+	<bean id="taxCalculator" class="com.keepthinker.example.spring.expression.model.TaxCalculator">
+		<property name="defaultLocale" value="#{ systemProperties['user.country'] }" />
+		<!-- other properties -->
+	</bean>
+	
+	<bean id="shapeGuess" class="com.keepthinker.example.spring.expression.model.ShapeGuess">
+		<property name="initialShapeSeed" value="#{ numberGuess.randomNumber }" />
+		<!-- other properties -->
+	</bean>
+	
+	<bean id="fieldValueTestBean" class="com.keepthinker.example.spring.expression.model.FieldValueTestBean">
+	</bean>
+	
+	
+</beans>

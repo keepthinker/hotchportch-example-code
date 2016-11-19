@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<object-table>
+	<database name="database1"  displayName="数据源1" url="jdbc:mysql://localhost:3306/database1?useUnicode=true&amp;characterEncoding=utf-8" >
+		<table name="table11"  displayName="表11">
+			<property column="column_name11"  name="columnName11"  displayName="栏名11"  type="string" />
+			<property column="column_name12"  name="columnName12"  displayName="栏名12"  type="int" />
+		</table>
+		<table name="table12"  displayName="表11">
+			<property column="column_name11"  name="columnName11"  displayName="栏名11"  type="string" />
+			<property column="column_name12"  name="columnName12"  displayName="栏名12"  type="int" />
+		</table>
+	</database>
+	<database name="database2" displayName="数据源2" url="jdbc:mysql://localhost:3306/database2?useUnicode=true&amp;characterEncoding=utf-8">
+		<table name="table21"  displayName="表21" >
+			<property column="column_name21"  name="columnName21"  displayName="栏名21"  type="string" />
+			<property column="column_name22"  name="columnName22"  displayName="栏名22"  type="int" />
+		</table>
+	</database>
+</object-table>

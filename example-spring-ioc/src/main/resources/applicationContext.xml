@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<context:component-scan base-package="com.keepthinker.example.spring.ioc" />
+
+	<alias name="main" alias="main1" />
+
+	<bean id="abstractAnimal" abstract="true">
+		<property name="name" value="animal" />
+	</bean>
+
+	<bean id="animal" class="com.keepthinker.example.spring.ioc.model.Animal"
+		primary="true">
+		<property name="name" value="bird" />
+	</bean>
+
+	<bean id="animalDuplicate" class="com.keepthinker.example.spring.ioc.model.Animal">
+		<property name="name" value="birdDuplicate" />
+	</bean>
+
+	<bean id="inheritedAnimal" parent="abstractAnimal"
+		class="com.keepthinker.example.spring.ioc.model.Animal" init-method="init">
+	</bean>
+
+	<bean id="overrideAnimal" parent="abstractAnimal"
+		class="com.keepthinker.example.spring.ioc.model.Animal" init-method="init">
+		<property name="name" value="override" />
+	</bean>
+
+	<bean id="earth" class="com.keepthinker.example.spring.ioc.model.Earth"
+		scope="prototype" autowire="byType">
+		<property name="quality" value="8.12e10" />
+	</bean>
+	
+	<bean id="earthFromFactory" class="com.keepthinker.example.spring.ioc.model.MyFactoryBean">
+	</bean>
+
+	<bean id="inner" class="com.keepthinker.example.spring.ioc.Main$Inner" />
+
+	<bean class="com.keepthinker.example.spring.ioc.InstantiationTracingBeanPostProcessor" />
+</beans>

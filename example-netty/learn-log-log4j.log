@@ -1,0 +1,159 @@
+[7] 2016-06-23 11:14:57,410 [main] DEBUG [io.netty.channel.MultithreadEventLoopGroup]: -Dio.netty.eventLoopThreads: 8
+[24] 2016-06-23 11:14:57,427 [main] DEBUG [io.netty.util.internal.PlatformDependent0]: java.nio.Buffer.address: available
+[24] 2016-06-23 11:14:57,427 [main] DEBUG [io.netty.util.internal.PlatformDependent0]: sun.misc.Unsafe.theUnsafe: available
+[24] 2016-06-23 11:14:57,427 [main] DEBUG [io.netty.util.internal.PlatformDependent0]: sun.misc.Unsafe.copyMemory: available
+[24] 2016-06-23 11:14:57,427 [main] DEBUG [io.netty.util.internal.PlatformDependent0]: java.nio.Bits.unaligned: true
+[25] 2016-06-23 11:14:57,428 [main] DEBUG [io.netty.util.internal.PlatformDependent0]: java.nio.DirectByteBuffer.<init>(long, int): available
+[25] 2016-06-23 11:14:57,428 [main] DEBUG [io.netty.util.internal.PlatformDependent]: Platform: Windows
+[25] 2016-06-23 11:14:57,428 [main] DEBUG [io.netty.util.internal.PlatformDependent]: Java version: 8
+[25] 2016-06-23 11:14:57,428 [main] DEBUG [io.netty.util.internal.PlatformDependent]: -Dio.netty.noUnsafe: false
+[26] 2016-06-23 11:14:57,429 [main] DEBUG [io.netty.util.internal.PlatformDependent]: sun.misc.Unsafe: available
+[26] 2016-06-23 11:14:57,429 [main] DEBUG [io.netty.util.internal.PlatformDependent]: -Dio.netty.noJavassist: false
+[26] 2016-06-23 11:14:57,429 [main] DEBUG [io.netty.util.internal.PlatformDependent]: Javassist: unavailable
+[26] 2016-06-23 11:14:57,429 [main] DEBUG [io.netty.util.internal.PlatformDependent]: You don't have Javassist in your class path or you don't have enough permission to load dynamically generated classes.  Please check the configuration for better performance.
+[27] 2016-06-23 11:14:57,430 [main] DEBUG [io.netty.util.internal.PlatformDependent]: -Dio.netty.tmpdir: C:\Users\ADMINI~1\AppData\Local\Temp (java.io.tmpdir)
+[27] 2016-06-23 11:14:57,430 [main] DEBUG [io.netty.util.internal.PlatformDependent]: -Dio.netty.bitMode: 64 (sun.arch.data.model)
+[27] 2016-06-23 11:14:57,430 [main] DEBUG [io.netty.util.internal.PlatformDependent]: -Dio.netty.noPreferDirect: false
+[27] 2016-06-23 11:14:57,430 [main] DEBUG [io.netty.util.internal.PlatformDependent]: io.netty.maxDirectMemory: 1888485376 bytes
+[46] 2016-06-23 11:14:57,449 [main] DEBUG [io.netty.channel.nio.NioEventLoop]: -Dio.netty.noKeySetOptimization: false
+[46] 2016-06-23 11:14:57,449 [main] DEBUG [io.netty.channel.nio.NioEventLoop]: -Dio.netty.selectorAutoRebuildThreshold: 512
+[101] 2016-06-23 11:14:57,504 [main] TRACE [io.netty.channel.nio.NioEventLoop]: Instrumented an optimized java.util.Set into: sun.nio.ch.WindowsSelectorImpl@24a35978
+[102] 2016-06-23 11:14:57,505 [main] TRACE [io.netty.channel.nio.NioEventLoop]: Instrumented an optimized java.util.Set into: sun.nio.ch.WindowsSelectorImpl@16f7c8c1
+[103] 2016-06-23 11:14:57,506 [main] TRACE [io.netty.channel.nio.NioEventLoop]: Instrumented an optimized java.util.Set into: sun.nio.ch.WindowsSelectorImpl@2f0a87b3
+[103] 2016-06-23 11:14:57,506 [main] TRACE [io.netty.channel.nio.NioEventLoop]: Instrumented an optimized java.util.Set into: sun.nio.ch.WindowsSelectorImpl@319b92f3
+[103] 2016-06-23 11:14:57,506 [main] TRACE [io.netty.channel.nio.NioEventLoop]: Instrumented an optimized java.util.Set into: sun.nio.ch.WindowsSelectorImpl@fcd6521
+[104] 2016-06-23 11:14:57,507 [main] TRACE [io.netty.channel.nio.NioEventLoop]: Instrumented an optimized java.util.Set into: sun.nio.ch.WindowsSelectorImpl@27d415d9
+[104] 2016-06-23 11:14:57,507 [main] TRACE [io.netty.channel.nio.NioEventLoop]: Instrumented an optimized java.util.Set into: sun.nio.ch.WindowsSelectorImpl@5c18298f
+[104] 2016-06-23 11:14:57,507 [main] TRACE [io.netty.channel.nio.NioEventLoop]: Instrumented an optimized java.util.Set into: sun.nio.ch.WindowsSelectorImpl@31f924f5
+[106] 2016-06-23 11:14:57,509 [main] TRACE [io.netty.channel.nio.NioEventLoop]: Instrumented an optimized java.util.Set into: sun.nio.ch.WindowsSelectorImpl@68ceda24
+[106] 2016-06-23 11:14:57,509 [main] TRACE [io.netty.channel.nio.NioEventLoop]: Instrumented an optimized java.util.Set into: sun.nio.ch.WindowsSelectorImpl@281e3708
+[106] 2016-06-23 11:14:57,509 [main] TRACE [io.netty.channel.nio.NioEventLoop]: Instrumented an optimized java.util.Set into: sun.nio.ch.WindowsSelectorImpl@35a50a4c
+[107] 2016-06-23 11:14:57,510 [main] TRACE [io.netty.channel.nio.NioEventLoop]: Instrumented an optimized java.util.Set into: sun.nio.ch.WindowsSelectorImpl@1f021e6c
+[107] 2016-06-23 11:14:57,510 [main] TRACE [io.netty.channel.nio.NioEventLoop]: Instrumented an optimized java.util.Set into: sun.nio.ch.WindowsSelectorImpl@103f852
+[108] 2016-06-23 11:14:57,511 [main] TRACE [io.netty.channel.nio.NioEventLoop]: Instrumented an optimized java.util.Set into: sun.nio.ch.WindowsSelectorImpl@587c290d
+[108] 2016-06-23 11:14:57,511 [main] TRACE [io.netty.channel.nio.NioEventLoop]: Instrumented an optimized java.util.Set into: sun.nio.ch.WindowsSelectorImpl@4516af24
+[108] 2016-06-23 11:14:57,511 [main] TRACE [io.netty.channel.nio.NioEventLoop]: Instrumented an optimized java.util.Set into: sun.nio.ch.WindowsSelectorImpl@4ae82894
+[128] 2016-06-23 11:14:57,531 [main] DEBUG [io.netty.channel.DefaultChannelId]: -Dio.netty.processId: 7992 (auto-detected)
+[149] 2016-06-23 11:14:57,552 [main] DEBUG [io.netty.util.NetUtil]: Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+[150] 2016-06-23 11:14:57,553 [main] DEBUG [io.netty.util.NetUtil]: \proc\sys\net\core\somaxconn: 200 (non-existent)
+[171] 2016-06-23 11:14:57,574 [main] DEBUG [io.netty.channel.DefaultChannelId]: -Dio.netty.machineId: 00:00:00:00:00:00:00:e0 (auto-detected)
+[172] 2016-06-23 11:14:57,575 [main] DEBUG [io.netty.util.internal.ThreadLocalRandom]: -Dio.netty.initialSeedUniquifier: 0x4c573b4c8f96f221
+[181] 2016-06-23 11:14:57,584 [main] DEBUG [io.netty.util.ResourceLeakDetector]: -Dio.netty.leakDetection.level: simple
+[182] 2016-06-23 11:14:57,585 [main] DEBUG [io.netty.util.ResourceLeakDetector]: -Dio.netty.leakDetection.maxRecords: 4
+[206] 2016-06-23 11:14:57,609 [main] DEBUG [io.netty.buffer.PooledByteBufAllocator]: -Dio.netty.allocator.numHeapArenas: 8
+[206] 2016-06-23 11:14:57,609 [main] DEBUG [io.netty.buffer.PooledByteBufAllocator]: -Dio.netty.allocator.numDirectArenas: 8
+[206] 2016-06-23 11:14:57,609 [main] DEBUG [io.netty.buffer.PooledByteBufAllocator]: -Dio.netty.allocator.pageSize: 8192
+[206] 2016-06-23 11:14:57,609 [main] DEBUG [io.netty.buffer.PooledByteBufAllocator]: -Dio.netty.allocator.maxOrder: 11
+[207] 2016-06-23 11:14:57,610 [main] DEBUG [io.netty.buffer.PooledByteBufAllocator]: -Dio.netty.allocator.chunkSize: 16777216
+[207] 2016-06-23 11:14:57,610 [main] DEBUG [io.netty.buffer.PooledByteBufAllocator]: -Dio.netty.allocator.tinyCacheSize: 512
+[207] 2016-06-23 11:14:57,610 [main] DEBUG [io.netty.buffer.PooledByteBufAllocator]: -Dio.netty.allocator.smallCacheSize: 256
+[207] 2016-06-23 11:14:57,610 [main] DEBUG [io.netty.buffer.PooledByteBufAllocator]: -Dio.netty.allocator.normalCacheSize: 64
+[207] 2016-06-23 11:14:57,610 [main] DEBUG [io.netty.buffer.PooledByteBufAllocator]: -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+[207] 2016-06-23 11:14:57,610 [main] DEBUG [io.netty.buffer.PooledByteBufAllocator]: -Dio.netty.allocator.cacheTrimInterval: 8192
+[215] 2016-06-23 11:14:57,618 [main] DEBUG [io.netty.buffer.ByteBufUtil]: -Dio.netty.allocator.type: pooled
+[215] 2016-06-23 11:14:57,618 [main] DEBUG [io.netty.buffer.ByteBufUtil]: -Dio.netty.threadLocalDirectBufferSize: 65536
+[215] 2016-06-23 11:14:57,618 [main] DEBUG [io.netty.buffer.ByteBufUtil]: -Dio.netty.maxThreadLocalCharBufferSize: 16384
+[0] 2016-06-23 11:14:59,347 [main] DEBUG [io.netty.util.internal.logging.InternalLoggerFactory]: Using SLF4J as the default logging framework
+[6] 2016-06-23 11:14:59,353 [main] DEBUG [io.netty.channel.MultithreadEventLoopGroup]: -Dio.netty.eventLoopThreads: 8
+[24] 2016-06-23 11:14:59,371 [main] DEBUG [io.netty.util.internal.PlatformDependent0]: java.nio.Buffer.address: available
+[24] 2016-06-23 11:14:59,371 [main] DEBUG [io.netty.util.internal.PlatformDependent0]: sun.misc.Unsafe.theUnsafe: available
+[25] 2016-06-23 11:14:59,372 [main] DEBUG [io.netty.util.internal.PlatformDependent0]: sun.misc.Unsafe.copyMemory: available
+[25] 2016-06-23 11:14:59,372 [main] DEBUG [io.netty.util.internal.PlatformDependent0]: java.nio.Bits.unaligned: true
+[26] 2016-06-23 11:14:59,373 [main] DEBUG [io.netty.util.internal.PlatformDependent0]: java.nio.DirectByteBuffer.<init>(long, int): available
+[26] 2016-06-23 11:14:59,373 [main] DEBUG [io.netty.util.internal.PlatformDependent]: Platform: Windows
+[26] 2016-06-23 11:14:59,373 [main] DEBUG [io.netty.util.internal.PlatformDependent]: Java version: 8
+[26] 2016-06-23 11:14:59,373 [main] DEBUG [io.netty.util.internal.PlatformDependent]: -Dio.netty.noUnsafe: false
+[26] 2016-06-23 11:14:59,373 [main] DEBUG [io.netty.util.internal.PlatformDependent]: sun.misc.Unsafe: available
+[27] 2016-06-23 11:14:59,374 [main] DEBUG [io.netty.util.internal.PlatformDependent]: -Dio.netty.noJavassist: false
+[27] 2016-06-23 11:14:59,374 [main] DEBUG [io.netty.util.internal.PlatformDependent]: Javassist: unavailable
+[27] 2016-06-23 11:14:59,374 [main] DEBUG [io.netty.util.internal.PlatformDependent]: You don't have Javassist in your class path or you don't have enough permission to load dynamically generated classes.  Please check the configuration for better performance.
+[27] 2016-06-23 11:14:59,374 [main] DEBUG [io.netty.util.internal.PlatformDependent]: -Dio.netty.tmpdir: C:\Users\ADMINI~1\AppData\Local\Temp (java.io.tmpdir)
+[28] 2016-06-23 11:14:59,375 [main] DEBUG [io.netty.util.internal.PlatformDependent]: -Dio.netty.bitMode: 64 (sun.arch.data.model)
+[28] 2016-06-23 11:14:59,375 [main] DEBUG [io.netty.util.internal.PlatformDependent]: -Dio.netty.noPreferDirect: false
+[28] 2016-06-23 11:14:59,375 [main] DEBUG [io.netty.util.internal.PlatformDependent]: io.netty.maxDirectMemory: 1888485376 bytes
+[48] 2016-06-23 11:14:59,395 [main] DEBUG [io.netty.channel.nio.NioEventLoop]: -Dio.netty.noKeySetOptimization: false
+[49] 2016-06-23 11:14:59,396 [main] DEBUG [io.netty.channel.nio.NioEventLoop]: -Dio.netty.selectorAutoRebuildThreshold: 512
+[109] 2016-06-23 11:14:59,456 [main] TRACE [io.netty.channel.nio.NioEventLoop]: Instrumented an optimized java.util.Set into: sun.nio.ch.WindowsSelectorImpl@24a35978
+[110] 2016-06-23 11:14:59,457 [main] TRACE [io.netty.channel.nio.NioEventLoop]: Instrumented an optimized java.util.Set into: sun.nio.ch.WindowsSelectorImpl@16f7c8c1
+[110] 2016-06-23 11:14:59,457 [main] TRACE [io.netty.channel.nio.NioEventLoop]: Instrumented an optimized java.util.Set into: sun.nio.ch.WindowsSelectorImpl@2f0a87b3
+[111] 2016-06-23 11:14:59,458 [main] TRACE [io.netty.channel.nio.NioEventLoop]: Instrumented an optimized java.util.Set into: sun.nio.ch.WindowsSelectorImpl@319b92f3
+[111] 2016-06-23 11:14:59,458 [main] TRACE [io.netty.channel.nio.NioEventLoop]: Instrumented an optimized java.util.Set into: sun.nio.ch.WindowsSelectorImpl@fcd6521
+[111] 2016-06-23 11:14:59,458 [main] TRACE [io.netty.channel.nio.NioEventLoop]: Instrumented an optimized java.util.Set into: sun.nio.ch.WindowsSelectorImpl@27d415d9
+[112] 2016-06-23 11:14:59,459 [main] TRACE [io.netty.channel.nio.NioEventLoop]: Instrumented an optimized java.util.Set into: sun.nio.ch.WindowsSelectorImpl@5c18298f
+[112] 2016-06-23 11:14:59,459 [main] TRACE [io.netty.channel.nio.NioEventLoop]: Instrumented an optimized java.util.Set into: sun.nio.ch.WindowsSelectorImpl@31f924f5
+[134] 2016-06-23 11:14:59,481 [main] DEBUG [io.netty.channel.DefaultChannelId]: -Dio.netty.processId: 828 (auto-detected)
+[155] 2016-06-23 11:14:59,502 [main] DEBUG [io.netty.util.NetUtil]: Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+[156] 2016-06-23 11:14:59,503 [main] DEBUG [io.netty.util.NetUtil]: \proc\sys\net\core\somaxconn: 200 (non-existent)
+[178] 2016-06-23 11:14:59,525 [main] DEBUG [io.netty.channel.DefaultChannelId]: -Dio.netty.machineId: 00:00:00:00:00:00:00:e0 (auto-detected)
+[179] 2016-06-23 11:14:59,526 [main] DEBUG [io.netty.util.internal.ThreadLocalRandom]: -Dio.netty.initialSeedUniquifier: 0x5581c194f7f14157
+[188] 2016-06-23 11:14:59,535 [main] DEBUG [io.netty.util.ResourceLeakDetector]: -Dio.netty.leakDetection.level: simple
+[189] 2016-06-23 11:14:59,536 [main] DEBUG [io.netty.util.ResourceLeakDetector]: -Dio.netty.leakDetection.maxRecords: 4
+[212] 2016-06-23 11:14:59,559 [main] DEBUG [io.netty.buffer.PooledByteBufAllocator]: -Dio.netty.allocator.numHeapArenas: 8
+[212] 2016-06-23 11:14:59,559 [main] DEBUG [io.netty.buffer.PooledByteBufAllocator]: -Dio.netty.allocator.numDirectArenas: 8
+[212] 2016-06-23 11:14:59,559 [main] DEBUG [io.netty.buffer.PooledByteBufAllocator]: -Dio.netty.allocator.pageSize: 8192
+[212] 2016-06-23 11:14:59,559 [main] DEBUG [io.netty.buffer.PooledByteBufAllocator]: -Dio.netty.allocator.maxOrder: 11
+[212] 2016-06-23 11:14:59,559 [main] DEBUG [io.netty.buffer.PooledByteBufAllocator]: -Dio.netty.allocator.chunkSize: 16777216
+[212] 2016-06-23 11:14:59,559 [main] DEBUG [io.netty.buffer.PooledByteBufAllocator]: -Dio.netty.allocator.tinyCacheSize: 512
+[212] 2016-06-23 11:14:59,559 [main] DEBUG [io.netty.buffer.PooledByteBufAllocator]: -Dio.netty.allocator.smallCacheSize: 256
+[212] 2016-06-23 11:14:59,559 [main] DEBUG [io.netty.buffer.PooledByteBufAllocator]: -Dio.netty.allocator.normalCacheSize: 64
+[212] 2016-06-23 11:14:59,559 [main] DEBUG [io.netty.buffer.PooledByteBufAllocator]: -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+[212] 2016-06-23 11:14:59,559 [main] DEBUG [io.netty.buffer.PooledByteBufAllocator]: -Dio.netty.allocator.cacheTrimInterval: 8192
+[219] 2016-06-23 11:14:59,566 [main] DEBUG [io.netty.buffer.ByteBufUtil]: -Dio.netty.allocator.type: pooled
+[220] 2016-06-23 11:14:59,567 [main] DEBUG [io.netty.buffer.ByteBufUtil]: -Dio.netty.threadLocalDirectBufferSize: 65536
+[220] 2016-06-23 11:14:59,567 [main] DEBUG [io.netty.buffer.ByteBufUtil]: -Dio.netty.maxThreadLocalCharBufferSize: 16384
+[3480] 2016-06-23 11:15:02,827 [nioEventLoopGroup-2-1] DEBUG [io.netty.util.Recycler]: -Dio.netty.recycler.maxCapacity: 262144
+[3480] 2016-06-23 11:15:02,827 [nioEventLoopGroup-2-1] DEBUG [io.netty.util.Recycler]: -Dio.netty.recycler.linkCapacity: 16
+[3510] 2016-06-23 11:15:02,857 [nioEventLoopGroup-2-1] DEBUG [io.netty.buffer.AbstractByteBuf]: -Dio.netty.buffer.bytebuf.checkAccessible: true
+[5728] 2016-06-23 11:15:05,075 [nioEventLoopGroup-2-1] DEBUG [io.netty.buffer.PoolThreadCache]: Freed 1 thread-local buffer(s) from thread: nioEventLoopGroup-2-1
+[0] 2016-06-23 11:15:40,743 [main] DEBUG [io.netty.util.internal.logging.InternalLoggerFactory]: Using SLF4J as the default logging framework
+[6] 2016-06-23 11:15:40,749 [main] DEBUG [io.netty.channel.MultithreadEventLoopGroup]: -Dio.netty.eventLoopThreads: 8
+[23] 2016-06-23 11:15:40,766 [main] DEBUG [io.netty.util.internal.PlatformDependent0]: java.nio.Buffer.address: available
+[24] 2016-06-23 11:15:40,767 [main] DEBUG [io.netty.util.internal.PlatformDependent0]: sun.misc.Unsafe.theUnsafe: available
+[24] 2016-06-23 11:15:40,767 [main] DEBUG [io.netty.util.internal.PlatformDependent0]: sun.misc.Unsafe.copyMemory: available
+[24] 2016-06-23 11:15:40,767 [main] DEBUG [io.netty.util.internal.PlatformDependent0]: java.nio.Bits.unaligned: true
+[25] 2016-06-23 11:15:40,768 [main] DEBUG [io.netty.util.internal.PlatformDependent0]: java.nio.DirectByteBuffer.<init>(long, int): available
+[25] 2016-06-23 11:15:40,768 [main] DEBUG [io.netty.util.internal.PlatformDependent]: Platform: Windows
+[25] 2016-06-23 11:15:40,768 [main] DEBUG [io.netty.util.internal.PlatformDependent]: Java version: 8
+[25] 2016-06-23 11:15:40,768 [main] DEBUG [io.netty.util.internal.PlatformDependent]: -Dio.netty.noUnsafe: false
+[25] 2016-06-23 11:15:40,768 [main] DEBUG [io.netty.util.internal.PlatformDependent]: sun.misc.Unsafe: available
+[26] 2016-06-23 11:15:40,769 [main] DEBUG [io.netty.util.internal.PlatformDependent]: -Dio.netty.noJavassist: false
+[26] 2016-06-23 11:15:40,769 [main] DEBUG [io.netty.util.internal.PlatformDependent]: Javassist: unavailable
+[26] 2016-06-23 11:15:40,769 [main] DEBUG [io.netty.util.internal.PlatformDependent]: You don't have Javassist in your class path or you don't have enough permission to load dynamically generated classes.  Please check the configuration for better performance.
+[27] 2016-06-23 11:15:40,770 [main] DEBUG [io.netty.util.internal.PlatformDependent]: -Dio.netty.tmpdir: C:\Users\ADMINI~1\AppData\Local\Temp (java.io.tmpdir)
+[27] 2016-06-23 11:15:40,770 [main] DEBUG [io.netty.util.internal.PlatformDependent]: -Dio.netty.bitMode: 64 (sun.arch.data.model)
+[27] 2016-06-23 11:15:40,770 [main] DEBUG [io.netty.util.internal.PlatformDependent]: -Dio.netty.noPreferDirect: false
+[27] 2016-06-23 11:15:40,770 [main] DEBUG [io.netty.util.internal.PlatformDependent]: io.netty.maxDirectMemory: 1888485376 bytes
+[46] 2016-06-23 11:15:40,789 [main] DEBUG [io.netty.channel.nio.NioEventLoop]: -Dio.netty.noKeySetOptimization: false
+[46] 2016-06-23 11:15:40,789 [main] DEBUG [io.netty.channel.nio.NioEventLoop]: -Dio.netty.selectorAutoRebuildThreshold: 512
+[101] 2016-06-23 11:15:40,844 [main] TRACE [io.netty.channel.nio.NioEventLoop]: Instrumented an optimized java.util.Set into: sun.nio.ch.WindowsSelectorImpl@24a35978
+[102] 2016-06-23 11:15:40,845 [main] TRACE [io.netty.channel.nio.NioEventLoop]: Instrumented an optimized java.util.Set into: sun.nio.ch.WindowsSelectorImpl@16f7c8c1
+[102] 2016-06-23 11:15:40,845 [main] TRACE [io.netty.channel.nio.NioEventLoop]: Instrumented an optimized java.util.Set into: sun.nio.ch.WindowsSelectorImpl@2f0a87b3
+[102] 2016-06-23 11:15:40,845 [main] TRACE [io.netty.channel.nio.NioEventLoop]: Instrumented an optimized java.util.Set into: sun.nio.ch.WindowsSelectorImpl@319b92f3
+[103] 2016-06-23 11:15:40,846 [main] TRACE [io.netty.channel.nio.NioEventLoop]: Instrumented an optimized java.util.Set into: sun.nio.ch.WindowsSelectorImpl@fcd6521
+[103] 2016-06-23 11:15:40,846 [main] TRACE [io.netty.channel.nio.NioEventLoop]: Instrumented an optimized java.util.Set into: sun.nio.ch.WindowsSelectorImpl@27d415d9
+[104] 2016-06-23 11:15:40,847 [main] TRACE [io.netty.channel.nio.NioEventLoop]: Instrumented an optimized java.util.Set into: sun.nio.ch.WindowsSelectorImpl@5c18298f
+[104] 2016-06-23 11:15:40,847 [main] TRACE [io.netty.channel.nio.NioEventLoop]: Instrumented an optimized java.util.Set into: sun.nio.ch.WindowsSelectorImpl@31f924f5
+[127] 2016-06-23 11:15:40,870 [main] DEBUG [io.netty.channel.DefaultChannelId]: -Dio.netty.processId: 6728 (auto-detected)
+[148] 2016-06-23 11:15:40,891 [main] DEBUG [io.netty.util.NetUtil]: Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+[148] 2016-06-23 11:15:40,891 [main] DEBUG [io.netty.util.NetUtil]: \proc\sys\net\core\somaxconn: 200 (non-existent)
+[170] 2016-06-23 11:15:40,913 [main] DEBUG [io.netty.channel.DefaultChannelId]: -Dio.netty.machineId: 00:00:00:00:00:00:00:e0 (auto-detected)
+[172] 2016-06-23 11:15:40,915 [main] DEBUG [io.netty.util.internal.ThreadLocalRandom]: -Dio.netty.initialSeedUniquifier: 0x71f5d656312bc28e
+[181] 2016-06-23 11:15:40,924 [main] DEBUG [io.netty.util.ResourceLeakDetector]: -Dio.netty.leakDetection.level: simple
+[181] 2016-06-23 11:15:40,924 [main] DEBUG [io.netty.util.ResourceLeakDetector]: -Dio.netty.leakDetection.maxRecords: 4
+[203] 2016-06-23 11:15:40,946 [main] DEBUG [io.netty.buffer.PooledByteBufAllocator]: -Dio.netty.allocator.numHeapArenas: 8
+[203] 2016-06-23 11:15:40,946 [main] DEBUG [io.netty.buffer.PooledByteBufAllocator]: -Dio.netty.allocator.numDirectArenas: 8
+[203] 2016-06-23 11:15:40,946 [main] DEBUG [io.netty.buffer.PooledByteBufAllocator]: -Dio.netty.allocator.pageSize: 8192
+[204] 2016-06-23 11:15:40,947 [main] DEBUG [io.netty.buffer.PooledByteBufAllocator]: -Dio.netty.allocator.maxOrder: 11
+[204] 2016-06-23 11:15:40,947 [main] DEBUG [io.netty.buffer.PooledByteBufAllocator]: -Dio.netty.allocator.chunkSize: 16777216
+[204] 2016-06-23 11:15:40,947 [main] DEBUG [io.netty.buffer.PooledByteBufAllocator]: -Dio.netty.allocator.tinyCacheSize: 512
+[204] 2016-06-23 11:15:40,947 [main] DEBUG [io.netty.buffer.PooledByteBufAllocator]: -Dio.netty.allocator.smallCacheSize: 256
+[204] 2016-06-23 11:15:40,947 [main] DEBUG [io.netty.buffer.PooledByteBufAllocator]: -Dio.netty.allocator.normalCacheSize: 64
+[204] 2016-06-23 11:15:40,947 [main] DEBUG [io.netty.buffer.PooledByteBufAllocator]: -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+[204] 2016-06-23 11:15:40,947 [main] DEBUG [io.netty.buffer.PooledByteBufAllocator]: -Dio.netty.allocator.cacheTrimInterval: 8192
+[211] 2016-06-23 11:15:40,954 [main] DEBUG [io.netty.buffer.ByteBufUtil]: -Dio.netty.allocator.type: pooled
+[211] 2016-06-23 11:15:40,954 [main] DEBUG [io.netty.buffer.ByteBufUtil]: -Dio.netty.threadLocalDirectBufferSize: 65536
+[211] 2016-06-23 11:15:40,954 [main] DEBUG [io.netty.buffer.ByteBufUtil]: -Dio.netty.maxThreadLocalCharBufferSize: 16384
+[3425] 2016-06-23 11:15:44,168 [nioEventLoopGroup-2-1] DEBUG [io.netty.util.Recycler]: -Dio.netty.recycler.maxCapacity: 262144
+[3426] 2016-06-23 11:15:44,169 [nioEventLoopGroup-2-1] DEBUG [io.netty.util.Recycler]: -Dio.netty.recycler.linkCapacity: 16
+[3454] 2016-06-23 11:15:44,197 [nioEventLoopGroup-2-1] DEBUG [io.netty.buffer.AbstractByteBuf]: -Dio.netty.buffer.bytebuf.checkAccessible: true
+[5673] 2016-06-23 11:15:46,416 [nioEventLoopGroup-2-1] DEBUG [io.netty.buffer.PoolThreadCache]: Freed 1 thread-local buffer(s) from thread: nioEventLoopGroup-2-1

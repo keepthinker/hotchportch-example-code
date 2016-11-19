@@ -1,0 +1,4 @@
+CREATE TABLE actor(
+	id int NOT NULL PRIMARY KEY,
+	firstname VARCHAR(20) NOT NULL ,
+	lastname VARCHAR(20) NOT NULL );

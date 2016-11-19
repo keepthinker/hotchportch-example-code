@@ -1,0 +1,10 @@
+[0] 2016-03-04 17:21:48,712 [main] FATAL [com.keepthinker.learn.log.log4j.Main]: fatal
+[0] 2016-03-04 17:21:48,712 [main] INFO  [root]: root
+[0] 2016-03-04 17:21:48,712 [main] WARN  [com.foo]: Low fuel level.
+[0] 2016-03-04 17:21:48,712 [main] INFO  [com.foo.Bar]: Located nearest gas station.
+[0] 2016-03-04 17:21:48,712 [main] INFO  [com]: parent info
+[0] 2016-03-04 17:21:48,712 [main] DEBUG [com]: parent info
+[0] 2016-03-04 17:21:48,712 [main] WARN  [com.foo]: Low fuel level.
+[0] 2016-03-04 17:21:48,712 [main] INFO  [com.foo]: Low fuel level. info
+[0] 2016-03-04 17:21:48,712 [New thread] INFO  [com.keepthinker.learn.log.log4j.Main]: info
+[0] 2016-03-04 17:21:48,712 [main] INFO  [com.keepthinker.learn.log.log4j.Main]: true
