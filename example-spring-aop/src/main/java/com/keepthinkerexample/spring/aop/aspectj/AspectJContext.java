@@ -1,4 +1,4 @@
-package com.keepthinker.example.spring.aop.aspectj;
+package com.keepthinkerexample.spring.aop.aspectj;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

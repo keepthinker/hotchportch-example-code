@@ -1,4 +1,4 @@
-package com.keepthinker.example.spring.aop.aspectj;
+package com.keepthinkerexample.spring.aop.aspectj;
 
 import org.apache.log4j.Logger;
 import org.aspectj.lang.JoinPoint;

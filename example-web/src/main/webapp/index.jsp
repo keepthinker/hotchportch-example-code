@@ -1,7 +1,7 @@
-<%@page import="com.keepthinker.learn.web.servlet.MyFilter"%>
+<%@page import="com.keepthinker.example.web.servlet.MyFilter"%>
 <%@page import="java.util.Date"%>
 <%@page import="java.util.Random"%>
-<%@page import="com.keepthinker.learn.web.servlet.Person"%>
+<%@page import="com.keepthinker.example.web.servlet.Person"%>
 <html>
 <body>
 <%!
@@ -16,7 +16,7 @@
  	pageContext.setAttribute("person", person1); 
 %>
 <h3>${person.name}</h3>
-<jsp:useBean id="person" class="com.keepthinker.learn.web.servlet.Person" />
+<jsp:useBean id="person" class="com.keepthinker.example.web.servlet.Person" />
 <h2>Hello World! <%-- <jsp:setProperty name="person" property="name" value="Shawn Ke"/> --%></h2>
 <h3><jsp:getProperty name="person" property="name"/></h3>
 <jsp:setProperty name="person" property="name" value="Shawn"/>

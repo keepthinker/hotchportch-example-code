@@ -1,4 +1,4 @@
-package com.keepthinker.example.spring.aop.aspectj;
+package com.keepthinkerexample.spring.aop.aspectj;
 
 public class StringService {
 	private String str = "string";
