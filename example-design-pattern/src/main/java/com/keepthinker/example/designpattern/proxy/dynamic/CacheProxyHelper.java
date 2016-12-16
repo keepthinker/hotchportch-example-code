@@ -10,7 +10,7 @@ import java.util.TimerTask;
 
 public class CacheProxyHelper {
 	private static CacheProxyHelper helper = new CacheProxyHelper();
-	
+
 	public static <T> T getProxyInstance(final T targetObject, Class<T> advicedInterface, int period){
 		helper.period = period;
 		return helper.cacheProxy(targetObject, advicedInterface);
@@ -21,7 +21,7 @@ public class CacheProxyHelper {
 	}
 
 	private Map<String, Object> cache = new HashMap<String, Object>();
-	
+
 	@SuppressWarnings("unchecked")
 	public <T> T cacheProxy(final T targetObject, Class<T> advicedInterface){
 
@@ -45,7 +45,7 @@ public class CacheProxyHelper {
 		this.period = 10;
 		clearingDeamon();
 	}
-	
+
 	/**
 	 * 秒数
 	 * @param period
@@ -54,7 +54,7 @@ public class CacheProxyHelper {
 		this.period = period;
 		clearingDeamon();
 	}
-	
+
 	private int period;
 
 	public void setPeriod(int period) {

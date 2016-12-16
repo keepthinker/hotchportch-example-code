@@ -1,6 +1,6 @@
 import mysql.connector;
 
-conn = mysql.connector.Connect(host='192.168.2.240', port=3337,  user='testromsp', password='testromsp', database='test')
+conn = mysql.connector.Connect(host='192.168.0.112', port=3306,  user='test', password='test', database='test')
 
 c = conn.cursor()
 

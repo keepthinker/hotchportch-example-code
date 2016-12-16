@@ -18,12 +18,12 @@ public class SearchServiceCacheProxy implements Search{
 		cache.put(keyword, value);
 		return value;
 	}
-	
+
 	public SearchServiceCacheProxy(){
 		this.period = 10;
 		clearingDeamon();
 	}
-	
+
 	/**
 	 * 秒数
 	 * @param period
@@ -32,7 +32,7 @@ public class SearchServiceCacheProxy implements Search{
 		this.period = period;
 		clearingDeamon();
 	}
-	
+
 	private int period;
 
 	public void setPeriod(int period) {
