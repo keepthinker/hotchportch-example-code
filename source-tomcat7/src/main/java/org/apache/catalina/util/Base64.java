@@ -17,10 +17,10 @@
 
 package org.apache.catalina.util;
 
-import javax.xml.bind.DatatypeConverter;
-
 import org.apache.tomcat.util.buf.ByteChunk;
 import org.apache.tomcat.util.buf.CharChunk;
+
+import javax.xml.bind.DatatypeConverter;
 
 /**
  * This class provides encode/decode for RFC 2045 Base64 as defined by

@@ -17,18 +17,17 @@
 package org.apache.catalina.filters;
 
 
-import java.io.IOException;
-import java.util.regex.Pattern;
+import org.apache.catalina.comet.CometEvent;
+import org.apache.catalina.comet.CometFilter;
+import org.apache.catalina.comet.CometFilterChain;
 
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletResponse;
-
-import org.apache.catalina.comet.CometEvent;
-import org.apache.catalina.comet.CometFilter;
-import org.apache.catalina.comet.CometFilterChain;
+import java.io.IOException;
+import java.util.regex.Pattern;
 
 /**
  * Implementation of a Filter that performs filtering based on comparing the

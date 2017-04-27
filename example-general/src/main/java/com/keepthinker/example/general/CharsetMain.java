@@ -1,7 +1,9 @@
 package com.keepthinker.example.general;
 
-import java.nio.charset.Charset;
 import org.apache.log4j.Logger;
+
+import java.nio.charset.Charset;
+
 
 public class CharsetMain {
 	private static Logger logger = Logger.getLogger(CharsetMain.class);

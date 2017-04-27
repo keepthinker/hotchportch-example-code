@@ -16,6 +16,9 @@
  */
 package org.apache.catalina.authenticator;
 
+import org.apache.catalina.Session;
+
+import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
@@ -23,10 +26,6 @@ import java.io.Serializable;
 import java.security.Principal;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
-
-import javax.servlet.http.HttpServletRequest;
-
-import org.apache.catalina.Session;
 
 /**
  * A class that represents entries in the cache of authenticated users.

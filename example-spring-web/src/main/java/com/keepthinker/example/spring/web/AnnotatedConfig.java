@@ -1,10 +1,9 @@
 package com.keepthinker.example.spring.web;
 
+import com.keepthinker.example.spring.web.model.Person;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
-
-import com.keepthinker.example.spring.web.model.Person;
 
 @Configuration
 public class AnnotatedConfig {

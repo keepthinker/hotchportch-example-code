@@ -1,11 +1,10 @@
 package com.keepthinker.example.spring.ioc.cglib;
 
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-
 import com.keepthinker.example.spring.ioc.model.Animal;
 import com.keepthinker.example.spring.ioc.model.Person;
 import com.keepthinker.example.spring.ioc.model.Tiger;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class CglibBean {

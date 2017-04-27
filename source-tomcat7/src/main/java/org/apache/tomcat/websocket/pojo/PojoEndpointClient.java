@@ -16,12 +16,11 @@
  */
 package org.apache.tomcat.websocket.pojo;
 
-import java.util.Collections;
-
 import javax.websocket.Decoder;
 import javax.websocket.DeploymentException;
 import javax.websocket.EndpointConfig;
 import javax.websocket.Session;
+import java.util.Collections;
 
 
 /**

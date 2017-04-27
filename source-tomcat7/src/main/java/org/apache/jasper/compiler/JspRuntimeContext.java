@@ -17,6 +17,19 @@
 
 package org.apache.jasper.compiler;
 
+import org.apache.jasper.Constants;
+import org.apache.jasper.JspCompilationContext;
+import org.apache.jasper.Options;
+import org.apache.jasper.runtime.JspFactoryImpl;
+import org.apache.jasper.security.SecurityClassLoad;
+import org.apache.jasper.servlet.JspServletWrapper;
+import org.apache.jasper.util.ExceptionUtils;
+import org.apache.jasper.util.FastRemovalDequeue;
+import org.apache.juli.logging.Log;
+import org.apache.juli.logging.LogFactory;
+
+import javax.servlet.ServletContext;
+import javax.servlet.jsp.JspFactory;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FilePermission;
@@ -30,20 +43,6 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
-
-import javax.servlet.ServletContext;
-import javax.servlet.jsp.JspFactory;
-
-import org.apache.jasper.Constants;
-import org.apache.jasper.JspCompilationContext;
-import org.apache.jasper.Options;
-import org.apache.jasper.runtime.JspFactoryImpl;
-import org.apache.jasper.security.SecurityClassLoad;
-import org.apache.jasper.servlet.JspServletWrapper;
-import org.apache.jasper.util.ExceptionUtils;
-import org.apache.jasper.util.FastRemovalDequeue;
-import org.apache.juli.logging.Log;
-import org.apache.juli.logging.LogFactory;
 
 
 /**

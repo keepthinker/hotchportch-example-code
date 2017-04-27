@@ -17,15 +17,15 @@
 
 package org.apache.catalina.mbeans;
 
-import javax.management.InstanceNotFoundException;
-import javax.management.MBeanException;
-import javax.management.RuntimeOperationsException;
-import javax.management.modelmbean.InvalidTargetObjectTypeException;
-
 import org.apache.catalina.Executor;
 import org.apache.catalina.Service;
 import org.apache.catalina.connector.Connector;
 import org.apache.tomcat.util.modeler.BaseModelMBean;
+
+import javax.management.InstanceNotFoundException;
+import javax.management.MBeanException;
+import javax.management.RuntimeOperationsException;
+import javax.management.modelmbean.InvalidTargetObjectTypeException;
 
 public class ServiceMBean extends BaseModelMBean {
 

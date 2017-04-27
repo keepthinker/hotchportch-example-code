@@ -1,11 +1,11 @@
 package com.keepthinker.example.zookeeper.curator.framework;
 
-import java.util.Collection;
-
 import org.apache.curator.framework.CuratorFramework;
 import org.apache.curator.framework.api.transaction.CuratorTransaction;
 import org.apache.curator.framework.api.transaction.CuratorTransactionFinal;
 import org.apache.curator.framework.api.transaction.CuratorTransactionResult;
+
+import java.util.Collection;
 
 public class TransactionExamples {
 	 public static Collection<CuratorTransactionResult>      transaction(CuratorFramework client) throws Exception

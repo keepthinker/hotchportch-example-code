@@ -1,7 +1,5 @@
 package com.keepthinker.example.zookeeper;
 
-import java.util.concurrent.CyclicBarrier;
-
 import org.apache.zookeeper.CreateMode;
 import org.apache.zookeeper.KeeperException;
 import org.apache.zookeeper.ZooDefs;

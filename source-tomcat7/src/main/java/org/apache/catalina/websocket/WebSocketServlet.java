@@ -16,15 +16,10 @@
  */
 package org.apache.catalina.websocket;
 
-import java.io.IOException;
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Enumeration;
-import java.util.List;
-import java.util.Queue;
-import java.util.concurrent.ConcurrentLinkedQueue;
+import org.apache.catalina.connector.RequestFacade;
+import org.apache.catalina.util.Base64;
+import org.apache.tomcat.util.buf.B2CConverter;
+import org.apache.tomcat.util.res.StringManager;
 
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
@@ -32,11 +27,11 @@ import javax.servlet.ServletRequestWrapper;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import org.apache.catalina.connector.RequestFacade;
-import org.apache.catalina.util.Base64;
-import org.apache.tomcat.util.buf.B2CConverter;
-import org.apache.tomcat.util.res.StringManager;
+import java.io.IOException;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.util.*;
+import java.util.concurrent.ConcurrentLinkedQueue;
 
 /**
  * Provides the base implementation of a Servlet for processing WebSocket

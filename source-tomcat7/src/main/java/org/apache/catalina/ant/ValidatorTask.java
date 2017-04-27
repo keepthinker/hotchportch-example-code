@@ -16,17 +16,17 @@
  */
 package org.apache.catalina.ant;
 
-import java.io.BufferedInputStream;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.InputStream;
-
 import org.apache.catalina.Globals;
 import org.apache.catalina.startup.Constants;
 import org.apache.tomcat.util.descriptor.DigesterFactory;
 import org.apache.tomcat.util.digester.Digester;
 import org.apache.tools.ant.BuildException;
 import org.xml.sax.InputSource;
+
+import java.io.BufferedInputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.InputStream;
 
 
 /**

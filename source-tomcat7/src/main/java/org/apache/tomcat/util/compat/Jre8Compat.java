@@ -16,12 +16,11 @@
  */
 package org.apache.tomcat.util.compat;
 
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
-
 import javax.net.ssl.SSLEngine;
 import javax.net.ssl.SSLParameters;
 import javax.net.ssl.SSLServerSocket;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 
 class Jre8Compat extends Jre7Compat {
 

@@ -18,20 +18,19 @@
 package org.apache.catalina.mbeans;
 
 
-import java.util.ArrayList;
-import java.util.Iterator;
-
-import javax.management.MBeanException;
-import javax.management.MalformedObjectNameException;
-import javax.management.ObjectName;
-import javax.management.RuntimeOperationsException;
-
 import org.apache.catalina.Group;
 import org.apache.catalina.Role;
 import org.apache.catalina.User;
 import org.apache.tomcat.util.modeler.BaseModelMBean;
 import org.apache.tomcat.util.modeler.ManagedBean;
 import org.apache.tomcat.util.modeler.Registry;
+
+import javax.management.MBeanException;
+import javax.management.MalformedObjectNameException;
+import javax.management.ObjectName;
+import javax.management.RuntimeOperationsException;
+import java.util.ArrayList;
+import java.util.Iterator;
 
 /**
  * <p>A <strong>ModelMBean</strong> implementation for the

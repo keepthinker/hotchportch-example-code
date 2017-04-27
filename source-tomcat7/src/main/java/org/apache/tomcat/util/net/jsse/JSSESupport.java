@@ -17,6 +17,12 @@
 
 package org.apache.tomcat.util.net.jsse;
 
+import org.apache.tomcat.util.net.SSLSessionManager;
+import org.apache.tomcat.util.net.SSLSupport;
+import org.apache.tomcat.util.res.StringManager;
+
+import javax.net.ssl.*;
+import javax.security.cert.X509Certificate;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -25,17 +31,6 @@ import java.security.cert.Certificate;
 import java.security.cert.CertificateFactory;
 import java.util.Map;
 import java.util.WeakHashMap;
-
-import javax.net.ssl.HandshakeCompletedEvent;
-import javax.net.ssl.HandshakeCompletedListener;
-import javax.net.ssl.SSLException;
-import javax.net.ssl.SSLSession;
-import javax.net.ssl.SSLSocket;
-import javax.security.cert.X509Certificate;
-
-import org.apache.tomcat.util.net.SSLSessionManager;
-import org.apache.tomcat.util.net.SSLSupport;
-import org.apache.tomcat.util.res.StringManager;
 
 /** JSSESupport
 

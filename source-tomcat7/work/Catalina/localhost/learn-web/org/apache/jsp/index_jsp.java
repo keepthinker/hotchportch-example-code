@@ -8,12 +8,9 @@
  */
 package org.apache.jsp;
 
-import javax.servlet.*;
-import javax.servlet.http.*;
-import javax.servlet.jsp.*;
-import java.util.Date;
-import java.util.Random;
 import com.keepthinker.example.web.servlet.Person;
+
+import java.util.Random;
 
 public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {

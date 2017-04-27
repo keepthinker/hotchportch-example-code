@@ -16,14 +16,9 @@
  */
 package org.apache.tomcat.websocket;
 
-import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.Future;
-import java.util.concurrent.TimeUnit;
-import java.util.concurrent.TimeoutException;
-
 import javax.websocket.SendHandler;
 import javax.websocket.SendResult;
+import java.util.concurrent.*;
 
 /**
  * Converts a Future to a SendHandler.

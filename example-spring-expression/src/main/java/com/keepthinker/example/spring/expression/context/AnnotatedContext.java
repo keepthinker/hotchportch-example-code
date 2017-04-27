@@ -1,12 +1,11 @@
 package com.keepthinker.example.spring.expression.context;
 
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-
 import com.keepthinker.example.spring.expression.model.Inventor;
 import com.keepthinker.example.spring.expression.model.MovieFinder;
 import com.keepthinker.example.spring.expression.model.PlaceOfBirth;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class AnnotatedContext {

@@ -20,26 +20,6 @@
 package com.keepthinker.example.zookeeper.curator;
 
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.util.Arrays;
-import java.util.List;
-
-import org.apache.curator.framework.CuratorFramework;
-import org.apache.curator.framework.CuratorFrameworkFactory;
-import org.apache.curator.framework.recipes.cache.ChildData;
-import org.apache.curator.framework.recipes.cache.PathChildrenCache;
-import org.apache.curator.framework.recipes.cache.PathChildrenCacheEvent;
-import org.apache.curator.framework.recipes.cache.PathChildrenCacheListener;
-import org.apache.curator.retry.ExponentialBackoffRetry;
-import org.apache.curator.test.TestingServer;
-import org.apache.curator.utils.CloseableUtils;
-import org.apache.curator.utils.ZKPaths;
-import org.apache.zookeeper.KeeperException;
-
-import com.google.common.collect.Lists;
-
-
 /**
  * An example of the PathChildrenCache. The example "harness" is a command processor
  * that allows adding/updating/removed nodes in a path. A PathChildrenCache keeps a

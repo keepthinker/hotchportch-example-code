@@ -18,13 +18,13 @@
 
 package org.apache.catalina.startup;
 
-import java.net.URL;
-
 import org.apache.catalina.util.SchemaResolver;
 import org.apache.juli.logging.Log;
 import org.apache.juli.logging.LogFactory;
 import org.apache.tomcat.util.digester.Digester;
 import org.apache.tomcat.util.digester.RuleSet;
+
+import java.net.URL;
 
 /**
  * Wrapper class around the Digester that hide Digester's initialization details

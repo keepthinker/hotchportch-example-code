@@ -16,13 +16,13 @@
  */
 package org.apache.catalina.tribes.group.interceptors;
 
-import java.util.ArrayList;
-
 import org.apache.catalina.tribes.Channel;
 import org.apache.catalina.tribes.ChannelException;
 import org.apache.catalina.tribes.Member;
 import org.apache.catalina.tribes.group.AbsoluteOrder;
 import org.apache.catalina.tribes.group.ChannelInterceptorBase;
+
+import java.util.ArrayList;
 
 public class StaticMembershipInterceptor
     extends ChannelInterceptorBase {

@@ -17,16 +17,7 @@
 
 package org.apache.catalina.ha.session;
 
-import java.io.ByteArrayInputStream;
-import java.io.IOException;
-import java.util.regex.Pattern;
-
-import org.apache.catalina.Cluster;
-import org.apache.catalina.Container;
-import org.apache.catalina.LifecycleException;
-import org.apache.catalina.Loader;
-import org.apache.catalina.SessionIdGenerator;
-import org.apache.catalina.Valve;
+import org.apache.catalina.*;
 import org.apache.catalina.ha.CatalinaCluster;
 import org.apache.catalina.ha.ClusterManager;
 import org.apache.catalina.ha.tcp.ReplicationValve;
@@ -34,6 +25,10 @@ import org.apache.catalina.session.ManagerBase;
 import org.apache.catalina.tribes.io.ReplicationStream;
 import org.apache.juli.logging.Log;
 import org.apache.juli.logging.LogFactory;
+
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.util.regex.Pattern;
 
 /**
  * 

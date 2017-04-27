@@ -19,11 +19,7 @@ package org.apache.tomcat.util.http.fileupload;
 import java.io.File;
 import java.lang.ref.PhantomReference;
 import java.lang.ref.ReferenceQueue;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.List;
+import java.util.*;
 
 /**
  * Keeps track of files awaiting deletion, and deletes them when an associated

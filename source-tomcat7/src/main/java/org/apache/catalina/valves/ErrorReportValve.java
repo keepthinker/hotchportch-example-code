@@ -16,14 +16,6 @@
  */
 package org.apache.catalina.valves;
 
-import java.io.IOException;
-import java.io.Writer;
-import java.util.Scanner;
-
-import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServletResponse;
-
 import org.apache.catalina.connector.Request;
 import org.apache.catalina.connector.Response;
 import org.apache.catalina.util.RequestUtil;
@@ -31,6 +23,13 @@ import org.apache.catalina.util.ServerInfo;
 import org.apache.coyote.ActionCode;
 import org.apache.tomcat.util.ExceptionUtils;
 import org.apache.tomcat.util.res.StringManager;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.Writer;
+import java.util.Scanner;
 
 /**
  * <p>Implementation of a Valve that outputs HTML error pages.</p>

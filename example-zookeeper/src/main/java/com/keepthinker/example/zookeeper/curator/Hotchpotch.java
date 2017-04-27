@@ -1,12 +1,11 @@
 package com.keepthinker.example.zookeeper.curator;
 
-import java.util.Date;
-
+import com.keepthinker.example.zookeeper.Constant;
+import com.keepthinker.example.zookeeper.curator.framework.CreateClientExamples;
 import org.apache.curator.framework.CuratorFramework;
 import org.apache.zookeeper.data.Stat;
 
-import com.keepthinker.example.zookeeper.Constant;
-import com.keepthinker.example.zookeeper.curator.framework.CreateClientExamples;
+import java.util.Date;
 
 public class Hotchpotch {
 

@@ -19,9 +19,9 @@
 package org.apache.catalina.deploy;
 
 
-import java.io.Serializable;
-
 import org.apache.catalina.util.RequestUtil;
+
+import java.io.Serializable;
 
 
 /**

@@ -16,9 +16,8 @@
  */
 package org.apache.catalina.connector;
 
-import java.io.IOException;
-
 import javax.servlet.ServletOutputStream;
+import java.io.IOException;
 
 /**
  * Coyote implementation of the servlet output stream.

@@ -16,11 +16,11 @@
  */
 package org.apache.catalina.websocket;
 
-import java.io.IOException;
-import java.io.InputStream;
-
 import org.apache.coyote.http11.upgrade.UpgradeProcessor;
 import org.apache.tomcat.util.res.StringManager;
+
+import java.io.IOException;
+import java.io.InputStream;
 
 /**
  * This class is used to read WebSocket frames from the underlying socket and

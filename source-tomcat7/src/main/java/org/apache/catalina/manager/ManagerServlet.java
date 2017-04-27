@@ -19,14 +19,17 @@
 package org.apache.catalina.manager;
 
 
-import java.io.BufferedOutputStream;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.Enumeration;
-import java.util.Locale;
+import org.apache.catalina.*;
+import org.apache.catalina.core.StandardHost;
+import org.apache.catalina.core.StandardServer;
+import org.apache.catalina.startup.ExpandWar;
+import org.apache.catalina.util.ContextName;
+import org.apache.catalina.util.RequestUtil;
+import org.apache.catalina.util.ServerInfo;
+import org.apache.tomcat.util.Diagnostics;
+import org.apache.tomcat.util.ExceptionUtils;
+import org.apache.tomcat.util.modeler.Registry;
+import org.apache.tomcat.util.res.StringManager;
 
 import javax.management.MBeanServer;
 import javax.management.ObjectName;
@@ -39,27 +42,9 @@ import javax.servlet.UnavailableException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import org.apache.catalina.Container;
-import org.apache.catalina.ContainerServlet;
-import org.apache.catalina.Context;
-import org.apache.catalina.Engine;
-import org.apache.catalina.Globals;
-import org.apache.catalina.Host;
-import org.apache.catalina.Manager;
-import org.apache.catalina.Server;
-import org.apache.catalina.Session;
-import org.apache.catalina.Wrapper;
-import org.apache.catalina.core.StandardHost;
-import org.apache.catalina.core.StandardServer;
-import org.apache.catalina.startup.ExpandWar;
-import org.apache.catalina.util.ContextName;
-import org.apache.catalina.util.RequestUtil;
-import org.apache.catalina.util.ServerInfo;
-import org.apache.tomcat.util.Diagnostics;
-import org.apache.tomcat.util.ExceptionUtils;
-import org.apache.tomcat.util.modeler.Registry;
-import org.apache.tomcat.util.res.StringManager;
+import java.io.*;
+import java.util.Enumeration;
+import java.util.Locale;
 
 
 /**

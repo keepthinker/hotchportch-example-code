@@ -17,6 +17,11 @@
 
 package org.apache.tomcat.util.modeler.modules;
 
+import org.apache.juli.logging.Log;
+import org.apache.juli.logging.LogFactory;
+import org.apache.tomcat.util.modeler.*;
+
+import javax.management.ObjectName;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import java.math.BigDecimal;
@@ -25,16 +30,6 @@ import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.Hashtable;
 import java.util.List;
-
-import javax.management.ObjectName;
-
-import org.apache.juli.logging.Log;
-import org.apache.juli.logging.LogFactory;
-import org.apache.tomcat.util.modeler.AttributeInfo;
-import org.apache.tomcat.util.modeler.ManagedBean;
-import org.apache.tomcat.util.modeler.OperationInfo;
-import org.apache.tomcat.util.modeler.ParameterInfo;
-import org.apache.tomcat.util.modeler.Registry;
 
 public class MbeansDescriptorsIntrospectionSource extends ModelerSource
 {

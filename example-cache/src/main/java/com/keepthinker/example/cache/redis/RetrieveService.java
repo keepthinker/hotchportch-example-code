@@ -1,9 +1,9 @@
 package com.keepthinker.example.cache.redis;
 
-import java.util.Date;
-
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
+
+import java.util.Date;
 
 @Service
 public class RetrieveService {

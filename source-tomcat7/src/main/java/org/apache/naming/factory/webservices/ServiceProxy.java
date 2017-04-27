@@ -18,16 +18,15 @@
 
 package org.apache.naming.factory.webservices;
 
+import javax.xml.namespace.QName;
+import javax.xml.rpc.Service;
+import javax.xml.rpc.ServiceException;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.rmi.Remote;
 import java.util.Hashtable;
 import java.util.Iterator;
-
-import javax.xml.namespace.QName;
-import javax.xml.rpc.Service;
-import javax.xml.rpc.ServiceException;
 
 /**
  * Object proxy for Web Services.

@@ -1,9 +1,9 @@
 package com.keepthinker.example.spring.aop;
 
-import java.lang.reflect.Method;
-
 import org.apache.log4j.Logger;
 import org.springframework.aop.MethodBeforeAdvice;
+
+import java.lang.reflect.Method;
 
 public class CountingBeforeAdvice implements MethodBeforeAdvice {
 	private static Logger logger = Logger.getLogger(CountingBeforeAdvice.class);

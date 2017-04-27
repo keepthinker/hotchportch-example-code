@@ -1,9 +1,9 @@
 package com.keepthinker.example.general.sql.example;
 
+import com.keepthinker.example.general.sql.Column;
+
 import java.io.Serializable;
 import java.util.Date;
-
-import com.keepthinker.example.general.sql.Column;
 
 public class Person implements Serializable{
 	

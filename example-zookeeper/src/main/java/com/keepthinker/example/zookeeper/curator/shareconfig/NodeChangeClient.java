@@ -1,13 +1,12 @@
 package com.keepthinker.example.zookeeper.curator.shareconfig;
 
 
+import com.keepthinker.example.zookeeper.curator.framework.CreateClientExamples;
 import org.apache.curator.framework.CuratorFramework;
 import org.apache.zookeeper.WatchedEvent;
 import org.apache.zookeeper.Watcher;
 import org.apache.zookeeper.Watcher.Event.EventType;
 import org.apache.zookeeper.data.Stat;
-
-import com.keepthinker.example.zookeeper.curator.framework.CreateClientExamples;
 
 public class NodeChangeClient implements Runnable{
 	protected long defaultSleepTime = 2000;

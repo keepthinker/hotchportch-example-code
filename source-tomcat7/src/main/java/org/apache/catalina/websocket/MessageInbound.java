@@ -16,13 +16,13 @@
  */
 package org.apache.catalina.websocket;
 
+import org.apache.tomcat.util.res.StringManager;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.Reader;
 import java.nio.ByteBuffer;
 import java.nio.CharBuffer;
-
-import org.apache.tomcat.util.res.StringManager;
 
 /**
  * Base implementation of the class used to process WebSocket connections based

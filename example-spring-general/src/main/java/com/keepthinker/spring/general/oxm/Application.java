@@ -1,16 +1,14 @@
 package com.keepthinker.spring.general.oxm;
 
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-
-import javax.xml.transform.stream.StreamResult;
-import javax.xml.transform.stream.StreamSource;
-
+import com.keepthinker.example.model.Actor;
 import org.springframework.oxm.Marshaller;
 import org.springframework.oxm.Unmarshaller;
 
-import com.keepthinker.example.model.Actor;
+import javax.xml.transform.stream.StreamResult;
+import javax.xml.transform.stream.StreamSource;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
 
 public class Application {
 	private	Actor actor = new Actor();

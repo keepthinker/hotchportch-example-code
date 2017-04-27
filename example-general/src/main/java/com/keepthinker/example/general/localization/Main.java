@@ -1,9 +1,9 @@
 package com.keepthinker.example.general.localization;
 
-import static com.keepthinker.example.general.SystemUtils.print;
-
 import java.util.Locale;
 import java.util.ResourceBundle;
+
+import static com.keepthinker.example.general.SystemUtils.print;
 
 public class Main {
 	private static final String LSTRING_FILE = "com.keepthinker.example.general.localization.LocalStrings";

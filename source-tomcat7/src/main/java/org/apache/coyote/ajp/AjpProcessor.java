@@ -16,12 +16,6 @@
  */
 package org.apache.coyote.ajp;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InterruptedIOException;
-import java.io.OutputStream;
-import java.net.Socket;
-
 import org.apache.coyote.ActionCode;
 import org.apache.coyote.ErrorState;
 import org.apache.coyote.RequestInfo;
@@ -32,6 +26,12 @@ import org.apache.tomcat.util.net.AbstractEndpoint.Handler.SocketState;
 import org.apache.tomcat.util.net.JIoEndpoint;
 import org.apache.tomcat.util.net.SocketStatus;
 import org.apache.tomcat.util.net.SocketWrapper;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InterruptedIOException;
+import java.io.OutputStream;
+import java.net.Socket;
 
 
 /**

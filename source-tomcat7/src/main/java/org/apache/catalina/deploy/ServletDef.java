@@ -19,13 +19,13 @@
 package org.apache.catalina.deploy;
 
 
+import org.apache.tomcat.util.res.StringManager;
+
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
-
-import org.apache.tomcat.util.res.StringManager;
 
 
 /**

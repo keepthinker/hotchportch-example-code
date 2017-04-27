@@ -16,22 +16,6 @@
  */
 package org.apache.catalina.ha.session;
 
-import java.io.Externalizable;
-import java.io.IOException;
-import java.io.NotSerializableException;
-import java.io.ObjectInput;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutput;
-import java.io.ObjectOutputStream;
-import java.io.Serializable;
-import java.security.Principal;
-import java.util.ArrayList;
-import java.util.Hashtable;
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.atomic.AtomicInteger;
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReentrantReadWriteLock;
-
 import org.apache.catalina.Manager;
 import org.apache.catalina.SessionListener;
 import org.apache.catalina.ha.CatalinaCluster;
@@ -45,6 +29,15 @@ import org.apache.catalina.session.StandardSession;
 import org.apache.catalina.tribes.io.ReplicationStream;
 import org.apache.catalina.tribes.tipis.ReplicatedMapEntry;
 import org.apache.tomcat.util.res.StringManager;
+
+import java.io.*;
+import java.security.Principal;
+import java.util.ArrayList;
+import java.util.Hashtable;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 /**
  *

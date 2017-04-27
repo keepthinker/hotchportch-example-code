@@ -1,13 +1,13 @@
 package com.keepthinker.example.zookeeper.queue;
 
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-
 import org.apache.zookeeper.KeeperException;
 import org.apache.zookeeper.WatchedEvent;
 import org.apache.zookeeper.Watcher;
 import org.apache.zookeeper.Watcher.Event.KeeperState;
 import org.apache.zookeeper.ZooKeeper;
+
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
 
 public class TaskQueueClient implements Watcher {
 

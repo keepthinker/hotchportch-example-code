@@ -16,50 +16,27 @@
  */
 package org.apache.catalina.startup;
 
+import org.apache.catalina.*;
+import org.apache.catalina.authenticator.NonLoginAuthenticator;
+import org.apache.catalina.connector.Connector;
+import org.apache.catalina.core.*;
+import org.apache.catalina.deploy.LoginConfig;
+import org.apache.catalina.realm.GenericPrincipal;
+import org.apache.catalina.realm.RealmBase;
+
+import javax.servlet.Servlet;
+import javax.servlet.ServletException;
 import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.security.Principal;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Stack;
+import java.util.*;
 import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
-import javax.servlet.Servlet;
-import javax.servlet.ServletException;
-
-import org.apache.catalina.Container;
-import org.apache.catalina.Context;
-import org.apache.catalina.Engine;
-import org.apache.catalina.Globals;
-import org.apache.catalina.Host;
-import org.apache.catalina.Lifecycle;
-import org.apache.catalina.LifecycleEvent;
-import org.apache.catalina.LifecycleException;
-import org.apache.catalina.LifecycleListener;
-import org.apache.catalina.Realm;
-import org.apache.catalina.Server;
-import org.apache.catalina.Service;
-import org.apache.catalina.Wrapper;
-import org.apache.catalina.authenticator.NonLoginAuthenticator;
-import org.apache.catalina.connector.Connector;
-import org.apache.catalina.core.NamingContextListener;
-import org.apache.catalina.core.StandardContext;
-import org.apache.catalina.core.StandardEngine;
-import org.apache.catalina.core.StandardHost;
-import org.apache.catalina.core.StandardServer;
-import org.apache.catalina.core.StandardService;
-import org.apache.catalina.core.StandardWrapper;
-import org.apache.catalina.deploy.LoginConfig;
-import org.apache.catalina.realm.GenericPrincipal;
-import org.apache.catalina.realm.RealmBase;
 
 // TODO: lazy init for the temp dir - only when a JSP is compiled or 
 // get temp dir is called we need to create it. This will avoid the 

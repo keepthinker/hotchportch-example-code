@@ -16,13 +16,12 @@
  */
 package org.apache.coyote.http11.upgrade;
 
-import java.io.IOException;
-
-import javax.servlet.ServletOutputStream;
-
 import org.apache.coyote.http11.upgrade.servlet31.WriteListener;
 import org.apache.tomcat.util.ExceptionUtils;
 import org.apache.tomcat.util.res.StringManager;
+
+import javax.servlet.ServletOutputStream;
+import java.io.IOException;
 
 /**
  * Implements the new Servlet 3.1 methods for {@link ServletOutputStream}.

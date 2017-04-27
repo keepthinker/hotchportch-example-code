@@ -1,13 +1,14 @@
 package com.keepthinker.example.zookeeper.queue;
-import java.io.IOException;
-import java.util.Arrays;
-import java.util.concurrent.LinkedBlockingQueue;
 
 import org.apache.zookeeper.KeeperException;
 import org.apache.zookeeper.WatchedEvent;
 import org.apache.zookeeper.Watcher;
 import org.apache.zookeeper.Watcher.Event.KeeperState;
 import org.apache.zookeeper.ZooKeeper;
+
+import java.io.IOException;
+import java.util.Arrays;
+import java.util.concurrent.LinkedBlockingQueue;
 
 public class TaskQueueWorker implements Watcher {
 	private ZooKeeper zk;

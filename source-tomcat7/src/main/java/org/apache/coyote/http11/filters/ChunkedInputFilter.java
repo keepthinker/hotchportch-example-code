@@ -16,12 +16,6 @@
  */
 package org.apache.coyote.http11.filters;
 
-import java.io.EOFException;
-import java.io.IOException;
-import java.nio.charset.Charset;
-import java.util.Locale;
-import java.util.Set;
-
 import org.apache.coyote.InputBuffer;
 import org.apache.coyote.Request;
 import org.apache.coyote.http11.Constants;
@@ -31,6 +25,12 @@ import org.apache.tomcat.util.buf.HexUtils;
 import org.apache.tomcat.util.buf.MessageBytes;
 import org.apache.tomcat.util.http.MimeHeaders;
 import org.apache.tomcat.util.res.StringManager;
+
+import java.io.EOFException;
+import java.io.IOException;
+import java.nio.charset.Charset;
+import java.util.Locale;
+import java.util.Set;
 
 /**
  * Chunked input filter. Parses chunked data according to

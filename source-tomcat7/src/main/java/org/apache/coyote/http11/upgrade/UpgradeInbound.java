@@ -16,9 +16,9 @@
  */
 package org.apache.coyote.http11.upgrade;
 
-import java.io.IOException;
-
 import org.apache.tomcat.util.net.AbstractEndpoint.Handler.SocketState;
+
+import java.io.IOException;
 
 /**
  * Receives notification that there is data to be read on the upgraded

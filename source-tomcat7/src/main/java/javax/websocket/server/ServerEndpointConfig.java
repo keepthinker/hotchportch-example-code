@@ -16,16 +16,11 @@
  */
 package javax.websocket.server;
 
+import javax.websocket.*;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 import java.util.ServiceLoader;
-
-import javax.websocket.Decoder;
-import javax.websocket.Encoder;
-import javax.websocket.EndpointConfig;
-import javax.websocket.Extension;
-import javax.websocket.HandshakeResponse;
 
 /**
  * Provides configuration information for WebSocket endpoints published to a

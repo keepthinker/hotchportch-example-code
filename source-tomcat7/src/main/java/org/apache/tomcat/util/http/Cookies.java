@@ -16,15 +16,15 @@
  */
 package org.apache.tomcat.util.http;
 
-import java.io.PrintWriter;
-import java.io.StringWriter;
-
 import org.apache.juli.logging.Log;
 import org.apache.juli.logging.LogFactory;
 import org.apache.tomcat.util.buf.ByteChunk;
 import org.apache.tomcat.util.buf.MessageBytes;
 import org.apache.tomcat.util.log.UserDataHelper;
 import org.apache.tomcat.util.res.StringManager;
+
+import java.io.PrintWriter;
+import java.io.StringWriter;
 
 /**
  * A collection of cookies - reusable and tuned for server side performance.

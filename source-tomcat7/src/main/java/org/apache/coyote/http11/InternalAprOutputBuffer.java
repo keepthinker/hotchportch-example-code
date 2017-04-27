@@ -17,9 +17,6 @@
 
 package org.apache.coyote.http11;
 
-import java.io.IOException;
-import java.nio.ByteBuffer;
-
 import org.apache.coyote.ActionCode;
 import org.apache.coyote.OutputBuffer;
 import org.apache.coyote.Response;
@@ -28,6 +25,9 @@ import org.apache.tomcat.util.buf.ByteChunk;
 import org.apache.tomcat.util.http.HttpMessages;
 import org.apache.tomcat.util.net.AbstractEndpoint;
 import org.apache.tomcat.util.net.SocketWrapper;
+
+import java.io.IOException;
+import java.nio.ByteBuffer;
 
 /**
  * Output buffer.

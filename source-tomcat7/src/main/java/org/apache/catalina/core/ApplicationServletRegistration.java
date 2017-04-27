@@ -17,21 +17,16 @@
 
 package org.apache.catalina.core;
 
-import java.util.Collection;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
-
-import javax.servlet.MultipartConfigElement;
-import javax.servlet.ServletRegistration;
-import javax.servlet.ServletSecurityElement;
-
 import org.apache.catalina.Context;
 import org.apache.catalina.LifecycleState;
 import org.apache.catalina.Wrapper;
 import org.apache.catalina.util.ParameterMap;
 import org.apache.tomcat.util.res.StringManager;
+
+import javax.servlet.MultipartConfigElement;
+import javax.servlet.ServletRegistration;
+import javax.servlet.ServletSecurityElement;
+import java.util.*;
 
 public class ApplicationServletRegistration
         implements ServletRegistration.Dynamic {

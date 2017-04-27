@@ -18,15 +18,15 @@
 
 package org.apache.catalina;
 
-import java.beans.PropertyChangeListener;
-import java.io.IOException;
-import java.security.Principal;
-import java.security.cert.X509Certificate;
-
 import org.apache.catalina.connector.Request;
 import org.apache.catalina.connector.Response;
 import org.apache.catalina.deploy.SecurityConstraint;
 import org.ietf.jgss.GSSContext;
+
+import java.beans.PropertyChangeListener;
+import java.io.IOException;
+import java.security.Principal;
+import java.security.cert.X509Certificate;
 /**
  * A <b>Realm</b> is a read-only facade for an underlying security realm
  * used to authenticate individual users, and identify the security roles

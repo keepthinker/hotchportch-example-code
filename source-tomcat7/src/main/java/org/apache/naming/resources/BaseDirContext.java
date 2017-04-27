@@ -18,39 +18,18 @@
 
 package org.apache.naming.resources;
 
+import org.apache.naming.*;
+
+import javax.naming.*;
+import javax.naming.directory.*;
 import java.io.File;
 import java.io.IOException;
 import java.net.JarURLConnection;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Hashtable;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.Map.Entry;
 import java.util.jar.JarFile;
 import java.util.zip.ZipEntry;
-
-import javax.naming.Binding;
-import javax.naming.Context;
-import javax.naming.Name;
-import javax.naming.NameClassPair;
-import javax.naming.NameNotFoundException;
-import javax.naming.NameParser;
-import javax.naming.NamingEnumeration;
-import javax.naming.NamingException;
-import javax.naming.directory.Attributes;
-import javax.naming.directory.DirContext;
-import javax.naming.directory.ModificationItem;
-import javax.naming.directory.SearchControls;
-import javax.naming.directory.SearchResult;
-
-import org.apache.naming.NameParserImpl;
-import org.apache.naming.NamingContextBindingsEnumeration;
-import org.apache.naming.NamingContextEnumeration;
-import org.apache.naming.NamingEntry;
-import org.apache.naming.StringManager;
 
 /**
  * Directory Context implementation helper class.

@@ -17,34 +17,22 @@
 
 package org.apache.jasper;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.net.JarURLConnection;
-import java.net.MalformedURLException;
-import java.net.URI;
-import java.net.URISyntaxException;
-import java.net.URL;
-import java.net.URLClassLoader;
-import java.net.URLConnection;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
-
-import javax.servlet.ServletContext;
-import javax.servlet.jsp.tagext.TagInfo;
-
 import org.apache.jasper.compiler.Compiler;
-import org.apache.jasper.compiler.JarResource;
-import org.apache.jasper.compiler.JspRuntimeContext;
-import org.apache.jasper.compiler.JspUtil;
-import org.apache.jasper.compiler.Localizer;
-import org.apache.jasper.compiler.ServletWriter;
-import org.apache.jasper.compiler.TldLocation;
+import org.apache.jasper.compiler.*;
 import org.apache.jasper.servlet.JasperLoader;
 import org.apache.jasper.servlet.JspServletWrapper;
 import org.apache.juli.logging.Log;
 import org.apache.juli.logging.LogFactory;
+
+import javax.servlet.ServletContext;
+import javax.servlet.jsp.tagext.TagInfo;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.net.*;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
 
 /**
  * A place holder for various things that are used through out the JSP

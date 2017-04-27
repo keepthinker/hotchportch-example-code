@@ -16,19 +16,12 @@
  */
 package org.apache.naming.resources;
 
-import java.io.File;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.StringTokenizer;
+import org.apache.naming.NamingEntry;
 
 import javax.naming.NamingException;
 import javax.naming.directory.Attributes;
-
-import org.apache.naming.NamingEntry;
+import java.io.File;
+import java.util.*;
 
 /**
  * Extended FileDirContext implementation that allows to expose multiple

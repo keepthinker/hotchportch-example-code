@@ -16,16 +16,11 @@
  */
 package org.apache.coyote.http11;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Locale;
-import java.util.Set;
-import java.util.concurrent.ConcurrentHashMap;
-
 import org.apache.coyote.AbstractProtocol;
 import org.apache.tomcat.util.res.StringManager;
+
+import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
 
 public abstract class AbstractHttp11Protocol<S> extends AbstractProtocol<S> {
 

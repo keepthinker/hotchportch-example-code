@@ -16,9 +16,6 @@
  */
 package org.apache.coyote.http11.upgrade;
 
-import java.io.IOException;
-import java.util.concurrent.Executor;
-
 import org.apache.coyote.Processor;
 import org.apache.coyote.Request;
 import org.apache.coyote.http11.upgrade.servlet31.HttpUpgradeHandler;
@@ -27,6 +24,9 @@ import org.apache.tomcat.util.net.SSLSupport;
 import org.apache.tomcat.util.net.SocketStatus;
 import org.apache.tomcat.util.net.SocketWrapper;
 import org.apache.tomcat.util.res.StringManager;
+
+import java.io.IOException;
+import java.util.concurrent.Executor;
 
 /**
  * @deprecated  Will be removed in Tomcat 8.0.x.

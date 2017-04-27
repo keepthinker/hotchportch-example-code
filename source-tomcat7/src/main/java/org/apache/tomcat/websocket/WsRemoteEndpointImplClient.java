@@ -16,10 +16,9 @@
  */
 package org.apache.tomcat.websocket;
 
+import javax.websocket.SendHandler;
 import java.nio.ByteBuffer;
 import java.util.concurrent.TimeUnit;
-
-import javax.websocket.SendHandler;
 
 public class WsRemoteEndpointImplClient extends WsRemoteEndpointImplBase {
 

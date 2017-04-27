@@ -1,18 +1,10 @@
 package com.keepthinker.example.spring.expression.main;
 
-import java.util.Properties;
-
+import com.keepthinker.example.spring.expression.model.*;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.keepthinker.example.spring.expression.model.FieldValueTestBean;
-import com.keepthinker.example.spring.expression.model.Inventor;
-import com.keepthinker.example.spring.expression.model.MovieFinder;
-import com.keepthinker.example.spring.expression.model.NumberGuess;
-import com.keepthinker.example.spring.expression.model.PropertyValueTestBean;
-import com.keepthinker.example.spring.expression.model.ShapeGuess;
-import com.keepthinker.example.spring.expression.model.SimpleMovieLister;
-import com.keepthinker.example.spring.expression.model.TaxCalculator;
+import java.util.Properties;
 
 /**
  * Expression support for defining bean definitions

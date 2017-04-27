@@ -16,19 +16,13 @@
  */
 package websocket.drawboard;
 
-import java.io.EOFException;
-
-import javax.websocket.CloseReason;
-import javax.websocket.Endpoint;
-import javax.websocket.EndpointConfig;
-import javax.websocket.MessageHandler;
-import javax.websocket.Session;
-
 import org.apache.juli.logging.Log;
 import org.apache.juli.logging.LogFactory;
-
 import websocket.drawboard.DrawMessage.ParseException;
 import websocket.drawboard.wsmessages.StringWebsocketMessage;
+
+import javax.websocket.*;
+import java.io.EOFException;
 
 
 public final class DrawboardEndpoint extends Endpoint {

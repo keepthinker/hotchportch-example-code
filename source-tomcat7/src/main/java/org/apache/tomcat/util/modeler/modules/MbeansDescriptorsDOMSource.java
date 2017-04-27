@@ -18,23 +18,17 @@
 
 package org.apache.tomcat.util.modeler.modules;
 
-import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.management.ObjectName;
-
 import org.apache.juli.logging.Log;
 import org.apache.juli.logging.LogFactory;
 import org.apache.tomcat.util.DomUtil;
-import org.apache.tomcat.util.modeler.AttributeInfo;
-import org.apache.tomcat.util.modeler.ManagedBean;
-import org.apache.tomcat.util.modeler.NotificationInfo;
-import org.apache.tomcat.util.modeler.OperationInfo;
-import org.apache.tomcat.util.modeler.ParameterInfo;
-import org.apache.tomcat.util.modeler.Registry;
+import org.apache.tomcat.util.modeler.*;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
+
+import javax.management.ObjectName;
+import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @deprecated Unused: Will be removed in Tomcat 8.0.x

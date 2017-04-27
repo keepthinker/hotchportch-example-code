@@ -17,26 +17,21 @@
 
 package org.apache.tomcat.util.scan;
 
-import java.io.File;
-import java.io.IOException;
-import java.net.JarURLConnection;
-import java.net.URISyntaxException;
-import java.net.URL;
-import java.net.URLClassLoader;
-import java.net.URLConnection;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.Set;
-import java.util.StringTokenizer;
-
-import javax.servlet.ServletContext;
-
 import org.apache.juli.logging.Log;
 import org.apache.juli.logging.LogFactory;
 import org.apache.tomcat.JarScanner;
 import org.apache.tomcat.JarScannerCallback;
 import org.apache.tomcat.util.file.Matcher;
 import org.apache.tomcat.util.res.StringManager;
+
+import javax.servlet.ServletContext;
+import java.io.File;
+import java.io.IOException;
+import java.net.*;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
+import java.util.StringTokenizer;
 
 /**
  * The default {@link JarScanner} implementation scans the WEB-INF/lib directory

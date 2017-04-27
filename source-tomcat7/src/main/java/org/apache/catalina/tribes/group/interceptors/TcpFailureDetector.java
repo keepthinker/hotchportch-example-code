@@ -16,20 +16,8 @@
  */
 package org.apache.catalina.tribes.group.interceptors;
 
-import java.net.ConnectException;
-import java.net.InetAddress;
-import java.net.InetSocketAddress;
-import java.net.Socket;
-import java.net.SocketTimeoutException;
-import java.util.Arrays;
-import java.util.HashMap;
-
-import org.apache.catalina.tribes.Channel;
-import org.apache.catalina.tribes.ChannelException;
+import org.apache.catalina.tribes.*;
 import org.apache.catalina.tribes.ChannelException.FaultyMember;
-import org.apache.catalina.tribes.ChannelMessage;
-import org.apache.catalina.tribes.Member;
-import org.apache.catalina.tribes.RemoteProcessException;
 import org.apache.catalina.tribes.group.ChannelInterceptorBase;
 import org.apache.catalina.tribes.group.InterceptorPayload;
 import org.apache.catalina.tribes.io.ChannelData;
@@ -37,6 +25,10 @@ import org.apache.catalina.tribes.io.XByteBuffer;
 import org.apache.catalina.tribes.membership.MemberImpl;
 import org.apache.catalina.tribes.membership.Membership;
 import org.apache.catalina.tribes.membership.StaticMember;
+
+import java.net.*;
+import java.util.Arrays;
+import java.util.HashMap;
 
 /**
  * <p>Title: A perfect failure detector </p>

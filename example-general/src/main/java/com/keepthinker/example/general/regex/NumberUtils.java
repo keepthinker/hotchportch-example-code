@@ -1,6 +1,6 @@
 package com.keepthinker.example.general.regex;
 
-import static com.keepthinker.example.general.SystemUtils.*;
+import static com.keepthinker.example.general.SystemUtils.print;
 
 public class NumberUtils{
 	private static String numberRegex = "(-|\\+)?\\d+e?\\d+";

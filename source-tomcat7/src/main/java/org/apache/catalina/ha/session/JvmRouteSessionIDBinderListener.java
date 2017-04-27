@@ -17,19 +17,15 @@
 
 package org.apache.catalina.ha.session;
 
-import java.io.IOException;
-
-import org.apache.catalina.Container;
-import org.apache.catalina.Context;
-import org.apache.catalina.Engine;
-import org.apache.catalina.LifecycleException;
-import org.apache.catalina.Session;
+import org.apache.catalina.*;
 import org.apache.catalina.core.StandardEngine;
 import org.apache.catalina.ha.ClusterListener;
 import org.apache.catalina.ha.ClusterMessage;
 import org.apache.juli.logging.Log;
 import org.apache.juli.logging.LogFactory;
 import org.apache.tomcat.util.res.StringManager;
+
+import java.io.IOException;
 
 /**
  * Receive SessionID cluster change from other backup node after primary session

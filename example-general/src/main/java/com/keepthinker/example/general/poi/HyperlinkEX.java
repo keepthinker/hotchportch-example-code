@@ -1,15 +1,12 @@
 package com.keepthinker.example.general.poi;
-import java.io.File;
-import java.io.FileOutputStream;
+
 import org.apache.poi.common.usermodel.Hyperlink;
 import org.apache.poi.hssf.util.HSSFColor;
 import org.apache.poi.ss.usermodel.CreationHelper;
-import org.apache.poi.xssf.usermodel.XSSFCell;
-import org.apache.poi.xssf.usermodel.XSSFCellStyle;
-import org.apache.poi.xssf.usermodel.XSSFFont;
-import org.apache.poi.xssf.usermodel.XSSFHyperlink;
-import org.apache.poi.xssf.usermodel.XSSFSheet;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.apache.poi.xssf.usermodel.*;
+
+import java.io.File;
+import java.io.FileOutputStream;
 public class HyperlinkEX 
 {
 	public static void main(String[] args) throws Exception 

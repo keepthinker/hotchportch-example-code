@@ -1,10 +1,6 @@
 package com.keepthinker.example.general.format;
 
-import java.text.DecimalFormat;
-import java.text.MessageFormat;
-import java.text.NumberFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
+import java.text.*;
 import java.util.Date;
 import java.util.Locale;
 

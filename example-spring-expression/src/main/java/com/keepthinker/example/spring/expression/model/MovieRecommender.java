@@ -1,9 +1,8 @@
 package com.keepthinker.example.spring.expression.model;
 
+import com.keepthinker.example.spring.expression.dao.CustomerPreferenceDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-
-import com.keepthinker.example.spring.expression.dao.CustomerPreferenceDao;
 
 public class MovieRecommender {
 	private String defaultLocale;

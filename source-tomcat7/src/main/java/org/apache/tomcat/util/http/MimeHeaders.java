@@ -16,12 +16,12 @@
  */
 package org.apache.tomcat.util.http;
 
+import org.apache.tomcat.util.buf.MessageBytes;
+import org.apache.tomcat.util.res.StringManager;
+
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.util.Enumeration;
-
-import org.apache.tomcat.util.buf.MessageBytes;
-import org.apache.tomcat.util.res.StringManager;
 
 /* XXX XXX XXX Need a major rewrite  !!!!
  */

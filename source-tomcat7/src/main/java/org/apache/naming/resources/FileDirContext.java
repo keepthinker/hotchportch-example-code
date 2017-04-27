@@ -18,30 +18,13 @@
 
 package org.apache.naming.resources;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.Hashtable;
-import java.util.List;
-
-import javax.naming.NameAlreadyBoundException;
-import javax.naming.NameNotFoundException;
-import javax.naming.NamingEnumeration;
-import javax.naming.NamingException;
-import javax.naming.OperationNotSupportedException;
-import javax.naming.directory.Attributes;
-import javax.naming.directory.DirContext;
-import javax.naming.directory.ModificationItem;
-import javax.naming.directory.SearchControls;
-import javax.naming.directory.SearchResult;
-
 import org.apache.naming.NamingEntry;
 import org.apache.tomcat.util.http.RequestUtil;
+
+import javax.naming.*;
+import javax.naming.directory.*;
+import java.io.*;
+import java.util.*;
 
 /**
  * Filesystem Directory Context implementation helper class.

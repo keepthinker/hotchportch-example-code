@@ -19,8 +19,6 @@
 package org.apache.catalina.startup;
 
 
-import java.lang.reflect.Method;
-
 import org.apache.catalina.Executor;
 import org.apache.catalina.Service;
 import org.apache.catalina.connector.Connector;
@@ -29,6 +27,8 @@ import org.apache.juli.logging.LogFactory;
 import org.apache.tomcat.util.IntrospectionUtils;
 import org.apache.tomcat.util.digester.Rule;
 import org.xml.sax.Attributes;
+
+import java.lang.reflect.Method;
 
 
 /**

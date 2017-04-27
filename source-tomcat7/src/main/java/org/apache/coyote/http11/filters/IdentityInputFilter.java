@@ -17,14 +17,14 @@
 
 package org.apache.coyote.http11.filters;
 
-import java.io.IOException;
-import java.nio.charset.Charset;
-
 import org.apache.coyote.InputBuffer;
 import org.apache.coyote.Request;
 import org.apache.coyote.http11.InputFilter;
 import org.apache.tomcat.util.buf.ByteChunk;
 import org.apache.tomcat.util.res.StringManager;
+
+import java.io.IOException;
+import java.nio.charset.Charset;
 
 /**
  * Identity input filter.

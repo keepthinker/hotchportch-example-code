@@ -17,27 +17,22 @@
 
 package org.apache.catalina.util;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.Locale;
-import java.util.NoSuchElementException;
-import java.util.StringTokenizer;
-import java.util.jar.JarInputStream;
-import java.util.jar.Manifest;
+import org.apache.catalina.Context;
+import org.apache.naming.resources.Resource;
+import org.apache.tomcat.util.ExceptionUtils;
+import org.apache.tomcat.util.res.StringManager;
 
 import javax.naming.Binding;
 import javax.naming.NamingEnumeration;
 import javax.naming.NamingException;
 import javax.naming.directory.DirContext;
-
-import org.apache.catalina.Context;
-import org.apache.naming.resources.Resource;
-import org.apache.tomcat.util.ExceptionUtils;
-import org.apache.tomcat.util.res.StringManager;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.*;
+import java.util.jar.JarInputStream;
+import java.util.jar.Manifest;
 
 
 /**

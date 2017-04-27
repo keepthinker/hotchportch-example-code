@@ -17,11 +17,15 @@
 
 package org.apache.tomcat.util.net.jsse;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStream;
+import org.apache.tomcat.util.compat.JreCompat;
+import org.apache.tomcat.util.net.AbstractEndpoint;
+import org.apache.tomcat.util.net.Constants;
+import org.apache.tomcat.util.net.SSLUtil;
+import org.apache.tomcat.util.net.ServerSocketFactory;
+import org.apache.tomcat.util.res.StringManager;
+
+import javax.net.ssl.*;
+import java.io.*;
 import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -30,43 +34,8 @@ import java.security.KeyManagementException;
 import java.security.KeyStore;
 import java.security.NoSuchAlgorithmException;
 import java.security.UnrecoverableKeyException;
-import java.security.cert.CRL;
-import java.security.cert.CRLException;
-import java.security.cert.CertPathParameters;
-import java.security.cert.CertStore;
-import java.security.cert.CertStoreParameters;
-import java.security.cert.CertificateException;
-import java.security.cert.CertificateFactory;
-import java.security.cert.CollectionCertStoreParameters;
-import java.security.cert.PKIXBuilderParameters;
-import java.security.cert.X509CertSelector;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.List;
-import java.util.Locale;
-
-import javax.net.ssl.CertPathTrustManagerParameters;
-import javax.net.ssl.KeyManager;
-import javax.net.ssl.KeyManagerFactory;
-import javax.net.ssl.ManagerFactoryParameters;
-import javax.net.ssl.SSLContext;
-import javax.net.ssl.SSLException;
-import javax.net.ssl.SSLServerSocket;
-import javax.net.ssl.SSLServerSocketFactory;
-import javax.net.ssl.SSLSession;
-import javax.net.ssl.SSLSessionContext;
-import javax.net.ssl.SSLSocket;
-import javax.net.ssl.TrustManager;
-import javax.net.ssl.TrustManagerFactory;
-import javax.net.ssl.X509KeyManager;
-
-import org.apache.tomcat.util.compat.JreCompat;
-import org.apache.tomcat.util.net.AbstractEndpoint;
-import org.apache.tomcat.util.net.Constants;
-import org.apache.tomcat.util.net.SSLUtil;
-import org.apache.tomcat.util.net.ServerSocketFactory;
-import org.apache.tomcat.util.res.StringManager;
+import java.security.cert.*;
+import java.util.*;
 
 /**
  * SSL server socket factory. It <b>requires</b> a valid RSA key and

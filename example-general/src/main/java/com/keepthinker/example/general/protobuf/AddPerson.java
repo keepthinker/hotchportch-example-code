@@ -1,12 +1,5 @@
 // See README.txt for information and build instructions.
 package com.keepthinker.example.general.protobuf;
-import java.io.BufferedReader;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintStream;
 
 class AddPerson {
  /* // This function fills in a Person message based on user input.

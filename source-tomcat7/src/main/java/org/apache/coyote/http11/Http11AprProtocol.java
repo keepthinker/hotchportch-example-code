@@ -16,8 +16,6 @@
  */
 package org.apache.coyote.http11;
 
-import java.io.IOException;
-
 import org.apache.coyote.AbstractProtocol;
 import org.apache.coyote.Processor;
 import org.apache.coyote.http11.upgrade.AprProcessor;
@@ -30,6 +28,8 @@ import org.apache.tomcat.util.net.AprEndpoint.Handler;
 import org.apache.tomcat.util.net.AprEndpoint.Poller;
 import org.apache.tomcat.util.net.SocketStatus;
 import org.apache.tomcat.util.net.SocketWrapper;
+
+import java.io.IOException;
 
 
 /**

@@ -16,11 +16,10 @@
  */
 package org.apache.catalina.core;
 
-import java.util.Collection;
+import org.apache.catalina.deploy.JspPropertyGroup;
 
 import javax.servlet.descriptor.JspPropertyGroupDescriptor;
-
-import org.apache.catalina.deploy.JspPropertyGroup;
+import java.util.Collection;
 
 
 public class ApplicationJspPropertyGroupDescriptor

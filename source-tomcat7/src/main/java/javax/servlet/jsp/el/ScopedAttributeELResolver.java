@@ -16,19 +16,15 @@
  */
 package javax.servlet.jsp.el;
 
+import javax.el.*;
+import javax.el.ELException;
+import javax.servlet.jsp.JspContext;
+import javax.servlet.jsp.PageContext;
 import java.beans.FeatureDescriptor;
 import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.Iterator;
 import java.util.List;
-
-import javax.el.ELContext;
-import javax.el.ELException;
-import javax.el.ELResolver;
-import javax.el.PropertyNotFoundException;
-import javax.el.PropertyNotWritableException;
-import javax.servlet.jsp.JspContext;
-import javax.servlet.jsp.PageContext;
 
 /**
 *

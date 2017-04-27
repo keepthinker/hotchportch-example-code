@@ -19,10 +19,9 @@
 package org.apache.catalina.session;
 
 
-import java.util.Enumeration;
-
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpSession;
+import java.util.Enumeration;
 
 
 /**

@@ -1,10 +1,10 @@
 package com.keepthinker.example.zookeeper;
 
-import java.util.List;
-
 import org.apache.zookeeper.KeeperException;
 import org.apache.zookeeper.ZooKeeper;
 import org.apache.zookeeper.data.Stat;
+
+import java.util.List;
 
 public class ZKGetChildren {
 	   private static ZooKeeper zk;

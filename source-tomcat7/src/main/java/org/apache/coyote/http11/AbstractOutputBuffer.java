@@ -16,10 +16,6 @@
  */
 package org.apache.coyote.http11;
 
-import java.io.IOException;
-import java.security.AccessController;
-import java.security.PrivilegedAction;
-
 import org.apache.coyote.ActionCode;
 import org.apache.coyote.OutputBuffer;
 import org.apache.coyote.Response;
@@ -31,6 +27,10 @@ import org.apache.tomcat.util.http.HttpMessages;
 import org.apache.tomcat.util.net.AbstractEndpoint;
 import org.apache.tomcat.util.net.SocketWrapper;
 import org.apache.tomcat.util.res.StringManager;
+
+import java.io.IOException;
+import java.security.AccessController;
+import java.security.PrivilegedAction;
 
 public abstract class AbstractOutputBuffer<S> implements OutputBuffer{
 

@@ -16,16 +16,16 @@
  */
 package org.apache.catalina.websocket;
 
+import org.apache.catalina.util.Conversions;
+import org.apache.coyote.http11.upgrade.UpgradeProcessor;
+import org.apache.tomcat.util.buf.Utf8Decoder;
+import org.apache.tomcat.util.res.StringManager;
+
 import java.io.EOFException;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.CharBuffer;
 import java.nio.charset.CoderResult;
-
-import org.apache.catalina.util.Conversions;
-import org.apache.coyote.http11.upgrade.UpgradeProcessor;
-import org.apache.tomcat.util.buf.Utf8Decoder;
-import org.apache.tomcat.util.res.StringManager;
 
 /**
  * Represents a complete WebSocket frame with the exception of the payload for

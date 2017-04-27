@@ -16,11 +16,11 @@
  */
 package org.apache.coyote.http11.upgrade;
 
+import org.apache.tomcat.util.net.SocketWrapper;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.Socket;
-
-import org.apache.tomcat.util.net.SocketWrapper;
 
 public class BioServletInputStream extends AbstractServletInputStream {
 

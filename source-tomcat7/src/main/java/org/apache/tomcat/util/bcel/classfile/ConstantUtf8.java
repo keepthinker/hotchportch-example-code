@@ -16,10 +16,10 @@
  */
 package org.apache.tomcat.util.bcel.classfile;
 
+import org.apache.tomcat.util.bcel.Constants;
+
 import java.io.DataInput;
 import java.io.IOException;
-
-import org.apache.tomcat.util.bcel.Constants;
 
 /** 
  * This class is derived from the abstract 

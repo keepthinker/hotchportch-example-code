@@ -1,11 +1,11 @@
 package com.keepthinker.example.general.json;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class HardBuildJson {
 	public static void main(String[] args){

@@ -16,10 +16,6 @@
  */
 package org.apache.catalina.ha.session;
 
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.Set;
-
 import org.apache.catalina.DistributedManager;
 import org.apache.catalina.LifecycleException;
 import org.apache.catalina.LifecycleState;
@@ -32,6 +28,10 @@ import org.apache.catalina.tribes.tipis.LazyReplicatedMap;
 import org.apache.juli.logging.Log;
 import org.apache.juli.logging.LogFactory;
 import org.apache.tomcat.util.res.StringManager;
+
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
 
 /**
  *@author Filip Hanik

@@ -1,10 +1,8 @@
 package com.keepthinker.example.general.xml.dynamictable;
 
-import java.util.List;
-
 import org.apache.log4j.Logger;
 
-import com.keepthinker.example.general.xml.dynamictable.Property;
+import java.util.List;
 public class Table {
 	private static final Logger LOGGER = Logger.getLogger(Table.class);
 	private String name;

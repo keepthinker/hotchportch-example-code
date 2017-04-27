@@ -16,11 +16,11 @@
  */
 package org.apache.catalina.core;
 
-import java.util.Arrays;
-
 import org.apache.catalina.AccessLog;
 import org.apache.catalina.connector.Request;
 import org.apache.catalina.connector.Response;
+
+import java.util.Arrays;
 
 /**
  * A helper class that wraps several AccessLog instances.

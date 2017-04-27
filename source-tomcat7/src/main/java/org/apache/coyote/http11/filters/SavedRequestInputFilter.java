@@ -17,11 +17,11 @@
 
 package org.apache.coyote.http11.filters;
 
-import java.io.IOException;
-
 import org.apache.coyote.InputBuffer;
 import org.apache.coyote.http11.InputFilter;
 import org.apache.tomcat.util.buf.ByteChunk;
+
+import java.io.IOException;
 
 /**
  * Input filter responsible for replaying the request body when restoring the

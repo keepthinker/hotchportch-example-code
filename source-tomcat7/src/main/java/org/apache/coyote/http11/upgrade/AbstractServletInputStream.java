@@ -16,12 +16,11 @@
  */
 package org.apache.coyote.http11.upgrade;
 
-import java.io.IOException;
-
-import javax.servlet.ServletInputStream;
-
 import org.apache.coyote.http11.upgrade.servlet31.ReadListener;
 import org.apache.tomcat.util.res.StringManager;
+
+import javax.servlet.ServletInputStream;
+import java.io.IOException;
 
 /**
  * Implements the new Servlet 3.1 methods for {@link ServletInputStream}.

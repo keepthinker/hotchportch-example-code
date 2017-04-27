@@ -17,12 +17,12 @@
 
 package org.apache.coyote.http11.filters;
 
-import java.io.IOException;
-
 import org.apache.coyote.OutputBuffer;
 import org.apache.coyote.Response;
 import org.apache.coyote.http11.OutputFilter;
 import org.apache.tomcat.util.buf.ByteChunk;
+
+import java.io.IOException;
 
 /**
  * Void output filter, which silently swallows bytes written. Used with a 204

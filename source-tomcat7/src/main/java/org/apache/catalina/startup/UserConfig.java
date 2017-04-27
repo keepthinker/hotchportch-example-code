@@ -19,6 +19,9 @@
 package org.apache.catalina.startup;
 
 
+import org.apache.catalina.*;
+import org.apache.tomcat.util.res.StringManager;
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Enumeration;
@@ -26,13 +29,6 @@ import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Future;
 import java.util.regex.Pattern;
-
-import org.apache.catalina.Context;
-import org.apache.catalina.Host;
-import org.apache.catalina.Lifecycle;
-import org.apache.catalina.LifecycleEvent;
-import org.apache.catalina.LifecycleListener;
-import org.apache.tomcat.util.res.StringManager;
 
 
 /**

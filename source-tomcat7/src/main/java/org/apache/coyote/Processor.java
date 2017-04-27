@@ -17,14 +17,14 @@
 
 package org.apache.coyote;
 
-import java.io.IOException;
-import java.util.concurrent.Executor;
-
 import org.apache.coyote.http11.upgrade.servlet31.HttpUpgradeHandler;
 import org.apache.tomcat.util.net.AbstractEndpoint.Handler.SocketState;
 import org.apache.tomcat.util.net.SSLSupport;
 import org.apache.tomcat.util.net.SocketStatus;
 import org.apache.tomcat.util.net.SocketWrapper;
+
+import java.io.IOException;
+import java.util.concurrent.Executor;
 
 
 /**

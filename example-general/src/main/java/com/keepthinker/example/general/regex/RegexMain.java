@@ -1,9 +1,9 @@
 package com.keepthinker.example.general.regex;
 
-import static com.keepthinker.example.general.SystemUtils.print;
-
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import static com.keepthinker.example.general.SystemUtils.print;
 
 public class RegexMain {
 	public static void main(String[] args){

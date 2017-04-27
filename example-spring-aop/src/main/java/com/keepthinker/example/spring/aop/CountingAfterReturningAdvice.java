@@ -1,9 +1,9 @@
 package com.keepthinker.example.spring.aop;
 
-import java.lang.reflect.Method;
-
 import org.apache.log4j.Logger;
 import org.springframework.aop.AfterReturningAdvice;
+
+import java.lang.reflect.Method;
 
 public class CountingAfterReturningAdvice implements AfterReturningAdvice {
 	private static Logger logger = Logger.getLogger(CountingAfterReturningAdvice.class);

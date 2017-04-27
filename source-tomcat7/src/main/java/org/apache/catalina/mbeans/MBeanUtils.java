@@ -18,31 +18,7 @@
 package org.apache.catalina.mbeans;
 
 
-import java.util.Hashtable;
-import java.util.Set;
-
-import javax.management.DynamicMBean;
-import javax.management.MBeanException;
-import javax.management.MBeanServer;
-import javax.management.MalformedObjectNameException;
-import javax.management.ObjectName;
-
-import org.apache.catalina.Contained;
-import org.apache.catalina.Container;
-import org.apache.catalina.Context;
-import org.apache.catalina.Engine;
-import org.apache.catalina.Group;
-import org.apache.catalina.Host;
-import org.apache.catalina.Loader;
-import org.apache.catalina.Manager;
-import org.apache.catalina.Realm;
-import org.apache.catalina.Role;
-import org.apache.catalina.Server;
-import org.apache.catalina.Service;
-import org.apache.catalina.User;
-import org.apache.catalina.UserDatabase;
-import org.apache.catalina.Valve;
-import org.apache.catalina.Wrapper;
+import org.apache.catalina.*;
 import org.apache.catalina.connector.Connector;
 import org.apache.catalina.deploy.ContextEnvironment;
 import org.apache.catalina.deploy.ContextResource;
@@ -60,6 +36,10 @@ import org.apache.tomcat.util.ExceptionUtils;
 import org.apache.tomcat.util.IntrospectionUtils;
 import org.apache.tomcat.util.modeler.ManagedBean;
 import org.apache.tomcat.util.modeler.Registry;
+
+import javax.management.*;
+import java.util.Hashtable;
+import java.util.Set;
 
 
 /**

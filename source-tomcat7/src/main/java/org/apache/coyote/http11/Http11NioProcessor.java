@@ -16,14 +16,6 @@
  */
 package org.apache.coyote.http11;
 
-import java.io.IOException;
-import java.io.InterruptedIOException;
-import java.net.InetAddress;
-import java.nio.channels.SelectionKey;
-import java.util.Set;
-
-import javax.net.ssl.SSLEngine;
-
 import org.apache.coyote.ActionCode;
 import org.apache.coyote.ErrorState;
 import org.apache.coyote.RequestInfo;
@@ -32,13 +24,15 @@ import org.apache.juli.logging.Log;
 import org.apache.juli.logging.LogFactory;
 import org.apache.tomcat.util.ExceptionUtils;
 import org.apache.tomcat.util.net.AbstractEndpoint.Handler.SocketState;
-import org.apache.tomcat.util.net.NioChannel;
-import org.apache.tomcat.util.net.NioEndpoint;
+import org.apache.tomcat.util.net.*;
 import org.apache.tomcat.util.net.NioEndpoint.KeyAttachment;
-import org.apache.tomcat.util.net.SSLSupport;
-import org.apache.tomcat.util.net.SecureNioChannel;
-import org.apache.tomcat.util.net.SocketStatus;
-import org.apache.tomcat.util.net.SocketWrapper;
+
+import javax.net.ssl.SSLEngine;
+import java.io.IOException;
+import java.io.InterruptedIOException;
+import java.net.InetAddress;
+import java.nio.channels.SelectionKey;
+import java.util.Set;
 
 
 /**

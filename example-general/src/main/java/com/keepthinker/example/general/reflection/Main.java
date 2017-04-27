@@ -1,10 +1,10 @@
 package com.keepthinker.example.general.reflection;
 
+import com.keepthinker.example.general.model.Person;
+
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
-
-import com.keepthinker.example.general.model.Person;
 
 public class Main {
 

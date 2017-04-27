@@ -16,20 +16,16 @@
  */
 package org.apache.coyote.http11;
 
-import java.io.EOFException;
-import java.io.IOException;
-import java.nio.channels.Selector;
-import java.nio.charset.Charset;
-
 import org.apache.coyote.InputBuffer;
 import org.apache.coyote.Request;
 import org.apache.tomcat.util.buf.ByteChunk;
 import org.apache.tomcat.util.buf.MessageBytes;
-import org.apache.tomcat.util.net.AbstractEndpoint;
-import org.apache.tomcat.util.net.NioChannel;
-import org.apache.tomcat.util.net.NioEndpoint;
-import org.apache.tomcat.util.net.NioSelectorPool;
-import org.apache.tomcat.util.net.SocketWrapper;
+import org.apache.tomcat.util.net.*;
+
+import java.io.EOFException;
+import java.io.IOException;
+import java.nio.channels.Selector;
+import java.nio.charset.Charset;
 
 /**
  * Implementation of InputBuffer which provides HTTP request header parsing as

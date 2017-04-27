@@ -1,12 +1,11 @@
 package com.keepthinker.example.general.sql.example;
 
-import java.util.Date;
-
-import org.apache.log4j.Logger;
-
 import com.keepthinker.example.general.sql.CompareCondition;
 import com.keepthinker.example.general.sql.CompareSign;
 import com.keepthinker.example.general.sql.SmartSQLGenerator;
+import org.apache.log4j.Logger;
+
+import java.util.Date;
 
 public class SmartSQLMain {
 	private static Logger logger = Logger.getLogger(SmartSQLMain.class);

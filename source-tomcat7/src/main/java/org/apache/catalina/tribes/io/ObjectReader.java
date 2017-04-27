@@ -16,14 +16,14 @@
  */
 package org.apache.catalina.tribes.io;
 
+import org.apache.catalina.tribes.ChannelMessage;
+import org.apache.juli.logging.Log;
+import org.apache.juli.logging.LogFactory;
+
 import java.io.IOException;
 import java.net.Socket;
 import java.nio.ByteBuffer;
 import java.nio.channels.SocketChannel;
-
-import org.apache.catalina.tribes.ChannelMessage;
-import org.apache.juli.logging.Log;
-import org.apache.juli.logging.LogFactory;
 
 
 

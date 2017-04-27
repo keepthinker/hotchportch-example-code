@@ -19,6 +19,11 @@
 package org.apache.catalina.ant;
 
 
+import org.apache.tomcat.util.buf.B2CConverter;
+import org.apache.tomcat.util.codec.binary.Base64;
+import org.apache.tools.ant.BuildException;
+import org.apache.tools.ant.Project;
+
 import java.io.BufferedOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -26,11 +31,6 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLConnection;
-
-import org.apache.tomcat.util.buf.B2CConverter;
-import org.apache.tomcat.util.codec.binary.Base64;
-import org.apache.tools.ant.BuildException;
-import org.apache.tools.ant.Project;
 
 
 /**

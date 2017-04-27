@@ -17,14 +17,9 @@
 
 package org.apache.jasper.el;
 
-import java.util.Iterator;
-
-import javax.el.ELContext;
-import javax.el.ELException;
-import javax.el.ELResolver;
-import javax.el.PropertyNotFoundException;
-import javax.el.PropertyNotWritableException;
+import javax.el.*;
 import javax.servlet.jsp.el.VariableResolver;
+import java.util.Iterator;
 
 @Deprecated
 public final class ELResolverImpl extends ELResolver {

@@ -16,15 +16,15 @@
  */
 package org.apache.catalina.websocket;
 
+import org.apache.coyote.http11.upgrade.UpgradeOutbound;
+import org.apache.tomcat.util.buf.B2CConverter;
+import org.apache.tomcat.util.res.StringManager;
+
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.CharBuffer;
 import java.nio.charset.CharsetEncoder;
 import java.nio.charset.CoderResult;
-
-import org.apache.coyote.http11.upgrade.UpgradeOutbound;
-import org.apache.tomcat.util.buf.B2CConverter;
-import org.apache.tomcat.util.res.StringManager;
 
 /**
  * Provides the means to write WebSocket messages to the client. All methods

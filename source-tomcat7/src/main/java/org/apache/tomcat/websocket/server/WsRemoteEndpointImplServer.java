@@ -16,6 +16,15 @@
  */
 package org.apache.tomcat.websocket.server;
 
+import org.apache.coyote.http11.upgrade.AbstractServletOutputStream;
+import org.apache.juli.logging.Log;
+import org.apache.juli.logging.LogFactory;
+import org.apache.tomcat.util.res.StringManager;
+import org.apache.tomcat.websocket.Transformation;
+import org.apache.tomcat.websocket.WsRemoteEndpointImplBase;
+
+import javax.websocket.SendHandler;
+import javax.websocket.SendResult;
 import java.io.EOFException;
 import java.io.IOException;
 import java.net.SocketTimeoutException;
@@ -23,16 +32,6 @@ import java.nio.ByteBuffer;
 import java.util.Queue;
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.ExecutorService;
-
-import javax.websocket.SendHandler;
-import javax.websocket.SendResult;
-
-import org.apache.coyote.http11.upgrade.AbstractServletOutputStream;
-import org.apache.juli.logging.Log;
-import org.apache.juli.logging.LogFactory;
-import org.apache.tomcat.util.res.StringManager;
-import org.apache.tomcat.websocket.Transformation;
-import org.apache.tomcat.websocket.WsRemoteEndpointImplBase;
 
 /**
  * This is the server side {@link javax.websocket.RemoteEndpoint} implementation

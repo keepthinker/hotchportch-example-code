@@ -3,7 +3,6 @@ package com.keepthinker.example.spring.aop;
 import org.apache.log4j.Logger;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.AbstractApplicationContext;
-import org.springframework.util.Base64Utils;
 
 public class AopMain{
 	private static Logger logger = Logger.getLogger(AopMain.class);

@@ -16,10 +16,9 @@
  */
 package org.apache.tomcat.websocket;
 
-import java.nio.channels.CompletionHandler;
-
 import javax.websocket.SendHandler;
 import javax.websocket.SendResult;
+import java.nio.channels.CompletionHandler;
 
 public class SendHandlerToCompletionHandler
         implements CompletionHandler<Long,Void> {

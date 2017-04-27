@@ -16,13 +16,13 @@
  */
 package org.apache.tomcat.websocket.server;
 
-import java.io.EOFException;
-import java.io.IOException;
-
 import org.apache.coyote.http11.upgrade.AbstractServletInputStream;
 import org.apache.tomcat.websocket.Transformation;
 import org.apache.tomcat.websocket.WsFrameBase;
 import org.apache.tomcat.websocket.WsSession;
+
+import java.io.EOFException;
+import java.io.IOException;
 
 public class WsFrameServer extends WsFrameBase {
 

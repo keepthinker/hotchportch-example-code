@@ -16,8 +16,6 @@
  */
 package org.apache.coyote.http11;
 
-import java.io.IOException;
-
 import org.apache.coyote.InputBuffer;
 import org.apache.coyote.Request;
 import org.apache.tomcat.util.buf.ByteChunk;
@@ -25,6 +23,8 @@ import org.apache.tomcat.util.http.MimeHeaders;
 import org.apache.tomcat.util.net.AbstractEndpoint;
 import org.apache.tomcat.util.net.SocketWrapper;
 import org.apache.tomcat.util.res.StringManager;
+
+import java.io.IOException;
 
 public abstract class AbstractInputBuffer<S> implements InputBuffer{
 

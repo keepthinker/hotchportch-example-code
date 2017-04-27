@@ -1,9 +1,9 @@
 package com.keepthinker.example.general.performance;
 
+import org.apache.log4j.Logger;
+
 import java.util.ArrayList;
 import java.util.List;
-
-import org.apache.log4j.Logger;
 
 public class PerformanceMain {
 	private static Logger logger = Logger.getLogger(PerformanceMain.class);

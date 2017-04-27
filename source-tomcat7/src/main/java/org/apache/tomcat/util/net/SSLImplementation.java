@@ -17,9 +17,8 @@
 
 package org.apache.tomcat.util.net;
 
-import java.net.Socket;
-
 import javax.net.ssl.SSLSession;
+import java.net.Socket;
 
 /* SSLImplementation:
 

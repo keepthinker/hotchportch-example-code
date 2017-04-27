@@ -17,17 +17,17 @@
 
 package org.apache.jasper.compiler;
 
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.Stack;
-import java.util.jar.JarFile;
-
 import org.apache.jasper.JasperException;
 import org.apache.jasper.JspCompilationContext;
 import org.apache.jasper.util.ExceptionUtils;
 import org.apache.jasper.xmlparser.XMLEncodingDetector;
 import org.xml.sax.Attributes;
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Stack;
+import java.util.jar.JarFile;
 
 /**
  * Controller for the parsing of a JSP page.

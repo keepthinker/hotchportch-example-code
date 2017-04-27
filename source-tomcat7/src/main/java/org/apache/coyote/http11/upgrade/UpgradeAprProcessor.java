@@ -16,11 +16,11 @@
  */
 package org.apache.coyote.http11.upgrade;
 
-import java.io.IOException;
-
 import org.apache.tomcat.jni.Socket;
 import org.apache.tomcat.jni.Status;
 import org.apache.tomcat.util.net.SocketWrapper;
+
+import java.io.IOException;
 
 /**
  * @deprecated  Will be removed in Tomcat 8.0.x.

@@ -1,9 +1,9 @@
 package com.keepthinker.example.spring.ioc.model;
 
+import org.apache.log4j.Logger;
+
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
-
-import org.apache.log4j.Logger;
 
 public class Animal{
 	private static Logger logger = Logger.getLogger(Animal.class);

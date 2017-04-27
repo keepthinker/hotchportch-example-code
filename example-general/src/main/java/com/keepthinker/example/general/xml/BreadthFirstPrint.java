@@ -1,18 +1,16 @@
 package com.keepthinker.example.general.xml;
 
-import java.io.File;
-import java.util.LinkedList;
-import java.util.List;
-
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-
+import com.keepthinker.example.general.util.Utils;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import com.keepthinker.example.general.util.Utils;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import java.io.File;
+import java.util.LinkedList;
+import java.util.List;
 
 public class BreadthFirstPrint {
 	

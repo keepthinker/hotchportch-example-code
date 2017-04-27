@@ -16,25 +16,17 @@
  */
 package org.apache.catalina.valves;
 
-import java.io.IOException;
-import java.security.AccessController;
-import java.security.PrivilegedAction;
-
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServletResponse;
-
-import org.apache.catalina.Container;
-import org.apache.catalina.Context;
-import org.apache.catalina.Engine;
-import org.apache.catalina.Globals;
-import org.apache.catalina.Host;
-import org.apache.catalina.Manager;
-import org.apache.catalina.Session;
-import org.apache.catalina.Store;
+import org.apache.catalina.*;
 import org.apache.catalina.connector.Request;
 import org.apache.catalina.connector.Response;
 import org.apache.catalina.session.PersistentManager;
 import org.apache.tomcat.util.security.PrivilegedSetTccl;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.security.AccessController;
+import java.security.PrivilegedAction;
 
 /**
  * Valve that implements per-request session persistence. It is intended to be

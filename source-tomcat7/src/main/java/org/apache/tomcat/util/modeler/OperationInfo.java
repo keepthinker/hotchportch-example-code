@@ -19,10 +19,9 @@
 package org.apache.tomcat.util.modeler;
 
 
-import java.util.Locale;
-
 import javax.management.MBeanOperationInfo;
 import javax.management.MBeanParameterInfo;
+import java.util.Locale;
 
 
 /**

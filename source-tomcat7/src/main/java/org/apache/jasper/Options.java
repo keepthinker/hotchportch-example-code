@@ -17,14 +17,13 @@
 
 package org.apache.jasper;
 
-import java.io.File;
-import java.util.Map;
-
-import javax.servlet.jsp.tagext.TagLibraryInfo;
-
 import org.apache.jasper.compiler.JspConfig;
 import org.apache.jasper.compiler.TagPluginManager;
 import org.apache.jasper.compiler.TldLocationsCache;
+
+import javax.servlet.jsp.tagext.TagLibraryInfo;
+import java.io.File;
+import java.util.Map;
 
 /**
  * A class to hold all init parameters specific to the JSP engine. 

@@ -1,8 +1,7 @@
 package com.keepthinker.example.zookeeper.curator.shareconfig;
 
-import org.apache.curator.framework.CuratorFramework;
-
 import com.keepthinker.example.zookeeper.curator.framework.CreateClientExamples;
+import org.apache.curator.framework.CuratorFramework;
 
 public class ChangeDataClient implements Runnable{
 	

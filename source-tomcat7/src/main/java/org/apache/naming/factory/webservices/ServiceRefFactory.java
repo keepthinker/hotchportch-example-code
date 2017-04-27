@@ -16,23 +16,10 @@
  */ 
 package org.apache.naming.factory.webservices;
 
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
-import java.lang.reflect.Proxy;
-import java.net.URL;
-import java.util.ArrayList;
-import java.util.Enumeration;
-import java.util.Hashtable;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-import java.util.Properties;
+import org.apache.naming.HandlerRef;
+import org.apache.naming.ServiceRef;
 
-import javax.naming.Context;
-import javax.naming.Name;
-import javax.naming.NamingException;
-import javax.naming.RefAddr;
-import javax.naming.Reference;
+import javax.naming.*;
 import javax.naming.spi.ObjectFactory;
 import javax.wsdl.Definition;
 import javax.wsdl.Port;
@@ -47,9 +34,11 @@ import javax.xml.rpc.handler.Handler;
 import javax.xml.rpc.handler.HandlerChain;
 import javax.xml.rpc.handler.HandlerInfo;
 import javax.xml.rpc.handler.HandlerRegistry;
-
-import org.apache.naming.HandlerRef;
-import org.apache.naming.ServiceRef;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.lang.reflect.Proxy;
+import java.net.URL;
+import java.util.*;
 
 /**
  * Object factory for Web Services.

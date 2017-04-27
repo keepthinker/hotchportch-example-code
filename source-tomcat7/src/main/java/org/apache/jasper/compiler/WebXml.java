@@ -17,18 +17,17 @@
 
 package org.apache.jasper.compiler;
 
+import org.apache.jasper.Constants;
+import org.apache.juli.logging.Log;
+import org.apache.juli.logging.LogFactory;
+import org.xml.sax.InputSource;
+
+import javax.servlet.ServletContext;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.StringReader;
 import java.net.MalformedURLException;
 import java.net.URL;
-
-import javax.servlet.ServletContext;
-
-import org.apache.jasper.Constants;
-import org.apache.juli.logging.Log;
-import org.apache.juli.logging.LogFactory;
-import org.xml.sax.InputSource;
 
 /**
  * Provides Jasper with a standard mechanism for gaining access to the web.xml

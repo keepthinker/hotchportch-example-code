@@ -16,19 +16,15 @@
  */
 package org.apache.coyote.ajp;
 
-import java.nio.channels.SocketChannel;
-import java.util.Iterator;
-
 import org.apache.coyote.AbstractProtocol;
 import org.apache.coyote.Processor;
 import org.apache.juli.logging.Log;
 import org.apache.juli.logging.LogFactory;
-import org.apache.tomcat.util.net.AbstractEndpoint;
-import org.apache.tomcat.util.net.NioChannel;
-import org.apache.tomcat.util.net.NioEndpoint;
+import org.apache.tomcat.util.net.*;
 import org.apache.tomcat.util.net.NioEndpoint.Handler;
-import org.apache.tomcat.util.net.SSLImplementation;
-import org.apache.tomcat.util.net.SocketWrapper;
+
+import java.nio.channels.SocketChannel;
+import java.util.Iterator;
 
 
 /**

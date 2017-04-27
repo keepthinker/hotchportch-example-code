@@ -16,12 +16,12 @@
  */
 package org.apache.tomcat.util.http.fileupload;
 
+import org.apache.tomcat.util.http.fileupload.util.mime.MimeUtility;
+
 import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
-
-import org.apache.tomcat.util.http.fileupload.util.mime.MimeUtility;
 
 /**
  * A simple parser intended to parse sequences of name/value pairs.

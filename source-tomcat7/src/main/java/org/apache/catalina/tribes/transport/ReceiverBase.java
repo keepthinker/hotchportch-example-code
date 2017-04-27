@@ -16,6 +16,14 @@
  */
 package org.apache.catalina.tribes.transport;
 
+import org.apache.catalina.tribes.ChannelMessage;
+import org.apache.catalina.tribes.ChannelReceiver;
+import org.apache.catalina.tribes.MessageListener;
+import org.apache.catalina.tribes.io.ListenCallback;
+import org.apache.catalina.tribes.util.ExecutorFactory;
+import org.apache.juli.logging.Log;
+import org.apache.juli.logging.LogFactory;
+
 import java.io.IOException;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
@@ -25,14 +33,6 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
-
-import org.apache.catalina.tribes.ChannelMessage;
-import org.apache.catalina.tribes.ChannelReceiver;
-import org.apache.catalina.tribes.MessageListener;
-import org.apache.catalina.tribes.io.ListenCallback;
-import org.apache.catalina.tribes.util.ExecutorFactory;
-import org.apache.juli.logging.Log;
-import org.apache.juli.logging.LogFactory;
 
 /**
  * <p>Title: </p>

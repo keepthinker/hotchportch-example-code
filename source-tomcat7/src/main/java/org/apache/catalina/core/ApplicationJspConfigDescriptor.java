@@ -17,13 +17,12 @@
 
 package org.apache.catalina.core;
 
-import java.util.Collection;
-import java.util.HashSet;
-import java.util.LinkedHashSet;
-
 import javax.servlet.descriptor.JspConfigDescriptor;
 import javax.servlet.descriptor.JspPropertyGroupDescriptor;
 import javax.servlet.descriptor.TaglibDescriptor;
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.LinkedHashSet;
 
 public class ApplicationJspConfigDescriptor implements JspConfigDescriptor {
 

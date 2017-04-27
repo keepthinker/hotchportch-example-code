@@ -16,11 +16,11 @@
  */
 package org.apache.tomcat.util.http.fileupload.disk;
 
-import java.io.File;
-
 import org.apache.tomcat.util.http.fileupload.FileCleaningTracker;
 import org.apache.tomcat.util.http.fileupload.FileItem;
 import org.apache.tomcat.util.http.fileupload.FileItemFactory;
+
+import java.io.File;
 
 /**
  * <p>The default {@link org.apache.tomcat.util.http.fileupload.FileItemFactory}

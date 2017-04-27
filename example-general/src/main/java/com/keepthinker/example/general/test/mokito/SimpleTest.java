@@ -1,9 +1,8 @@
 package com.keepthinker.example.general.test.mokito;
 
+import junit.framework.Assert;
 import org.junit.Test;
 import org.mockito.Mockito;
-
-import junit.framework.Assert;
 
 public class SimpleTest {
 

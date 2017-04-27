@@ -16,9 +16,6 @@
  */
 package org.apache.coyote.http11;
 
-import java.io.IOException;
-import java.net.Socket;
-
 import org.apache.coyote.AbstractProtocol;
 import org.apache.coyote.Processor;
 import org.apache.coyote.http11.upgrade.BioProcessor;
@@ -29,6 +26,9 @@ import org.apache.tomcat.util.net.JIoEndpoint;
 import org.apache.tomcat.util.net.JIoEndpoint.Handler;
 import org.apache.tomcat.util.net.SSLImplementation;
 import org.apache.tomcat.util.net.SocketWrapper;
+
+import java.io.IOException;
+import java.net.Socket;
 
 
 /**

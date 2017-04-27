@@ -30,8 +30,8 @@
     <!ENTITY ns_xlink "http://www.w3.org/1999/xlink">
 ]>
 <svg
-     xmlns:x="&ns_extend;" xmlns:i="&ns_ai;" xmlns:graph="&ns_graphs;" i:viewOrigin="176.7139 486.707" i:rulerOrigin="-156 -296" i:pageBounds="156 496 456 296"
-     xmlns="&ns_svg;" xmlns:xlink="&ns_xlink;" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+     xmlns:x="&ns_extend;" xmlns:i="&ns_ai;"  i:viewOrigin="176.7139 486.707" i:rulerOrigin="-156 -296" i:pageBounds="156 496 456 296"
+     xmlns="&ns_svg;" xmlns:xlink="&ns_xlink;"
      width="260.162" height="184.413" viewBox="0 0 260.162 184.413" overflow="visible" enable-background="new 0 0 260.162 184.413"
      xml:space="preserve">
     <metadata>
@@ -46,14 +46,14 @@
             <sliceSourceBounds  y="302.294" x="176.714" width="260.162" height="184.413" bottomLeftOrigin="true"></sliceSourceBounds>
         </sfw>
 <?xpacket begin='﻿' id='W5M0MpCehiHzreSzNTczkc9d'?><x:xmpmeta xmlns:x='adobe:ns:meta/' x:xmptk='XMP toolkit 3.0-29, framework 1.6'>
-<rdf:RDF xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#' xmlns:iX='http://ns.adobe.com/iX/1.0/'>
+<rdf:RDF xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#' >
 
  <rdf:Description rdf:about=''
-  xmlns:pdf='http://ns.adobe.com/pdf/1.3/'>
+  >
  </rdf:Description>
 
  <rdf:Description rdf:about=''
-  xmlns:tiff='http://ns.adobe.com/tiff/1.0/'>
+  >
  </rdf:Description>
 
  <rdf:Description rdf:about=''

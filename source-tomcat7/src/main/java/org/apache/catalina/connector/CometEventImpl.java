@@ -16,15 +16,14 @@
  */
 package org.apache.catalina.connector;
 
-import java.io.IOException;
+import org.apache.catalina.Globals;
+import org.apache.catalina.comet.CometEvent;
+import org.apache.tomcat.util.res.StringManager;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import org.apache.catalina.Globals;
-import org.apache.catalina.comet.CometEvent;
-import org.apache.tomcat.util.res.StringManager;
+import java.io.IOException;
 
 public class CometEventImpl implements CometEvent {
 

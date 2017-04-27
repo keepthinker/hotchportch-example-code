@@ -16,6 +16,8 @@
  */
 package org.apache.tomcat.util.buf;
 
+import org.apache.tomcat.util.res.StringManager;
+
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.nio.ByteBuffer;
@@ -27,8 +29,6 @@ import java.nio.charset.CodingErrorAction;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
-
-import org.apache.tomcat.util.res.StringManager;
 
 /**
  * NIO based character decoder.

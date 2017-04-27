@@ -1,19 +1,17 @@
 package com.keepthinker.example.spring.web;
 
-import java.io.IOException;
-import java.io.Writer;
-import java.util.Enumeration;
+import com.keepthinker.example.spring.web.model.Person;
+import org.springframework.context.ApplicationContext;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.context.support.WebApplicationContextUtils;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import org.springframework.context.ApplicationContext;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.context.support.WebApplicationContextUtils;
-
-import com.keepthinker.example.spring.web.model.Person;
+import java.io.IOException;
+import java.io.Writer;
+import java.util.Enumeration;
 
 /**
  * If you want make a servlet managed by spring, you have to define 

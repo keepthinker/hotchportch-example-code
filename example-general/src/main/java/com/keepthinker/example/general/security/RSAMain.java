@@ -1,9 +1,8 @@
 package com.keepthinker.example.general.security;
 
+import javax.crypto.Cipher;
 import java.security.KeyPair;
 import java.security.KeyPairGenerator;
-
-import javax.crypto.Cipher;
 
 public class RSAMain {
 

@@ -1,9 +1,9 @@
 package com.keepthinker.example.spring.expression.model;
 
+import org.springframework.beans.factory.annotation.Value;
+
 import java.util.Date;
 import java.util.GregorianCalendar;
-
-import org.springframework.beans.factory.annotation.Value;
 
 public class Inventor {
 	private String name;

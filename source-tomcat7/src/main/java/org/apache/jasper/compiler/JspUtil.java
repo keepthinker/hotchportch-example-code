@@ -17,19 +17,15 @@
 
 package org.apache.jasper.compiler;
 
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.UnsupportedEncodingException;
-import java.util.Vector;
-import java.util.jar.JarFile;
-import java.util.zip.ZipEntry;
-
 import org.apache.jasper.Constants;
 import org.apache.jasper.JasperException;
 import org.apache.jasper.JspCompilationContext;
 import org.xml.sax.Attributes;
+
+import java.io.*;
+import java.util.Vector;
+import java.util.jar.JarFile;
+import java.util.zip.ZipEntry;
 
 /**
  * This class has all the utility method(s). Ideally should move all the bean

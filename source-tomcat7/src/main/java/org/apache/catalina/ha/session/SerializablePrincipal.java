@@ -19,6 +19,10 @@
 package org.apache.catalina.ha.session;
 
 
+import org.apache.catalina.Realm;
+import org.apache.catalina.realm.GenericPrincipal;
+import org.apache.tomcat.util.res.StringManager;
+
 import java.io.IOException;
 import java.io.ObjectInput;
 import java.io.ObjectOutput;
@@ -26,10 +30,6 @@ import java.io.Serializable;
 import java.security.Principal;
 import java.util.Arrays;
 import java.util.List;
-
-import org.apache.catalina.Realm;
-import org.apache.catalina.realm.GenericPrincipal;
-import org.apache.tomcat.util.res.StringManager;
 
 
 /**

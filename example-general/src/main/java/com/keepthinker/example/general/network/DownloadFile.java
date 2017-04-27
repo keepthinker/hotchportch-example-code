@@ -1,12 +1,12 @@
 package com.keepthinker.example.general.network;
 
+import org.apache.commons.io.FileUtils;
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.net.URL;
 import java.nio.channels.Channels;
 import java.nio.channels.ReadableByteChannel;
-
-import org.apache.commons.io.FileUtils;
 
 public class DownloadFile {
 

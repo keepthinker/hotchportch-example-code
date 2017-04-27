@@ -1,7 +1,9 @@
 package com.keepthinker.example.spring.ioc;
 
-import java.util.Map;
-
+import com.keepthinker.example.spring.ioc.model.Animal;
+import com.keepthinker.example.spring.ioc.model.Earth;
+import com.keepthinker.example.spring.ioc.model.Person;
+import com.keepthinker.example.spring.ioc.model.Tiger;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
@@ -11,10 +13,7 @@ import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 import org.springframework.core.env.PropertySource;
 import org.springframework.stereotype.Component;
 
-import com.keepthinker.example.spring.ioc.model.Animal;
-import com.keepthinker.example.spring.ioc.model.Earth;
-import com.keepthinker.example.spring.ioc.model.Person;
-import com.keepthinker.example.spring.ioc.model.Tiger;
+import java.util.Map;
 
 @Component
 public class XmlMain{

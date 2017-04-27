@@ -16,19 +16,6 @@
  */
 package org.apache.tomcat.websocket.server;
 
-import java.io.EOFException;
-import java.io.IOException;
-import java.util.List;
-import java.util.Map;
-
-import javax.servlet.http.HttpSession;
-import javax.websocket.CloseReason;
-import javax.websocket.CloseReason.CloseCodes;
-import javax.websocket.DeploymentException;
-import javax.websocket.Endpoint;
-import javax.websocket.EndpointConfig;
-import javax.websocket.Extension;
-
 import org.apache.coyote.http11.upgrade.AbstractServletInputStream;
 import org.apache.coyote.http11.upgrade.AbstractServletOutputStream;
 import org.apache.coyote.http11.upgrade.servlet31.HttpUpgradeHandler;
@@ -41,6 +28,14 @@ import org.apache.tomcat.util.res.StringManager;
 import org.apache.tomcat.websocket.Transformation;
 import org.apache.tomcat.websocket.WsIOException;
 import org.apache.tomcat.websocket.WsSession;
+
+import javax.servlet.http.HttpSession;
+import javax.websocket.*;
+import javax.websocket.CloseReason.CloseCodes;
+import java.io.EOFException;
+import java.io.IOException;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Servlet 3.1 HTTP upgrade handler for WebSocket connections.

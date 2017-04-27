@@ -16,13 +16,13 @@
  */
 package org.apache.coyote.http11.upgrade;
 
-import java.io.IOException;
-import java.net.Socket;
-
 import org.apache.coyote.http11.upgrade.servlet31.HttpUpgradeHandler;
 import org.apache.juli.logging.Log;
 import org.apache.juli.logging.LogFactory;
 import org.apache.tomcat.util.net.SocketWrapper;
+
+import java.io.IOException;
+import java.net.Socket;
 
 public class BioProcessor extends AbstractProcessor<Socket> {
 

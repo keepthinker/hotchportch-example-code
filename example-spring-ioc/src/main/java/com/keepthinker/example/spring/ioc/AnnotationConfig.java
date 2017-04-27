@@ -1,9 +1,8 @@
 package com.keepthinker.example.spring.ioc;
 
+import com.keepthinker.example.spring.ioc.model.Panda;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
-import com.keepthinker.example.spring.ioc.model.Panda;
 
 @Configuration
 public class AnnotationConfig {

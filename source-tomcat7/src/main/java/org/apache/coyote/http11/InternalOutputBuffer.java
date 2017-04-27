@@ -17,15 +17,15 @@
 
 package org.apache.coyote.http11;
 
-import java.io.IOException;
-import java.io.OutputStream;
-import java.net.Socket;
-
 import org.apache.coyote.OutputBuffer;
 import org.apache.coyote.Response;
 import org.apache.tomcat.util.buf.ByteChunk;
 import org.apache.tomcat.util.net.AbstractEndpoint;
 import org.apache.tomcat.util.net.SocketWrapper;
+
+import java.io.IOException;
+import java.io.OutputStream;
+import java.net.Socket;
 
 /**
  * Output buffer.

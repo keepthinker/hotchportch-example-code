@@ -16,45 +16,11 @@
  */
 package org.apache.catalina.startup;
 
-import java.beans.PropertyChangeListener;
-import java.io.IOException;
-import java.net.URL;
-import java.util.Locale;
-import java.util.Map;
-import java.util.Set;
-
-import javax.naming.directory.DirContext;
-import javax.servlet.ServletContainerInitializer;
-import javax.servlet.ServletContext;
-import javax.servlet.ServletException;
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletSecurityElement;
-import javax.servlet.descriptor.JspConfigDescriptor;
-
-import org.apache.catalina.AccessLog;
-import org.apache.catalina.Authenticator;
-import org.apache.catalina.Cluster;
-import org.apache.catalina.Container;
-import org.apache.catalina.ContainerListener;
-import org.apache.catalina.Context;
-import org.apache.catalina.LifecycleException;
-import org.apache.catalina.Loader;
-import org.apache.catalina.Manager;
-import org.apache.catalina.Pipeline;
-import org.apache.catalina.Realm;
-import org.apache.catalina.Valve;
-import org.apache.catalina.Wrapper;
+import org.apache.catalina.*;
 import org.apache.catalina.connector.Request;
 import org.apache.catalina.connector.Response;
 import org.apache.catalina.core.ApplicationServletRegistration;
-import org.apache.catalina.deploy.ApplicationListener;
-import org.apache.catalina.deploy.ApplicationParameter;
-import org.apache.catalina.deploy.ErrorPage;
-import org.apache.catalina.deploy.FilterDef;
-import org.apache.catalina.deploy.FilterMap;
-import org.apache.catalina.deploy.LoginConfig;
-import org.apache.catalina.deploy.NamingResources;
-import org.apache.catalina.deploy.SecurityConstraint;
+import org.apache.catalina.deploy.*;
 import org.apache.catalina.mbeans.MBeanUtils;
 import org.apache.catalina.util.CharsetMapper;
 import org.apache.catalina.util.LifecycleMBeanBase;
@@ -63,6 +29,16 @@ import org.apache.tomcat.InstanceManager;
 import org.apache.tomcat.JarScanner;
 import org.apache.tomcat.util.http.mapper.Mapper;
 import org.apache.tomcat.util.res.StringManager;
+
+import javax.naming.directory.DirContext;
+import javax.servlet.*;
+import javax.servlet.descriptor.JspConfigDescriptor;
+import java.beans.PropertyChangeListener;
+import java.io.IOException;
+import java.net.URL;
+import java.util.Locale;
+import java.util.Map;
+import java.util.Set;
 
 /**
  * An implementation of {@link Context} that is used as a place-holder for

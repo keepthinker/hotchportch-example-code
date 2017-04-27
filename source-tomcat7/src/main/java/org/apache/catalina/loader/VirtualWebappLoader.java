@@ -16,14 +16,10 @@
  */
 package org.apache.catalina.loader;
 
-import java.io.File;
-import java.util.Arrays;
-import java.util.LinkedHashSet;
-import java.util.Locale;
-import java.util.Set;
-import java.util.StringTokenizer;
-
 import org.apache.catalina.LifecycleException;
+
+import java.io.File;
+import java.util.*;
 
 /**
  * A WebappLoader that allows a customized classpath to be added

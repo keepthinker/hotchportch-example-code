@@ -17,13 +17,13 @@
 
 package org.apache.coyote.http11.filters;
 
-import java.io.IOException;
-import java.nio.charset.Charset;
-
 import org.apache.coyote.InputBuffer;
 import org.apache.coyote.Request;
 import org.apache.coyote.http11.InputFilter;
 import org.apache.tomcat.util.buf.ByteChunk;
+
+import java.io.IOException;
+import java.nio.charset.Charset;
 
 /**
  * Input filter responsible for reading and buffering the request body, so that

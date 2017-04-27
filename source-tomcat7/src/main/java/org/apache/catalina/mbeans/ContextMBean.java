@@ -17,17 +17,13 @@
 
 package org.apache.catalina.mbeans;
 
+import org.apache.catalina.Context;
+import org.apache.catalina.deploy.*;
+
 import javax.management.InstanceNotFoundException;
 import javax.management.MBeanException;
 import javax.management.RuntimeOperationsException;
 import javax.management.modelmbean.InvalidTargetObjectTypeException;
-
-import org.apache.catalina.Context;
-import org.apache.catalina.deploy.ApplicationParameter;
-import org.apache.catalina.deploy.ErrorPage;
-import org.apache.catalina.deploy.FilterDef;
-import org.apache.catalina.deploy.FilterMap;
-import org.apache.catalina.deploy.SecurityConstraint;
 
 public class ContextMBean extends ContainerMBean {
 

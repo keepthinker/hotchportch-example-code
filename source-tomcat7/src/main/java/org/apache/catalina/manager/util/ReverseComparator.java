@@ -17,9 +17,9 @@
 
 package org.apache.catalina.manager.util;
 
-import java.util.Comparator;
-
 import org.apache.catalina.Session;
+
+import java.util.Comparator;
 
 /**
  * Comparator which reverse the sort order

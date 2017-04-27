@@ -16,12 +16,11 @@
  */
 package org.apache.tomcat.util.compat;
 
-import java.util.Locale;
+import org.apache.tomcat.util.res.StringManager;
 
 import javax.net.ssl.SSLEngine;
 import javax.net.ssl.SSLServerSocket;
-
-import org.apache.tomcat.util.res.StringManager;
+import java.util.Locale;
 
 /**
  * This is the base implementation class for JRE compatibility and provides an

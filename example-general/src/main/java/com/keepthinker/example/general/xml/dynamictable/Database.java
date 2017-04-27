@@ -1,8 +1,8 @@
 package com.keepthinker.example.general.xml.dynamictable;
 
-import java.util.List;
-
 import org.apache.log4j.Logger;
+
+import java.util.List;
 
 public class Database{
 	private static final Logger LOGGER = Logger.getLogger(Database.class);

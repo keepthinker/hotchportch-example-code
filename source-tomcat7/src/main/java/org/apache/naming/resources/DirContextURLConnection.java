@@ -17,20 +17,10 @@
 
 package org.apache.naming.resources;
 
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.URL;
-import java.net.URLConnection;
-import java.security.Permission;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Date;
-import java.util.Enumeration;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Vector;
+import org.apache.naming.JndiPermission;
+import org.apache.tomcat.util.buf.UDecoder;
+import org.apache.tomcat.util.buf.UEncoder;
+import org.apache.tomcat.util.http.FastHttpDateFormat;
 
 import javax.naming.NameClassPair;
 import javax.naming.NamingEnumeration;
@@ -38,11 +28,13 @@ import javax.naming.NamingException;
 import javax.naming.directory.Attribute;
 import javax.naming.directory.Attributes;
 import javax.naming.directory.DirContext;
-
-import org.apache.naming.JndiPermission;
-import org.apache.tomcat.util.buf.UDecoder;
-import org.apache.tomcat.util.buf.UEncoder;
-import org.apache.tomcat.util.http.FastHttpDateFormat;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.URL;
+import java.net.URLConnection;
+import java.security.Permission;
+import java.util.*;
 
 /**
  * Connection to a JNDI directory context.

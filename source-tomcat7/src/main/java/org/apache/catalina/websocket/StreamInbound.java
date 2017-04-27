@@ -16,6 +16,12 @@
  */
 package org.apache.catalina.websocket;
 
+import org.apache.coyote.http11.upgrade.UpgradeInbound;
+import org.apache.coyote.http11.upgrade.UpgradeOutbound;
+import org.apache.coyote.http11.upgrade.UpgradeProcessor;
+import org.apache.tomcat.util.buf.Utf8Decoder;
+import org.apache.tomcat.util.net.AbstractEndpoint.Handler.SocketState;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -23,12 +29,6 @@ import java.io.Reader;
 import java.nio.ByteBuffer;
 import java.nio.charset.MalformedInputException;
 import java.nio.charset.UnmappableCharacterException;
-
-import org.apache.coyote.http11.upgrade.UpgradeInbound;
-import org.apache.coyote.http11.upgrade.UpgradeOutbound;
-import org.apache.coyote.http11.upgrade.UpgradeProcessor;
-import org.apache.tomcat.util.buf.Utf8Decoder;
-import org.apache.tomcat.util.net.AbstractEndpoint.Handler.SocketState;
 
 /**
  * Base implementation of the class used to process WebSocket connections based

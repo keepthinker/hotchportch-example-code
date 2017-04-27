@@ -16,14 +16,13 @@
  */
 package org.apache.catalina.connector;
 
+import org.apache.catalina.security.SecurityUtil;
+
+import javax.servlet.ServletInputStream;
 import java.io.IOException;
 import java.security.AccessController;
 import java.security.PrivilegedActionException;
 import java.security.PrivilegedExceptionAction;
-
-import javax.servlet.ServletInputStream;
-
-import org.apache.catalina.security.SecurityUtil;
 
 /**
  * This class handles reading bytes.

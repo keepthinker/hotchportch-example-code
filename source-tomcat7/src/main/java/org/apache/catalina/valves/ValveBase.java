@@ -17,16 +17,7 @@
 package org.apache.catalina.valves;
 
 
-import java.io.IOException;
-
-import javax.servlet.ServletException;
-
-import org.apache.catalina.Contained;
-import org.apache.catalina.Container;
-import org.apache.catalina.LifecycleException;
-import org.apache.catalina.LifecycleState;
-import org.apache.catalina.Pipeline;
-import org.apache.catalina.Valve;
+import org.apache.catalina.*;
 import org.apache.catalina.comet.CometEvent;
 import org.apache.catalina.connector.Request;
 import org.apache.catalina.connector.Response;
@@ -34,6 +25,9 @@ import org.apache.catalina.mbeans.MBeanUtils;
 import org.apache.catalina.util.LifecycleMBeanBase;
 import org.apache.juli.logging.Log;
 import org.apache.tomcat.util.res.StringManager;
+
+import javax.servlet.ServletException;
+import java.io.IOException;
 
 
 /**

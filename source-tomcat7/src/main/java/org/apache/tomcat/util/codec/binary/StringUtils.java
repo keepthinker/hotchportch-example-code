@@ -16,9 +16,9 @@
  */
 package org.apache.tomcat.util.codec.binary;
 
-import java.nio.charset.Charset;
-
 import org.apache.tomcat.util.buf.B2CConverter;
+
+import java.nio.charset.Charset;
 
 /**
  * Converts String to and from bytes using the encodings required by the Java specification. These encodings are

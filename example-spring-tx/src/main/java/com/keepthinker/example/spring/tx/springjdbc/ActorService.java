@@ -1,12 +1,11 @@
 package com.keepthinker.example.spring.tx.springjdbc;
 
+import com.keepthinker.example.model.Actor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
-import com.keepthinker.example.model.Actor;
 
 
 @Service

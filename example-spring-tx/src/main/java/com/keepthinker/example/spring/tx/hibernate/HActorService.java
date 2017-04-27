@@ -1,7 +1,6 @@
 package com.keepthinker.example.spring.tx.hibernate;
 
-import java.math.BigInteger;
-
+import com.keepthinker.example.model.Actor;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,7 +8,7 @@ import org.springframework.orm.hibernate4.HibernateCallback;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.keepthinker.example.model.Actor;
+import java.math.BigInteger;
 
 @Service
 public class HActorService {

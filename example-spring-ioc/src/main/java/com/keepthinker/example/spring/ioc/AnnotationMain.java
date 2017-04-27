@@ -1,9 +1,8 @@
 package com.keepthinker.example.spring.ioc;
 
+import com.keepthinker.example.spring.ioc.model.Panda;
 import org.apache.log4j.Logger;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-
-import com.keepthinker.example.spring.ioc.model.Panda;
 
 public class AnnotationMain {
 	private static Logger logger = Logger.getLogger(AnnotationMain.class);

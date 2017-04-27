@@ -16,14 +16,14 @@
  */
 package org.apache.catalina.startup;
 
-import java.util.HashSet;
-import java.util.Set;
-
 import org.apache.juli.logging.Log;
 import org.apache.tomcat.util.res.StringManager;
 import org.xml.sax.ErrorHandler;
 import org.xml.sax.SAXException;
 import org.xml.sax.SAXParseException;
+
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * @deprecated Use {@link org.apache.tomcat.util.descriptor.XmlErrorHandler}

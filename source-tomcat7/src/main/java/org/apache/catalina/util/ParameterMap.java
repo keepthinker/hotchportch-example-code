@@ -16,10 +16,10 @@
  */
 package org.apache.catalina.util;
 
+import org.apache.tomcat.util.res.StringManager;
+
 import java.util.LinkedHashMap;
 import java.util.Map;
-
-import org.apache.tomcat.util.res.StringManager;
 
 /**
  * Extended implementation of <strong>HashMap</strong> that includes a

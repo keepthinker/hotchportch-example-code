@@ -1,7 +1,5 @@
 package com.keepthinker.example.cache.ehcache.usagepattern;
 
-import java.util.Collection;
-
 import net.sf.ehcache.CacheEntry;
 import net.sf.ehcache.CacheException;
 import net.sf.ehcache.Ehcache;
@@ -10,6 +8,8 @@ import net.sf.ehcache.constructs.blocking.CacheEntryFactory;
 import net.sf.ehcache.constructs.blocking.SelfPopulatingCache;
 import net.sf.ehcache.writer.CacheWriter;
 import net.sf.ehcache.writer.writebehind.operations.SingleOperationType;
+
+import java.util.Collection;
 
 public class CacheAsSor {
 	private final Ehcache cache; 

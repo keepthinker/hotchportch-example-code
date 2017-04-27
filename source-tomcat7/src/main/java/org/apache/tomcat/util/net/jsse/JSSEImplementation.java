@@ -17,16 +17,11 @@
 
 package org.apache.tomcat.util.net.jsse;
 
-import java.net.Socket;
+import org.apache.tomcat.util.net.*;
 
 import javax.net.ssl.SSLSession;
 import javax.net.ssl.SSLSocket;
-
-import org.apache.tomcat.util.net.AbstractEndpoint;
-import org.apache.tomcat.util.net.SSLImplementation;
-import org.apache.tomcat.util.net.SSLSupport;
-import org.apache.tomcat.util.net.SSLUtil;
-import org.apache.tomcat.util.net.ServerSocketFactory;
+import java.net.Socket;
 
 /* JSSEImplementation:
 

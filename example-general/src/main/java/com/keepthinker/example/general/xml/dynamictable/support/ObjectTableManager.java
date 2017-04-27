@@ -1,13 +1,9 @@
 package com.keepthinker.example.general.xml.dynamictable.support;
 
+import com.keepthinker.example.general.xml.dynamictable.*;
+
 import java.util.ArrayList;
 import java.util.List;
-
-import com.keepthinker.example.general.xml.dynamictable.Database;
-import com.keepthinker.example.general.xml.dynamictable.FileParser;
-import com.keepthinker.example.general.xml.dynamictable.ObjectTable;
-import com.keepthinker.example.general.xml.dynamictable.Property;
-import com.keepthinker.example.general.xml.dynamictable.Table;
 
 public class ObjectTableManager implements ObjectTable{
 	

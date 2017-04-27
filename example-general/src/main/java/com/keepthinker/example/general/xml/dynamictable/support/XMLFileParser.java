@@ -1,24 +1,18 @@
 package com.keepthinker.example.general.xml.dynamictable.support;
 
-import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-
-import org.apache.log4j.Logger;
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-import org.w3c.dom.NamedNodeMap;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
-
 import com.keepthinker.example.general.util.Utils;
 import com.keepthinker.example.general.xml.dynamictable.Database;
 import com.keepthinker.example.general.xml.dynamictable.FileParser;
 import com.keepthinker.example.general.xml.dynamictable.Property;
 import com.keepthinker.example.general.xml.dynamictable.Table;
+import org.apache.log4j.Logger;
+import org.w3c.dom.*;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 
 public class XMLFileParser implements FileParser {
 	private static final Logger LOGGER = Logger.getLogger(XMLFileParser.class);

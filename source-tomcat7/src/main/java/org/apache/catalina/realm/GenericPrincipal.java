@@ -19,13 +19,12 @@
 package org.apache.catalina.realm;
 
 
+import org.ietf.jgss.GSSCredential;
+
+import javax.security.auth.login.LoginContext;
 import java.security.Principal;
 import java.util.Arrays;
 import java.util.List;
-
-import javax.security.auth.login.LoginContext;
-
-import org.ietf.jgss.GSSCredential;
 
 
 /**

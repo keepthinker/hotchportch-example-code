@@ -17,20 +17,10 @@
 
 package org.apache.jasper.el;
 
-import java.util.List;
-
-import javax.el.ArrayELResolver;
-import javax.el.BeanELResolver;
-import javax.el.CompositeELResolver;
-import javax.el.ELContext;
-import javax.el.ELException;
-import javax.el.ELResolver;
-import javax.el.ListELResolver;
-import javax.el.MapELResolver;
-import javax.el.PropertyNotFoundException;
-import javax.el.ResourceBundleELResolver;
+import javax.el.*;
 import javax.servlet.jsp.el.ImplicitObjectELResolver;
 import javax.servlet.jsp.el.ScopedAttributeELResolver;
+import java.util.List;
 
 /**
  * Jasper-specific CompositeELResolver that optimizes certain functions to avoid

@@ -1,13 +1,12 @@
 package com.keepthinker.example.zookeeper.curator.shareconfig;
 
-import java.util.List;
-
+import com.keepthinker.example.zookeeper.curator.framework.CreateClientExamples;
 import org.apache.curator.framework.CuratorFramework;
 import org.apache.zookeeper.WatchedEvent;
 import org.apache.zookeeper.Watcher;
 import org.apache.zookeeper.Watcher.Event.EventType;
 
-import com.keepthinker.example.zookeeper.curator.framework.CreateClientExamples;
+import java.util.List;
 
 public class ChildrenClient implements Runnable{
 

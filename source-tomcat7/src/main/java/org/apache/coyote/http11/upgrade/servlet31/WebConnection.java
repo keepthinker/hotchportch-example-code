@@ -16,10 +16,10 @@
  */
 package org.apache.coyote.http11.upgrade.servlet31;
 
-import java.io.IOException;
-
 import org.apache.coyote.http11.upgrade.AbstractServletInputStream;
 import org.apache.coyote.http11.upgrade.AbstractServletOutputStream;
+
+import java.io.IOException;
 
 /**
  * The interface used by a {@link HttpUpgradeHandler} to interact with an upgraded

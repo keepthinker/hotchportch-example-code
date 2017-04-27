@@ -16,12 +16,6 @@
  */
 package org.apache.coyote.ajp;
 
-import java.io.EOFException;
-import java.io.IOException;
-import java.io.InterruptedIOException;
-import java.nio.ByteBuffer;
-import java.nio.channels.Selector;
-
 import org.apache.coyote.ActionCode;
 import org.apache.coyote.ErrorState;
 import org.apache.coyote.RequestInfo;
@@ -29,12 +23,14 @@ import org.apache.juli.logging.Log;
 import org.apache.juli.logging.LogFactory;
 import org.apache.tomcat.util.ExceptionUtils;
 import org.apache.tomcat.util.net.AbstractEndpoint.Handler.SocketState;
-import org.apache.tomcat.util.net.NioChannel;
-import org.apache.tomcat.util.net.NioEndpoint;
+import org.apache.tomcat.util.net.*;
 import org.apache.tomcat.util.net.NioEndpoint.KeyAttachment;
-import org.apache.tomcat.util.net.NioSelectorPool;
-import org.apache.tomcat.util.net.SocketStatus;
-import org.apache.tomcat.util.net.SocketWrapper;
+
+import java.io.EOFException;
+import java.io.IOException;
+import java.io.InterruptedIOException;
+import java.nio.ByteBuffer;
+import java.nio.channels.Selector;
 
 
 /**

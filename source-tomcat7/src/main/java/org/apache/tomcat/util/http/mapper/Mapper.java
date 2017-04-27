@@ -17,19 +17,18 @@
 
 package org.apache.tomcat.util.http.mapper;
 
+import org.apache.tomcat.util.buf.Ascii;
+import org.apache.tomcat.util.buf.CharChunk;
+import org.apache.tomcat.util.buf.MessageBytes;
+import org.apache.tomcat.util.res.StringManager;
+
+import javax.naming.NamingException;
+import javax.naming.directory.DirContext;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
-
-import javax.naming.NamingException;
-import javax.naming.directory.DirContext;
-
-import org.apache.tomcat.util.buf.Ascii;
-import org.apache.tomcat.util.buf.CharChunk;
-import org.apache.tomcat.util.buf.MessageBytes;
-import org.apache.tomcat.util.res.StringManager;
 
 /**
  * Mapper, which implements the servlet API mapping rules (which are derived

@@ -17,9 +17,6 @@
 
 package org.apache.coyote;
 
-import java.io.IOException;
-import java.util.HashMap;
-
 import org.apache.tomcat.util.buf.ByteChunk;
 import org.apache.tomcat.util.buf.MessageBytes;
 import org.apache.tomcat.util.buf.UDecoder;
@@ -27,6 +24,9 @@ import org.apache.tomcat.util.http.ContentType;
 import org.apache.tomcat.util.http.Cookies;
 import org.apache.tomcat.util.http.MimeHeaders;
 import org.apache.tomcat.util.http.Parameters;
+
+import java.io.IOException;
+import java.util.HashMap;
 
 /**
  * This is a low-level, efficient representation of a server request. Most 

@@ -1,17 +1,12 @@
 package com.keepthinker.example.general.sql;
 
+import org.apache.log4j.Logger;
+
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.sql.Timestamp;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-
-import org.apache.log4j.Logger;
+import java.util.*;
 
 /**
  * Generate sql from entity with or without @Column annotated.<br/>

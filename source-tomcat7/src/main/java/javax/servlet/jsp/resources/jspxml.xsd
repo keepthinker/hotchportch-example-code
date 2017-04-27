@@ -36,12 +36,11 @@
 <!--Conforms to w3c http://www.w3.org/2001/XMLSchema -->
 
 <xsd:schema
-    xmlns = "http://java.sun.com/JSP/Page"
-    xmlns:xsd = "http://www.w3.org/2001/XMLSchema"
-    xmlns:jsp = "http://java.sun.com/JSP/Page"
-    targetNamespace = "http://java.sun.com/JSP/Page"
-    elementFormDefault = "qualified"
-    attributeFormDefault = "unqualified">
+        xmlns="http://java.sun.com/JSP/Page"
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://java.sun.com/JSP/Page"
+        elementFormDefault="qualified"
+        attributeFormDefault="unqualified">
 
   <xsd:annotation>
     <xsd:documentation>

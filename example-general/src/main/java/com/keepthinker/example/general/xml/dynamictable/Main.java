@@ -1,11 +1,11 @@
 package com.keepthinker.example.general.xml.dynamictable;
 
+import com.keepthinker.example.general.xml.dynamictable.support.ObjectTableManager;
+import com.keepthinker.example.general.xml.dynamictable.support.XMLFileParser;
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-
-import com.keepthinker.example.general.xml.dynamictable.support.ObjectTableManager;
-import com.keepthinker.example.general.xml.dynamictable.support.XMLFileParser;
 
 public class Main {
 

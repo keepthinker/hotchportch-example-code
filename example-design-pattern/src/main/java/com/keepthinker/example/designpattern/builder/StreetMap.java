@@ -1,7 +1,6 @@
 package com.keepthinker.example.designpattern.builder;
 
-import java.awt.Color;
-import java.awt.Point;
+import java.awt.*;
 
 /**
  * from wikipedia

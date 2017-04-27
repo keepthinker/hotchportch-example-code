@@ -1,11 +1,10 @@
 package com.keepthinker.example.spring.tx.hibernate;
 
+import com.keepthinker.example.model.Actor;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate4.HibernateTemplate;
 import org.springframework.stereotype.Service;
-
-import com.keepthinker.example.model.Actor;
 
 @Service
 public class HActorDao extends HibernateTemplate{

@@ -1,9 +1,8 @@
 package com.keepthinker.example.spring.tx.hibernate;
 
+import com.keepthinker.example.model.Actor;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-
-import com.keepthinker.example.model.Actor;
 
 public class Main {
 	

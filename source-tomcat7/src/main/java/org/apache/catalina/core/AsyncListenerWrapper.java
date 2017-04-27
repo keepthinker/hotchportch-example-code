@@ -16,10 +16,9 @@
 */
 package org.apache.catalina.core;
 
-import java.io.IOException;
-
 import javax.servlet.AsyncEvent;
 import javax.servlet.AsyncListener;
+import java.io.IOException;
 
 /**
  * TODO SERVLET3 - async 
