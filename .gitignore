@@ -1,5 +1,25 @@
+
+bin
+build
+
+example-*/bin
+example-*/build
+
 /**/target
+
+/**/logs
+/.gradle
+
+/out
+
+#idea config file
+/.idea
+/**/*.iml
+/software-technology.ipr
+/software-technology.iws
+
+#eclipse config file
 /**/.project
-/**/.classpath
 /**/.settings
-/**/.pydevproject
+/**/.classpath
+
