@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.keepthinker</groupId>
-	<artifactId>software-technology</artifactId>
+	<artifactId>hotchportch-example-code</artifactId>
 	<version>1.0.0-RELEASE</version>
 	<packaging>pom</packaging>
 
-	<name>software-technology</name>
+	<name>hotchpotch-example-code</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>

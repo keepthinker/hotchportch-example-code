@@ -2,6 +2,7 @@ package com.keepthinker.example.general.test.mokito;
 
 import junit.framework.Assert;
 import org.junit.Test;
+
 import org.mockito.Mockito;
 
 public class SimpleTest {

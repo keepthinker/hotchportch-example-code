@@ -1,5 +1,6 @@
 package com.keepthinker.example.general.concurrency;
 
+import java.util.Random;
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -36,6 +37,11 @@ public class CompletionServiceMain {
 
 			@Override
 			public String call() throws Exception {
+				Random random = new Random();
+				long timeLen = Math.abs(random.nextLong() % 10000);
+				System.out.println("sleep " + timeLen);
+				Thread.sleep(timeLen);
+				System.out.println("sleep " + timeLen);
 				return String.valueOf(ATINT.incrementAndGet());
 			}
 
