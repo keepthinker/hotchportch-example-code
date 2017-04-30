@@ -3,9 +3,6 @@ package com.keepthinker.example.general.concurrency;
 import com.keepthinker.example.general.concurrency.utils.RateController;
 
 import java.util.Calendar;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ScheduledExecutorService;
-import java.util.concurrent.TimeUnit;
 
 /**
  * Created by keepthinker on 2017/4/30.
@@ -25,5 +22,6 @@ public class HorthpotchMain {
                 System.out.println(milli + ":" + count);
             }
         }
+
     }
 }

@@ -15,8 +15,8 @@ example-*/build
 #idea config file
 /.idea
 /**/*.iml
-/software-technology.ipr
-/software-technology.iws
+/hotchpotch-example-code.ipr
+/hotchpotch-example-code.iws
 
 #eclipse config file
 /**/.project

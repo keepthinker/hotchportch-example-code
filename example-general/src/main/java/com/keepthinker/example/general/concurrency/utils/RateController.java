@@ -91,7 +91,7 @@ public class RateController {
                 if (delta < rateController.clearInterval) {
                     sleepTime = rateController.clearInterval - delta;
                 } else {
-                    sleepTime = rateController.clearInterval;
+                    sleepTime = 1;
                 }
 
                 try {
