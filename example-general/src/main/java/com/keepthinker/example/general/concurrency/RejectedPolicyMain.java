@@ -28,8 +28,8 @@ public class RejectedPolicyMain {
 		}
 		
 		//the following can only support up to 5 tasks in the pool, two running and three waiting
-		ex = new ThreadPoolExecutor(2, 2, 0, TimeUnit.MINUTES
-				, new LinkedBlockingQueue<Runnable>(3), Executors.defaultThreadFactory(),
+		ex = new ThreadPoolExecutor(2, 3, 0, TimeUnit.MINUTES
+				, new LinkedBlockingQueue<Runnable>(2), Executors.defaultThreadFactory(),
 				new ThreadPoolExecutor.AbortPolicy());
 		try{
 		for(int i = 0; i < 15; i++){

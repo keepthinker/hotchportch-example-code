@@ -1,5 +1,8 @@
 package com.keepthinker.example.general.concurrency.utils;
 
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
+
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -8,12 +11,20 @@ import java.util.concurrent.atomic.AtomicInteger;
  */
 public class ConcurrentUtils {
 
-    private static ExecutorService executor = new ThreadPoolExecutor(10,
-            15,
-            10l,
-            TimeUnit.MINUTES,
-            new LinkedBlockingQueue<Runnable>(), new ExceptionLogThreadFactory(),
-            new ThreadPoolExecutor.AbortPolicy());
+    private final static Logger LOGGER = LogManager.getLogger(ConcurrentUtils.class);
+
+    private static final int CORE_POOL_SIZE = 10;
+    private static final int MAX_POOL_SIZE = 15;
+    private static final int MAX_WORK_QUEUE_SIZE = 1000000;
+
+    private static final BlockingQueue<Runnable> BLOCKING_QUEUE = new LinkedBlockingQueue<Runnable>(MAX_WORK_QUEUE_SIZE);
+
+    private static ExecutorService executor = new ThreadPoolExecutor(
+            CORE_POOL_SIZE, MAX_POOL_SIZE,
+            10L, TimeUnit.MINUTES,
+            BLOCKING_QUEUE,
+            new ExceptionLogThreadFactory(),
+            new AbortAndLogPolicy());
 
     public static void execute(Runnable runnable){
         executor.execute(runnable);
@@ -23,6 +34,21 @@ public class ConcurrentUtils {
         executor.submit(callable);
     }
 
+    public static int workPoolSize(){
+        return BLOCKING_QUEUE.size();
+    }
+
+    public boolean isAvailable(){
+        return BLOCKING_QUEUE.size() < MAX_WORK_QUEUE_SIZE;
+    }
+
+    private static class AbortAndLogPolicy implements RejectedExecutionHandler{
+
+        @Override
+        public void rejectedExecution(Runnable r, ThreadPoolExecutor executor) {
+            LOGGER.error("Thread pool executor is full");
+        }
+    }
 
     private static class ExceptionLogThreadFactory implements ThreadFactory {
         private static final AtomicInteger poolNumber = new AtomicInteger(1);
@@ -55,7 +81,7 @@ public class ConcurrentUtils {
 
             @Override
             public void uncaughtException(Thread t, Throwable e) {
-                System.out.format("Thread: %s, exception: %s", t.toString(), e.getMessage().toString());
+                LOGGER.error(String.format("Thread: %s", t), e);
             }
         }
 

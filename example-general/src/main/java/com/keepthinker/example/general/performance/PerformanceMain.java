@@ -49,7 +49,7 @@ public class PerformanceMain {
 			config.setB("q12");
 			configs.add(config);
 		}
-		logger.info("config size : " + configs.size());
+		logger.info("config capacity : " + configs.size());
 		
 	}
 	

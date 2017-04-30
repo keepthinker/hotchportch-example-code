@@ -21,7 +21,7 @@ public class PrintArea
 				0, //start row
 				5 //end row
 				);
-		//set paper size
+		//set paper capacity
 		spreadsheet.getPrintSetup().setPaperSize(
 				XSSFPrintSetup.A4_PAPERSIZE);
 		//set display grid lines or not
