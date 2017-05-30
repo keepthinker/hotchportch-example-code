@@ -12,7 +12,13 @@ public class CycliBarrierMain {
 	private final CyclicBarrier barrier = new CyclicBarrier(SIZE, new Runnable() {
 		@Override
 		public void run() {
-			System.out.println("Thread ID: " + Thread.currentThread().getId());
+			System.out.println("All workers are ready, Thread ID: " + Thread.currentThread().getId());
+			try {
+				Thread.sleep(3000);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+			System.out.println("start to work");
 		}
 	});
 	
@@ -51,6 +57,7 @@ public class CycliBarrierMain {
 			}
 			try {
 				CycliBarrierMain.this.barrier.await();
+				System.out.println("worker " + id + " is working");
 			} catch (InterruptedException | BrokenBarrierException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

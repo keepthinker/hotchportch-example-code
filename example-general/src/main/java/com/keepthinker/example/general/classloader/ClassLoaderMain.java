@@ -17,11 +17,11 @@ public class ClassLoaderMain {
 		recursiveCallParentCL(cl);
 		cl.loadClass("com.keepthinker.example.general.classloader.Lifecycle").newInstance();
 		ClassLoader syscl = ClassLoader.getSystemClassLoader();
-		System.out.println("ClassLoader"+ " : " + syscl);
+		System.out.println("System ClassLoader"+ " : " + syscl);
 		ClassLoader thrcl = Thread.currentThread().getContextClassLoader();
-		System.out.println("currentThread"+ " : " + thrcl);
-		System.out.println(syscl == thrcl);
-		System.out.println(syscl== cl);
+		System.out.println("Context Classloader currentThread"+ " : " + thrcl);
+		System.out.println("syscl == thrcl:" + (syscl == thrcl));
+		System.out.println("syscl== cl:" + (syscl== cl));
 		
 		System.out.println("-----------------------------------");
 		ClassLoader clInt = java.lang.Integer.class.getClassLoader();
