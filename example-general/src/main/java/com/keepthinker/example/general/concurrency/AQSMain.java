@@ -61,7 +61,7 @@ public class AQSMain {
     }
 
     public static void main(String[] args) throws InterruptedException {
-        final TwoLatch oneLatch = new TwoLatch();
+        final TwoLatch twoLatch = new TwoLatch();
 
         new Thread(new Runnable(){
 
@@ -73,7 +73,7 @@ public class AQSMain {
                     e.printStackTrace();
                 }
                 System.out.println("release1");
-                oneLatch.release();
+                twoLatch.release();
             }
         }).start();
 
@@ -87,12 +87,12 @@ public class AQSMain {
                     e.printStackTrace();
                 }
                 System.out.println("release2");
-                oneLatch.release();
+                twoLatch.release();
             }
         }).start();
 
         System.out.println("await");
-        oneLatch.await();
+        twoLatch.await();
 
         System.out.println("free");
 

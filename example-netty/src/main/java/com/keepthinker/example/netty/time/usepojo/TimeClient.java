@@ -18,7 +18,8 @@ public class TimeClient {
 			host = args[0];
 			port = Integer.parseInt(args[1]);
 		}else{
-			host = "localhost";
+//			host = "localhost";
+            host = "192.168.31.114";
 			port = 8080;
 		}
         EventLoopGroup workerGroup = new NioEventLoopGroup();
