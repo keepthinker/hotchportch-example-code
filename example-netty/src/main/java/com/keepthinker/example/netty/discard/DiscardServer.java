@@ -38,6 +38,7 @@ public class DiscardServer {
 
             // Bind and start to accept incoming connections.
             ChannelFuture f = b.bind(port).sync(); // (7)
+            System.out.println("server started");
 
             // Wait until the server socket is closed.
             // In this example, this does not happen, but you can do that to gracefully

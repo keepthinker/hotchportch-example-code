@@ -18,7 +18,8 @@ public class TimeClient {
 			host = args[0];
 			port = Integer.parseInt(args[1]);
 		}else{
-			host = "localhost";
+			host = "192.168.31.11";
+//            host = "localhost";
 			port = 8080;
 		}
         EventLoopGroup workerGroup = new NioEventLoopGroup();
@@ -28,13 +29,15 @@ public class TimeClient {
             b.group(workerGroup); // (2)
             b.channel(NioSocketChannel.class); // (3)
             b.option(ChannelOption.SO_KEEPALIVE, true); // (4)
+            b.option(ChannelOption.SO_REUSEADDR, false); // (4)
+
             b.handler(new ChannelInitializer<SocketChannel>() {
                 @Override
                 public void initChannel(SocketChannel ch) throws Exception {
                     ch.pipeline().addLast(new TimeDecoder(), new TimeClientHandler());
                 }
             });
-
+            b.localAddress(21000);
             // Start the client.
             ChannelFuture f = b.connect(host, port).sync(); // (5)
 

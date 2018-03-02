@@ -22,8 +22,10 @@ public class ThreadJoinMain {
 		});
 		t2.start();
 		t1.start();
+		long start = System.currentTimeMillis();
 		t1.join(1500);
-		System.out.println("end");
+		long end  = System.currentTimeMillis();
+		System.out.println("end --- time passed: " + (end - start));
 		
 
 	}
