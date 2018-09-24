@@ -16,29 +16,40 @@ public class ReferenceTypeMain {
     }
 
     public static void strongReference(){
+        System.out.println("strongReference start^^^^^^^^^^^^^^^^^");
         String str =  new String("StrongReference");
         System.gc();
         System.out.println(str);
+        System.out.println("strongReference end________________");
     }
 
 
     public static void softReference(){
-        String str =  new String("SoftReference");
-        SoftReference<String> softReference = new SoftReference<String>(str);
+        System.out.println("softReference start^^^^^^^^^^^^^^^^^");
+        final ReferenceQueue<StringObject> referenceQueue = new ReferenceQueue<>();
+        StringObject str =  new StringObject("SoftReference");
+        SoftReference<StringObject> softReference = new SoftReference<>(str);
         str = null;
         System.gc();
-        System.out.println(softReference.get());
+        System.out.println("value after gc: " + softReference.get());
+        new ReferenceQueueConsumer(referenceQueue).run();
+        System.out.println("softReference end________________");
     }
 
     public static void weakReference(){
-        String str =  new String("WeakReference");
-        WeakReference<String> softReference = new WeakReference<String>(str);
+        System.out.println("weakReference star^^^^^^^^^^^^^^^^^");
+        final ReferenceQueue<StringObject> referenceQueue = new ReferenceQueue<>();
+        StringObject str =  new StringObject("WeakReference");
+        WeakReference<StringObject> weakReference = new WeakReference<>(str, referenceQueue);
         str = null;
         System.gc();
-        System.out.println(softReference.get());
+        System.out.println("value after gc: " + weakReference.get());
+        new ReferenceQueueConsumer(referenceQueue).run();
+        System.out.println("weakReference end________________");
     }
 
     public static void phantomReference(){
+        System.out.println("phantomReference start^^^^^^^^^^^^^^^^");
         StringObject str = new StringObject("phantomReference");
         final ReferenceQueue<StringObject> referenceQueue = new ReferenceQueue<>();
         final StringPhantomReference phantomReference = new StringPhantomReference(str, referenceQueue);
@@ -47,38 +58,46 @@ public class ReferenceTypeMain {
         System.gc();
         System.out.println("phantomReference enqueued after gc: " + phantomReference.isEnqueued());
 
-        new Thread(){
-            public void run(){
-                while(true){
-                    Reference reference = referenceQueue.poll();
-                    if(reference == null){
-                        try {
-                            Thread.sleep(1000);
-                            System.out.println("sleep for 1s");
-                        } catch (InterruptedException e) {
-                            e.printStackTrace();
-                        }
-                    } else {
-                        System.out.println("enqueued: " + reference.isEnqueued());
-
-                        try {
-                            Field field = Reference.class.getDeclaredField("referent");
-                            field.setAccessible(true);
-                            StringObject value = (StringObject) field.get(reference);
-                            System.out.println("Reference:" + value);
-                        } catch (NoSuchFieldException e) {
-                            e.printStackTrace();
-                        } catch (IllegalAccessException e) {
-                            e.printStackTrace();
-                        }
-                        reference.clear(); //.如果被从队列取出，再也没有被引用，无需调用此方法。
-                    }
-                }}
-        }.start();
+        new ReferenceQueueConsumer(referenceQueue).run();
+        System.out.println("phantomReference end________________");
     }
 
-    private static class StringPhantomReference extends PhantomReference<StringObject>{
+    private static class ReferenceQueueConsumer extends Thread{
+        ReferenceQueue referenceQueue = new ReferenceQueue<>();
+        ReferenceQueueConsumer (ReferenceQueue referenceQueue ){
+            this.referenceQueue = referenceQueue;
+        }
 
+        public void run(){
+            for(int i = 0; i < 3; i++){
+                Reference reference = referenceQueue.poll();
+                if(reference == null){
+                    try {
+                        Thread.sleep(1000);
+                        System.out.println("sleep for 1s");
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                } else {
+                    System.out.println("after gc, enqueued: " + reference.isEnqueued());
+
+                    try {
+                        Field field = Reference.class.getDeclaredField("referent");
+                        field.setAccessible(true);
+                        StringObject value = (StringObject) field.get(reference);
+                        System.out.println("Reference's referent value:" + value);
+                    } catch (NoSuchFieldException e) {
+                        e.printStackTrace();
+                    } catch (IllegalAccessException e) {
+                        e.printStackTrace();
+                    }
+                    reference.clear(); //.如果被从队列取出，再也没有被引用，无需调用此方法。
+                }
+            }}
+    }
+
+
+    private static class StringPhantomReference extends PhantomReference<StringObject>{
 
         public StringPhantomReference(StringObject referent, ReferenceQueue<? super StringObject> q) {
             super(referent, q);

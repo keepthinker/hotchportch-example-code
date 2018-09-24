@@ -3,10 +3,10 @@ package com.keepthinker.example.general.concurrency;
 public class ThreadJoinMain {
 
 	public static void main(String[] args) throws InterruptedException {
-		
+
 		final Thread t1 = new Thread(new Worker(0));
 		Thread t2 = new Thread(new Runnable() {
-			
+
 			@Override
 			public void run() {
 				try {
@@ -17,7 +17,7 @@ public class ThreadJoinMain {
 				}
 				System.out.println("notify");
 				t1.interrupt();
-				
+
 			}
 		});
 		t2.start();
@@ -26,10 +26,10 @@ public class ThreadJoinMain {
 		t1.join(1500);
 		long end  = System.currentTimeMillis();
 		System.out.println("end --- time passed: " + (end - start));
-		
+
 
 	}
-	
+
 	private static class Worker implements Runnable{
 
 		private int id;

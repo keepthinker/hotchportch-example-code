@@ -2,7 +2,6 @@ package com.keepthinker.example.netty.myproto.server;
 
 import com.keepthinker.example.netty.myproto.codec.Decoder;
 import com.keepthinker.example.netty.myproto.codec.Encoder;
-
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
@@ -41,11 +40,10 @@ public class Server {
 	}
 
 	private void init(){
-		bossGroup = new NioEventLoopGroup(); // (1)
-		workerGroup = new NioEventLoopGroup();
+		bossGroup = new NioEventLoopGroup(1); // (1)
+		workerGroup = new NioEventLoopGroup(Runtime.getRuntime().availableProcessors() * 2);
 		bootstrap = new ServerBootstrap(); // (2)
-		bootstrap.option(ChannelOption.TCP_NODELAY, true)
-		.group(bossGroup, workerGroup)
+		bootstrap.group(bossGroup, workerGroup)
 		.channel(NioServerSocketChannel.class) // (3)
 		.childHandler(new ChannelInitializer<SocketChannel>() { // (4)
 			@Override
@@ -54,7 +52,8 @@ public class Server {
 			}
 		})
 		.option(ChannelOption.SO_BACKLOG, 128)          // (5)
-		.childOption(ChannelOption.SO_KEEPALIVE, true); // (6)
+		.childOption(ChannelOption.SO_KEEPALIVE, true)
+		.childOption(ChannelOption.TCP_NODELAY, true)		; // (6)
 
 	}
 
