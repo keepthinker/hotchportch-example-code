@@ -1,11 +1,14 @@
 package com.keepthinker.example.netty.udp.server;
 
+import com.keepthinker.example.netty.udp.UdpPayload;
+import io.netty.buffer.ByteBuf;
+import io.netty.buffer.PooledByteBufAllocator;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 import io.netty.channel.socket.DatagramPacket;
 import org.apache.log4j.Logger;
 
-public class UdpTimeServerHandler extends SimpleChannelInboundHandler<DatagramPacket> {
+public class UdpTimeServerHandler extends SimpleChannelInboundHandler<UdpPayload> {
 
     private final static Logger logger = Logger.getLogger(UdpTimeServerHandler.class);
 
@@ -17,12 +20,21 @@ public class UdpTimeServerHandler extends SimpleChannelInboundHandler<DatagramPa
 
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
-        logger.info("channel read|" +  msg.toString());
+        UdpPayload udpPayload = (UdpPayload) msg;
+        logger.info("channel read|" +  udpPayload);
+
+
+        logger.info("channel write|" +  udpPayload);
+        ByteBuf byteBuf = PooledByteBufAllocator.DEFAULT.directBuffer(8);
+        byteBuf.writeLong(udpPayload.getData());
+        ctx.writeAndFlush(new DatagramPacket(byteBuf, udpPayload.getAddr()));
+
+
     }
 
     @Override
-    protected void channelRead0(ChannelHandlerContext ctx, DatagramPacket msg) throws Exception {
-        logger.info("channel read0|" +  msg.toString());
+    protected void channelRead0(ChannelHandlerContext ctx, UdpPayload msg) throws Exception {
+        // won't go here
     }
 
     @Override

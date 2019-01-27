@@ -16,7 +16,8 @@ import java.net.InetSocketAddress;
 import java.net.UnknownHostException;
 
 public class UdpTimeClient {
-    private static final String DESC_HOST = "255.255.255.255";
+//    private static final String DESC_HOST = "255.255.255.255";
+    private static final String DESC_HOST = "127.0.0.1";
 
     public static void main(String[] args) throws Exception {
         String host;
@@ -87,7 +88,7 @@ public class UdpTimeClient {
                 }
             }while(loop);
 
-            channel.close();
+//            channel.close();
         }
     }
 }

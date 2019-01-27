@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <classPathEntry location="mysql-connector-java-5.1.47.jar" />
+    <context id="test" targetRuntime="MyBatis3">
+
+        <!-- 是否取消注释 -->
+        <commentGenerator>
+            <property name="suppressDate" value="false"/>
+            <property name="suppressAllComments" value="true"/>
+        </commentGenerator>
+
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://192.168.0.104:3306/test?useUnicode=true"
+                        userId="test"
+                        password="test">
+        </jdbcConnection>
+
+        <javaTypeResolver >
+            <property name="forceBigDecimals" value="false" />
+        </javaTypeResolver>
+
+        <!-- 生成实体类 -->
+        <javaModelGenerator targetPackage="com.keepthinker.entity" targetProject="src">
+        </javaModelGenerator>
+        <!-- 生成maper.xml文件 -->
+        <sqlMapGenerator targetPackage="com.keepthinker.dao"  targetProject="src">
+        </sqlMapGenerator>
+        <!-- 生成dao接口 -->
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.keepthinker.dao"  targetProject="src">
+        </javaClientGenerator>
+
+        <table schema="test" tableName="person" domainObjectName="Person"
+               enableCountByExample="false" enableDeleteByExample="false"
+               enableSelectByExample="false" enableUpdateByExample="false">
+            <generatedKey column="ID" sqlStatement="MySQL" identity="true" />
+            <!-- <ignoreColumn column="FRED" /> -->
+        </table>
+
+
+    </context>
+</generatorConfiguration>

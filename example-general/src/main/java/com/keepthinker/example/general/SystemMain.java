@@ -10,23 +10,30 @@ import java.util.TreeSet;
 
 public class SystemMain {
 	public static void main(String[] args) throws IOException{
+		System.out.println(-199999 >>> 5);
+		System.out.println(-199999 >> 5);
+		System.out.println(199999 >>> 5);
+	}
+
+	private static void a() throws IOException{
+
 		System.out.println(System.getProperty("PATH"));
 
 		System.out.println("---------------------pro---------------------");
-		
+
 		Properties pros = System.getProperties();
 		Set<Object> sortedSet = new TreeSet<Object>(pros.keySet());
 		for(Object obj : sortedSet){
 			System.out.printf("%35s : %s\n", obj, pros.getProperty((String)obj));
 		}
 		System.out.println("---------------------env---------------------");
-		
+
 		Map<String, String> maps = System.getenv();
 		sortedSet = new TreeSet<Object>(maps.keySet());
 		for(Object key : sortedSet){
 			System.out.printf("%35s : %s\n", key, maps.get(key));
 		}
-		
+
 		System.out.print((int)'\r'); //carrige return
 		System.out.print((int)'\n'); //line feed
 		System.out.println();
@@ -39,9 +46,9 @@ public class SystemMain {
 		PrintStream ps = System.out;
 		System.setOut(new PrintStream(new FileOutputStream(file)));
 		System.out.println("system out print");
-		
+
 		System.setOut(ps);
-		
+
 		Runtime runtime = Runtime.getRuntime();
 		BufferedReader br = new BufferedReader(new InputStreamReader(runtime.exec("netstat -an").getInputStream()));
 		while(br.ready()){
@@ -55,5 +62,4 @@ public class SystemMain {
 //		runtime.load("/home/avh/lib/libX11.so");
 		System.out.println("end");
 	}
-	
 }

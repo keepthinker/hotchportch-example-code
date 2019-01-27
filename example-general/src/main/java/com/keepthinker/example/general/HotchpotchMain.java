@@ -1,5 +1,6 @@
 package com.keepthinker.example.general;
 
+import java.util.concurrent.*;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.LockSupport;
@@ -10,7 +11,25 @@ import java.util.concurrent.locks.ReentrantLock;
  */
 public class HotchpotchMain {
 	public static void main(String[] args){
-		test4();
+		ExecutorService executorService = Executors.newCachedThreadPool();
+		RequestTask requestTask = new RequestTask();
+		Future<String> future = executorService.submit(requestTask);
+		try {
+			System.out.println(future.get());
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		} catch (ExecutionException e) {
+			e.printStackTrace();
+		}
+	}
+
+	private static class RequestTask implements Callable<String> {
+
+		@Override
+		public String call() throws Exception {
+
+			return "";
+		}
 	}
 
 	private static void test3(){

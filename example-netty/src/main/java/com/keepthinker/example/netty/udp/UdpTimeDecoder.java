@@ -14,7 +14,10 @@ public class UdpTimeDecoder extends SimpleChannelInboundHandler<DatagramPacket> 
         System.out.println("channelRead0 decode bytes: " + msg);
         Long data = msg.content().getLong(0);
         System.out.println("channelRead0 decode obj: " + msg.content().getLong(0));
-        ctx.fireChannelRead(data);
+        UdpPayload udpPayload = new UdpPayload();
+        udpPayload.setAddr(msg.sender());
+        udpPayload.setData(data);
+        ctx.fireChannelRead(udpPayload);
     }
 /*
     @Override
