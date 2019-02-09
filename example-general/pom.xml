@@ -5,7 +5,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>com.keepthinker</groupId>
-		<artifactId>software-technology</artifactId>
+		<artifactId>hotchportch-example-code</artifactId>
 		<version>1.0.0-RELEASE</version>
 	</parent>
 	<artifactId>example-general</artifactId>

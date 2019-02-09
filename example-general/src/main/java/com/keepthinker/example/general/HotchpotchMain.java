@@ -11,6 +11,10 @@ import java.util.concurrent.locks.ReentrantLock;
  */
 public class HotchpotchMain {
 	public static void main(String[] args){
+		test4();
+	}
+
+	private static void test5(){
 		ExecutorService executorService = Executors.newCachedThreadPool();
 		RequestTask requestTask = new RequestTask();
 		Future<String> future = executorService.submit(requestTask);
@@ -21,8 +25,8 @@ public class HotchpotchMain {
 		} catch (ExecutionException e) {
 			e.printStackTrace();
 		}
-	}
 
+	}
 	private static class RequestTask implements Callable<String> {
 
 		@Override
