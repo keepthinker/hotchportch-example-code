@@ -19,7 +19,7 @@ public class ReferenceTypeMain {
         System.out.println("strongReference start^^^^^^^^^^^^^^^^^");
         String str =  new String("StrongReference");
         System.gc();
-        System.out.println(str);
+        System.out.println("value after gc: " + str);
         System.out.println("strongReference end________________");
     }
 
@@ -30,19 +30,23 @@ public class ReferenceTypeMain {
         StringObject str =  new StringObject("SoftReference");
         SoftReference<StringObject> softReference = new SoftReference<>(str);
         str = null;
+        System.out.println("softReference.isEnqueued() before gc: " + softReference.isEnqueued());;
         System.gc();
+        System.out.println("softReference.isEnqueued() after gc: " + softReference.isEnqueued());;
         System.out.println("value after gc: " + softReference.get());
         new ReferenceQueueConsumer(referenceQueue).run();
         System.out.println("softReference end________________");
     }
 
     public static void weakReference(){
-        System.out.println("weakReference star^^^^^^^^^^^^^^^^^");
+        System.out.println("weakReference start^^^^^^^^^^^^^^^^^");
         final ReferenceQueue<StringObject> referenceQueue = new ReferenceQueue<>();
         StringObject str =  new StringObject("WeakReference");
         WeakReference<StringObject> weakReference = new WeakReference<>(str, referenceQueue);
         str = null;
+        System.out.println("weakReference.isEnqueued() before gc: " + weakReference.isEnqueued());
         System.gc();
+        System.out.println("weakReference.isEnqueued() after gc: " + weakReference.isEnqueued());
         System.out.println("value after gc: " + weakReference.get());
         new ReferenceQueueConsumer(referenceQueue).run();
         System.out.println("weakReference end________________");
@@ -54,10 +58,10 @@ public class ReferenceTypeMain {
         final ReferenceQueue<StringObject> referenceQueue = new ReferenceQueue<>();
         final StringPhantomReference phantomReference = new StringPhantomReference(str, referenceQueue);
         str = null;
-        System.out.println("phantomReference enqueued before gc: " + phantomReference.isEnqueued());
+        System.out.println("phantomReference.isEnqueued() after gc: " + phantomReference.isEnqueued());
         System.gc();
-        System.out.println("phantomReference enqueued after gc: " + phantomReference.isEnqueued());
-
+        System.out.println("phantomReference.isEnqueued() after gc: " + phantomReference.isEnqueued());
+        System.out.println("value after gc: " + phantomReference.get());
         new ReferenceQueueConsumer(referenceQueue).run();
         System.out.println("phantomReference end________________");
     }

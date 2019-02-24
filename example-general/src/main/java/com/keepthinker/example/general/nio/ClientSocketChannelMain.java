@@ -15,7 +15,7 @@ public class ClientSocketChannelMain {
         socketChannel.connect(new InetSocketAddress("127.0.0.1", 8088));
 
         String newData = "New String to write to file..." + System.currentTimeMillis();
-        ByteBuffer buf = ByteBuffer.allocate(48);
+        ByteBuffer buf = ByteBuffer.allocateDirect(48);
         buf.clear();
         buf.put(newData.getBytes());
         buf.flip();
