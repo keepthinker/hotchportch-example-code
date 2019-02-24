@@ -1,25 +1,22 @@
-
 bin
 build
 
-example-*/bin
-example-*/build
-
-/**/target
+wm-*/bin
+wm-*/build
 
 /**/logs
 /.gradle
 
-/out
+/**/out
+/**/target
 
 #idea config file
 /.idea
 /**/*.iml
-/hotchpotch-example-code.ipr
-/hotchpotch-example-code.iws
+/wavemessaging.ipr
+/wavemessaging.iws
 
 #eclipse config file
 /**/.project
 /**/.settings
 /**/.classpath
-
