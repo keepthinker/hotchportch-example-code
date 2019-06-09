@@ -27,7 +27,6 @@ public class ClassLoaderMain {
 		ClassLoader clInt = java.lang.Integer.class.getClassLoader();
 		ClassLoader clStr = java.lang.String.class.getClassLoader();
 		System.out.println("Bootstrap cl: " + clInt);
-		System.out.println("ECKeyPairGenerator cl :" + com.sun.nio.zipfs.JarFileSystemProvider.class.getClassLoader());
 		System.out.println(clStr);
 		System.out.println(clInt == clStr);
 
