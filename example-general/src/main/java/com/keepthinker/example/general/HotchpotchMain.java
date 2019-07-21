@@ -16,6 +16,10 @@ import java.util.concurrent.locks.ReentrantLock;
 public class HotchpotchMain {
 	public static void main(String[] args){
 
+	}
+
+	public static void test5(){
+
 		final ReferenceQueue<Object> referenceQueue = new ReferenceQueue<>();
 		Object obj = new Object();
 		TestWeakReference weakReference = new TestWeakReference(obj, referenceQueue);
@@ -44,7 +48,6 @@ public class HotchpotchMain {
 				}
 			}
 		}
-
 	}
 
 	public static class TestWeakReference extends PhantomReference{//WeakReference {

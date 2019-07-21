@@ -13,17 +13,29 @@ public class CountdownLatchMain {
         ExecutorService es = Executors.newCachedThreadPool();
 
         int size = 10;
-        CountDownLatch latch = new CountDownLatch(size);
+        final CountDownLatch latch = new CountDownLatch(size);
         for(int i = 0; i < size; i++) {
             es.execute(new KeyHolder(latch));
         }
+
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    latch.await();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                System.out.println("latch free 2");
+            }
+        }).start();
 
         try {
             latch.await();
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        System.out.println("latch free");
+        System.out.println("latch free 1");
 
         es.shutdown();
     }

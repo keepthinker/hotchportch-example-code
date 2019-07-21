@@ -58,7 +58,7 @@ public class ReferenceTypeMain {
         final ReferenceQueue<StringObject> referenceQueue = new ReferenceQueue<>();
         final StringPhantomReference phantomReference = new StringPhantomReference(str, referenceQueue);
         str = null;
-        System.out.println("phantomReference.isEnqueued() after gc: " + phantomReference.isEnqueued());
+        System.out.println("phantomReference.isEnqueued() before gc: " + phantomReference.isEnqueued());
         System.gc();
         System.out.println("phantomReference.isEnqueued() after gc: " + phantomReference.isEnqueued());
         System.out.println("value after gc: " + phantomReference.get());
@@ -83,13 +83,11 @@ public class ReferenceTypeMain {
                         e.printStackTrace();
                     }
                 } else {
-                    System.out.println("after gc, enqueued: " + reference.isEnqueued());
-
                     try {
                         Field field = Reference.class.getDeclaredField("referent");
                         field.setAccessible(true);
                         StringObject value = (StringObject) field.get(reference);
-                        System.out.println("Reference's referent value:" + value);
+                        System.out.println("ReferenceQueueConsumer|Reference's referent value:" + value);
                     } catch (NoSuchFieldException e) {
                         e.printStackTrace();
                     } catch (IllegalAccessException e) {
