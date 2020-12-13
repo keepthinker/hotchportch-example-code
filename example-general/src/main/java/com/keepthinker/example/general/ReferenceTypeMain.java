@@ -12,13 +12,13 @@ public class ReferenceTypeMain {
         softReference();
         weakReference();
         phantomReference();
-
     }
 
     public static void strongReference(){
         System.out.println("strongReference start^^^^^^^^^^^^^^^^^");
         String str =  new String("StrongReference");
         System.gc();
+        sleep(1);
         System.out.println("value after gc: " + str);
         System.out.println("strongReference end________________");
     }
@@ -32,6 +32,7 @@ public class ReferenceTypeMain {
         str = null;
         System.out.println("softReference.isEnqueued() before gc: " + softReference.isEnqueued());;
         System.gc();
+        sleep(1);
         System.out.println("softReference.isEnqueued() after gc: " + softReference.isEnqueued());;
         System.out.println("value after gc: " + softReference.get());
         new ReferenceQueueConsumer(referenceQueue).run();
@@ -42,10 +43,12 @@ public class ReferenceTypeMain {
         System.out.println("weakReference start^^^^^^^^^^^^^^^^^");
         final ReferenceQueue<StringObject> referenceQueue = new ReferenceQueue<>();
         StringObject str =  new StringObject("WeakReference");
-        WeakReference<StringObject> weakReference = new WeakReference<>(str, referenceQueue);
+        StringWeakReference weakReference = new StringWeakReference(str, referenceQueue);
+        weakReference.setName("StringWeakReference");
         str = null;
         System.out.println("weakReference.isEnqueued() before gc: " + weakReference.isEnqueued());
         System.gc();
+        sleep(1);
         System.out.println("weakReference.isEnqueued() after gc: " + weakReference.isEnqueued());
         System.out.println("value after gc: " + weakReference.get());
         new ReferenceQueueConsumer(referenceQueue).run();
@@ -71,7 +74,6 @@ public class ReferenceTypeMain {
         ReferenceQueueConsumer (ReferenceQueue referenceQueue ){
             this.referenceQueue = referenceQueue;
         }
-
         public void run(){
             for(int i = 0; i < 3; i++){
                 Reference reference = referenceQueue.poll();
@@ -87,6 +89,10 @@ public class ReferenceTypeMain {
                         Field field = Reference.class.getDeclaredField("referent");
                         field.setAccessible(true);
                         StringObject value = (StringObject) field.get(reference);
+                        if (reference instanceof StringWeakReference) {
+                            StringWeakReference stringWeakReference = (StringWeakReference)(reference);
+                            System.out.println("StringWeakReference.name: " + stringWeakReference.getName() + "  |  ");
+                        }
                         System.out.println("ReferenceQueueConsumer|Reference's referent value:" + value);
                     } catch (NoSuchFieldException e) {
                         e.printStackTrace();
@@ -98,13 +104,20 @@ public class ReferenceTypeMain {
             }}
     }
 
-
     private static class StringPhantomReference extends PhantomReference<StringObject>{
 
         public StringPhantomReference(StringObject referent, ReferenceQueue<? super StringObject> q) {
             super(referent, q);
         }
 
+    }
+
+    private static void sleep(int seconds) {
+        try {
+            Thread.sleep(seconds * 1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     private static class StringObject{
@@ -131,5 +144,25 @@ public class ReferenceTypeMain {
         }
     }
 
+    private static class StringWeakReference extends WeakReference{
+
+        private String name;
+
+        public StringWeakReference(Object referent) {
+            super(referent);
+        }
+
+        public StringWeakReference(Object referent, ReferenceQueue queue) {
+            super(referent, queue);
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+    }
 
 }

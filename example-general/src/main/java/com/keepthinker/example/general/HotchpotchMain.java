@@ -14,9 +14,156 @@ import java.util.concurrent.locks.ReentrantLock;
  * @author keshengkai
  */
 public class HotchpotchMain {
+	private static Lock lock = new ReentrantLock();
+	private static final BlockingQueue queue = new LinkedBlockingQueue();
 	public static void main(String[] args){
 
+		final ReentrantLock lock = new ReentrantLock();
+
+		new Thread(){
+			@Override
+			public void run() {
+				lock.lock();
+				try {
+					System.out.println("get the lock");
+					try {
+						Thread.sleep(60000L);
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					}
+				} finally {
+					lock.unlock();
+				}
+			}
+		}.start();
+		lock.lock();
+
+		System.out.println("get the lock2");
+		try {
+			Thread.sleep(60000L);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		lock.unlock();
+
+
 	}
+
+	private static void foo1(){
+
+		ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(1, 1, 1000, TimeUnit.MINUTES, new LinkedBlockingDeque<Runnable>());
+		threadPoolExecutor.execute(new Runnable() {
+			@Override
+			public void run() {
+				try {
+					Thread.sleep(3000L);
+				} catch (InterruptedException e) {
+					System.out.println("exception:" + e.getMessage());
+				}
+				System.out.println("running");
+			}
+		});
+
+		threadPoolExecutor.execute(new Runnable() {
+			@Override
+			public void run() {
+				try {
+					Thread.sleep(3000L);
+				} catch (InterruptedException e) {
+					System.out.println("exception:" + e.getMessage());
+				}
+				System.out.println("running");
+			}
+		});
+
+		threadPoolExecutor.shutdownNow();
+
+//		foo();
+		try {
+			Thread.sleep(30000L);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+
+	}
+
+	private static void foo(){
+
+
+
+		Thread thread = new Thread(new Runnable() {
+			@Override
+			public void run() {
+				while(true) {
+					Object obj = null;
+					try {
+						obj = queue.take();
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					}
+					System.out.println("run" + obj);
+				}
+			}
+		});
+
+		final ReferenceQueue<Thread> referenceQueue = new ReferenceQueue<>();
+		final ThreadPhantomReference phantomReference = new ThreadPhantomReference(thread, referenceQueue);
+		System.out.println("value before gc|" + phantomReference.get());
+		queue.add("data");
+		thread.start();
+		try {
+			Thread.sleep(10000L);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		thread = null;
+		queue.add("data");
+		System.out.println("phantomReference.isEnqueued() before gc: " + phantomReference.isEnqueued());
+		System.gc();
+		System.out.println("phantomReference.isEnqueued() after gc: " + phantomReference.isEnqueued());
+		System.out.println("value after gc: " + phantomReference.get());
+		new ReferenceQueueConsumer(referenceQueue).run();
+		System.out.println("phantomReference end________________");
+	}
+	private static class ReferenceQueueConsumer{
+		ReferenceQueue referenceQueue = new ReferenceQueue<>();
+		ReferenceQueueConsumer (ReferenceQueue referenceQueue ){
+			this.referenceQueue = referenceQueue;
+		}
+
+		public void run(){
+			for(int i = 0; i < 3; i++){
+				Reference reference = referenceQueue.poll();
+				if(reference == null){
+					try {
+						Thread.sleep(1000);
+						System.out.println("sleep for 1s");
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					}
+				} else {
+					try {
+						Field field = Reference.class.getDeclaredField("referent");
+						field.setAccessible(true);
+						Thread value = (Thread) field.get(reference);
+						System.out.println("ReferenceQueueConsumer|Reference's referent value:" + value);
+					} catch (NoSuchFieldException e) {
+						e.printStackTrace();
+					} catch (IllegalAccessException e) {
+						e.printStackTrace();
+					}
+					reference.clear(); //.如果被从队列取出，再也没有被引用，无需调用此方法。
+				}
+			}}
+	}
+
+	private static class ThreadPhantomReference extends PhantomReference<Thread>{
+
+		public ThreadPhantomReference(Thread referent, ReferenceQueue<? super Thread> q) {
+			super(referent, q);
+		}
+	}
+
 
 	public static void test5(){
 
