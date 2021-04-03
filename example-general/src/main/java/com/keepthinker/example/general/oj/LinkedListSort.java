@@ -7,11 +7,37 @@ public class LinkedListSort {
     public static void main(String[] args) {
         ListNode list =  generateRandomNodeList(5);
         printList(list);
-        ListNode newList = new Solution().selectSortList(list);
+        ListNode newList = new Solution().insertionSortList(list);
         printList(newList);
     }
 
     static class Solution {
+
+        public ListNode  insertionSortList(ListNode head) {
+            ListNode dummyHead = new ListNode(0, head);
+
+            ListNode lastSorted = head;
+            ListNode cur = head.next;
+
+            while (cur != null) {
+                if (lastSorted.val < cur.val) {
+                    lastSorted = lastSorted.next;
+                } else {
+                    ListNode tempPreHead = dummyHead;
+                    while (tempPreHead.next.val < cur.val) {
+                        tempPreHead = tempPreHead.next;
+                    }
+                    lastSorted.next = lastSorted.next.next;
+                    ListNode tempNext = tempPreHead.next;
+                    tempPreHead.next = cur;
+                    cur.next = tempNext;
+                }
+                cur = lastSorted.next;
+            }
+            return dummyHead.next;
+        }
+
+
         public ListNode selectSortList(ListNode head) {
 
             if (head.next == null) {

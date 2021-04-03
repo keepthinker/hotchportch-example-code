@@ -18,33 +18,7 @@ public class HotchpotchMain {
 	private static final BlockingQueue queue = new LinkedBlockingQueue();
 	public static void main(String[] args){
 
-		final ReentrantLock lock = new ReentrantLock();
-
-		new Thread(){
-			@Override
-			public void run() {
-				lock.lock();
-				try {
-					System.out.println("get the lock");
-					try {
-						Thread.sleep(60000L);
-					} catch (InterruptedException e) {
-						e.printStackTrace();
-					}
-				} finally {
-					lock.unlock();
-				}
-			}
-		}.start();
-		lock.lock();
-
-		System.out.println("get the lock2");
-		try {
-			Thread.sleep(60000L);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		lock.unlock();
+		System.out.println(new String(new char[]{'2', '3'}));
 
 
 	}
