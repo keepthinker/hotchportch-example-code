@@ -11,7 +11,7 @@ public class LinkedListSort {
         printList(newList);
     }
 
-    static class Solution {
+    private static class Solution {
 
         public ListNode  insertionSortList(ListNode head) {
             ListNode dummyHead = new ListNode(0, head);

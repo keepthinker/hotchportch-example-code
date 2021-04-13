@@ -14,7 +14,7 @@ public class IslandMaxArea {
         System.out.println(new Solution().maxAreaOfIsland(grid2));
     }
 
-    static class Solution {
+    private static class Solution {
 
         private int rowSize;
         private int columnSize;

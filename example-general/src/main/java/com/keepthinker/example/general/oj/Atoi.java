@@ -21,7 +21,7 @@ public class Atoi {
         System.out.println(new Atoi.Solution().myAtoi("-1"));
     }
 
-    public static class Solution {
+    private static class Solution {
         public int myAtoi(String str) {
             int positive = 1;
             long result = 0;

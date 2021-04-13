@@ -8,7 +8,7 @@ public class MinPathSum {
         System.out.println(new Solution().minPathSum(grid));
     }
 
-    static class Solution {
+    private static class Solution {
         public int minPathSum(int[][] grid) {
             int[][] dp = new int[grid.length][];
             for (int i = 0; i < grid.length; i++) {

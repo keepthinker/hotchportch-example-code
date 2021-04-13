@@ -13,7 +13,7 @@ public class TreeSum {
         System.out.println(new Solution().threeSum(new int[] {-4,-2,-2,-2,0,1,2,2,2,3,3,4,4,6,6}));
     }
 
-    public static class Solution {
+    private static class Solution {
         public List<List<Integer>> threeSum(int[] nums) {
             Arrays.sort(nums);
             List<List<Integer>> list = new ArrayList<>();
