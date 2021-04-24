@@ -26,9 +26,9 @@ public class ClassLoaderMain {
 		System.out.println("-----------------------------------");
 		ClassLoader clInt = java.lang.Integer.class.getClassLoader();
 		ClassLoader clStr = java.lang.String.class.getClassLoader();
-		System.out.println("Bootstrap cl: " + clInt);
-		System.out.println(clStr);
-		System.out.println(clInt == clStr);
+		System.out.println("Integer Classloader: " + clInt);
+		System.out.println("String Classloader: " + clStr);
+		System.out.println("String Classloader equals Integer's Classloader: " + (clInt == clStr));
 
 		ClassLoader clMain = java.lang.Integer.class.getClassLoader();
 		ClassLoader clSystem =ClassLoader.getSystemClassLoader();
@@ -46,6 +46,7 @@ public class ClassLoaderMain {
 	}
 	public static void recursiveCallParentCL(ClassLoader cl){
 		if(cl == null){
+			System.out.println("null indicates Bootstrap ClassLoader");
 			return;
 		}
 		recursiveCallParentCL(cl.getParent());
