@@ -33,14 +33,23 @@
 	</bean>
 
 	<bean id="earth" class="com.keepthinker.example.spring.ioc.model.Earth"
-		scope="prototype" autowire="byType">
+		scope="prototype">
 		<property name="quality" value="8.12e10" />
+		<property name="animal" ref="overrideAnimal"/>
 	</bean>
 	
 	<bean id="earthFromFactory" class="com.keepthinker.example.spring.ioc.model.MyFactoryBean">
 	</bean>
 
-	<bean id="inner" class="com.keepthinker.example.spring.ioc.Main$Inner" />
+	<bean id="inner" class="com.keepthinker.example.spring.ioc.XmlMain$Inner" />
 
-	<bean class="com.keepthinker.example.spring.ioc.InstantiationTracingBeanPostProcessor" />
+	<bean id="main" class="com.keepthinker.example.spring.ioc.XmlMain" />
+
+	<bean class="com.keepthinker.example.spring.ioc.postprocessor.InstantiationTracingBeanPostProcessor" />
+	<bean class="com.keepthinker.example.spring.ioc.postprocessor.InstantiationTracingBeanPostProcessor2" />
+	<bean class="com.keepthinker.example.spring.ioc.postprocessor.MyInstantiationAwareBeanPostProcessor" />
+	<bean class="com.keepthinker.example.spring.ioc.postprocessor.AnimalNamePrefixAddBeanFactoryPostProcessor" />
+
+	<bean class="com.keepthinker.example.spring.ioc.BeanLifeCircleObserver" init-method="xmlInitMethod" destroy-method="xmlDestroyMethod"/>
+
 </beans>

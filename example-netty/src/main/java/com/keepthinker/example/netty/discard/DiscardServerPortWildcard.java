@@ -12,11 +12,11 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 /**
  * Discards any incoming data.
  */
-public class DiscardServer {
+public class DiscardServerPortWildcard {
 
     private int port;
 
-    public DiscardServer(int port) {
+    public DiscardServerPortWildcard(int port) {
         this.port = port;
     }
 
@@ -37,8 +37,9 @@ public class DiscardServer {
                     .childOption(ChannelOption.SO_KEEPALIVE, true)
                     .childOption(ChannelOption.SO_REUSEADDR, true); // (6)
 
+
             // Bind and start to accept incoming connections.
-            ChannelFuture f = b.bind("192.168.31.99", port).sync(); // (7)
+            ChannelFuture f = b.bind("0.0.0.0", port).sync(); // (7)
             System.out.println("server started");
 
             // Wait until the server socket is closed.
@@ -58,6 +59,6 @@ public class DiscardServer {
         } else {
             port = 8080;
         }
-        new DiscardServer(port).run();
+        new DiscardServerPortWildcard(port).run();
     }
 }

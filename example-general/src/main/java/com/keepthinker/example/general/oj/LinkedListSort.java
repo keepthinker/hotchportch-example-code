@@ -2,6 +2,9 @@ package com.keepthinker.example.general.oj;
 
 import java.util.concurrent.ThreadLocalRandom;
 
+/**
+ * 对链表进行插入排序
+ */
 public class LinkedListSort {
 
     public static void main(String[] args) {

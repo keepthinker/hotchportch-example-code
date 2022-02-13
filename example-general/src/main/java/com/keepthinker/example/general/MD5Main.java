@@ -5,7 +5,6 @@ import java.io.IOException;
 import java.security.MessageDigest;
 
 public class MD5Main {
-	int a;
 	public static void main(String[] args) throws Exception{
 		System.out.println(generateMd5FromFile("/home/keshengkai/workspace/example/example-general/createworkbook.xlsx"));
 	}

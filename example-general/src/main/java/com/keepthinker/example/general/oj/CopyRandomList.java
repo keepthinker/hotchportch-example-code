@@ -3,6 +3,9 @@ package com.keepthinker.example.general.oj;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * 复制带随机指针的链表
+ */
 public class CopyRandomList {
 
     class Solution {

@@ -1,5 +1,8 @@
 package com.keepthinker.example.general.oj;
 
+/**
+ * 合并两个有序数组
+ */
 public class JoinSortedArr {
 
     class Solution {

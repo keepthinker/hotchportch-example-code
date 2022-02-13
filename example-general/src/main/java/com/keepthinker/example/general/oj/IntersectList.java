@@ -3,6 +3,9 @@ package com.keepthinker.example.general.oj;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * 相交链表
+ */
 public class IntersectList {
     public static void main(String[] args) {
 

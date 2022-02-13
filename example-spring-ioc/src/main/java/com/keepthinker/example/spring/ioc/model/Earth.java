@@ -1,11 +1,14 @@
 package com.keepthinker.example.spring.ioc.model;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import java.util.List;
 
 public class Earth {
 	private static int counter = 0;
 	private int id;
 	private double quality;
+	@Autowired
 	private List<Animal> animals;
 	private Animal animal;
 	

@@ -1,10 +1,10 @@
-package com.keepthinkerexample.spring.aop.aspectj;
+package com.keepthinker.example.spring.aop.aspectj;
 
 public class StringService {
 	private String str = "string";
 
-	public String getStr() {
-		return str;
+	public String getStr(String suffix) {
+		return str + ":" + suffix;
 	}
 
 	public void setStr(String str) {

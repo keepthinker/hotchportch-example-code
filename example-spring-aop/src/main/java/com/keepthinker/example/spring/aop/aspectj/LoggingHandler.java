@@ -1,4 +1,4 @@
-package com.keepthinkerexample.spring.aop.aspectj;
+package com.keepthinker.example.spring.aop.aspectj;
 
 import org.apache.log4j.Logger;
 import org.aspectj.lang.JoinPoint;
@@ -17,9 +17,9 @@ public class LoggingHandler {
 		String targetClassName=joinpoint.getTarget().getClass().getName();
 
 		String signature=joinpoint.getSignature().toString();
-		String argsInfo = "";
+		StringBuilder argsInfo = new StringBuilder();
 		for(Object obj:joinpoint.getArgs()){
-			argsInfo += obj + ":" + obj.getClass().getName() + "  ";
+			argsInfo.append(obj).append(":").append(obj.getClass().getName()).append("  ");
 		}
 		Logger logger = Logger.getLogger(targetClassName);
 		logger.info("get into via " + signature + (argsInfo.length() > 0 ? 

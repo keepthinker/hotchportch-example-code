@@ -4,7 +4,8 @@ import com.keepthinker.example.spring.ioc.model.Animal;
 import com.keepthinker.example.spring.ioc.model.Earth;
 import com.keepthinker.example.spring.ioc.model.Person;
 import com.keepthinker.example.spring.ioc.model.Tiger;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.AbstractApplicationContext;
@@ -17,7 +18,7 @@ import java.util.Map;
 
 @Component
 public class XmlMain{
-	private static Logger logger = Logger.getLogger(XmlMain.class);
+	private static Logger logger = LoggerFactory.getLogger(XmlMain.class);
 	@Autowired
 	private PropertySourcesPlaceholderConfigurer configurer;
 
@@ -43,27 +44,28 @@ public class XmlMain{
 		factoryBean(context);
 		mapAutowired(context);
 		atBean(context);
-		
 		context.registerShutdownHook();
+
+		context.close();
 	}
 
 	public static void configurationAnnotation(ApplicationContext context){
 		Person person = context.getBean(Person.class);
 		logger.info(person.getName());
-		logger.info(person.getWealth());
+		logger.info("{}", person.getWealth());
 
 		person =new Person();
 		logger.info(person.getName());
-		logger.info(person.getWealth());
+		logger.info("{}", person.getWealth());
 		PropertySource<?> pro = context.getBean("main1", XmlMain.class).configurer.getAppliedPropertySources().iterator().next();
-		logger.info(pro.getProperty("person.name"));
+		logger.info("{}", pro.getProperty("person.name"));
 	}
 
 	public static void nameOfClass(ApplicationContext context){
 		logger.info(Inner.class.getName());
 		logger.info(Inner.class.getCanonicalName());
 		try {
-			logger.info(Class.forName(Inner.class.getName()).newInstance());
+			logger.info("{}", Class.forName(Inner.class.getName()).newInstance());
 		} catch (InstantiationException | IllegalAccessException | ClassNotFoundException e) {
 			e.printStackTrace();
 		}
@@ -73,9 +75,9 @@ public class XmlMain{
 
 	public static void scopeAndAutowired(ApplicationContext context){
 		Animal animal1 = context.getBean("animal", Animal.class);
-		logger.info("animal : " + animal1.getId());
+		logger.info("animalId:{}|name:{}", animal1.getId(), animal1.getName());
 		Animal animal2 = context.getBean("animal", Animal.class);
-		logger.info("animal : " + animal2.getId());
+		logger.info("animalId:{}|name:{}", animal2.getId(), animal2.getName());
 
 		Animal animalDuplicate = context.getBean("animalDuplicate", Animal.class);
 		logger.info("animalDuplicate : " + animalDuplicate.getId());

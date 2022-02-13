@@ -1,29 +1,27 @@
-package com.keepthinker.example.spring.ioc;
+package com.keepthinker.example.spring.ioc.postprocessor;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.core.Ordered;
-import org.springframework.stereotype.Component;
 
-@Component
-public class InstantiationTracingBeanPostProcessor2  implements BeanPostProcessor, Ordered{
+public class InstantiationTracingBeanPostProcessor implements BeanPostProcessor, Ordered{
 	private static Logger logger = Logger.getLogger(InstantiationTracingBeanPostProcessor.class);
 	
 	@Override
 	public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
-		logger.info("before init1 : " + beanName);
+		logger.info("postProcessBeforeInitialization before init0 : " + beanName);
 		return bean;
 	}
 
 	@Override
 	public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
-		logger.info("after init1 : " + beanName);
+		logger.info("postProcessAfterInitialization after init0 : " + beanName);
 		return bean;
 	}
 
 	@Override
 	public int getOrder() {
-		return 1;
+		return 0;
 	}
 }

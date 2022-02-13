@@ -1,5 +1,8 @@
 package com.keepthinker.example.general.oj;
 
+/**
+ * 最小路径和
+ */
 public class MinPathSum {
 
     public static void main(String[] args) {

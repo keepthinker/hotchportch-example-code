@@ -1,4 +1,4 @@
-package com.keepthinkerexample.spring.aop.aspectj;
+package com.keepthinker.example.spring.aop.aspectj;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -9,12 +9,12 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 public class AspectJContext {
 
 	@Bean
-	LoggingHandler logginHandler(){
+	LoggingHandler loggingHandler(){
 		return new LoggingHandler();
 	}
 	
 	@Bean
-	StringService stringService(){
+	public StringService stringService(){
 		return new StringService();
 	}
 }

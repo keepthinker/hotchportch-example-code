@@ -46,7 +46,7 @@ public class ClassLoaderMain {
 	}
 	public static void recursiveCallParentCL(ClassLoader cl){
 		if(cl == null){
-			System.out.println("null indicates Bootstrap ClassLoader");
+			System.out.println("null ClassLoader");
 			return;
 		}
 		recursiveCallParentCL(cl.getParent());
@@ -58,20 +58,20 @@ public class ClassLoaderMain {
 		String binPath = basePath + "../../lib-bin/";
 		URL[] urls = new URL[]{new URL("file:" + binPath)};
 
-		ClassLoader parent = ClassLoaderMain.class.getClassLoader();
-		ClassLoader cl = new URLClassLoader(urls, parent);//, ClassLoaderMain.class.getClassLoader());
+//		ClassLoader parent = ClassLoaderMain.class.getClassLoader();
+		URLClassLoader cl = new URLClassLoader(urls, null);//, ClassLoaderMain.class.getClassLoader());
 		System.out.println("class loader: " + cl);
-		String classStr = "com.keepthinker.example.BinConsole";
+		String classStr = "com.keepthinker.learn.BinConsole";
 		Class<?> clazz = cl.loadClass(classStr);
 		Object obj = clazz.newInstance();
-		System.out.println("com.keepthinker.example.BinConsole print :");
+		System.out.println("com.keepthinker.learn.BinConsole print :");
 		clazz.getMethod("print").invoke(obj);
 
 		urls = new URL[]{new URL("file:" + jarPath)};
 		cl = new URLClassLoader(urls, cl);
 		System.out.println("class loader: " + cl);
-		String classStr2 = "com.keepthinker.example.JarConsole";
-		System.out.println("com.keepthinker.example.JarConsole static{} :");
+		String classStr2 = "com.keepthinker.learn.JarConsole";
+		System.out.println("com.keepthinker.learn.JarConsole static{} :");
 		Class.forName(classStr2, true, cl);
 		
 
@@ -110,7 +110,7 @@ public class ClassLoaderMain {
 		String path = basePath + "../../lib-bin/";
 		URL[] urls = new URL[]{new URL("file:" + path)};
 		ClassLoader cl = new URLClassLoader(urls);
-		Class<?> clazz = cl.loadClass("com.keepthinker.example.general.ReadFile");
+		Class<?> clazz = cl.loadClass("com.keepthinker.learn.general.ReadFile");
 		Object readFile = clazz.newInstance();
 		System.out.println(readFile);
 		byte[] data = (byte[])clazz.getDeclaredMethod("read", String.class).invoke(readFile, "pom.xml");
@@ -123,7 +123,7 @@ public class ClassLoaderMain {
 		URL[] urls = new URL[]{new URL("file:" + path)};
 		ClassLoader cl = new URLClassLoader(urls);//default use ClassLoaderMain.class.getClassLoader() as parent class loader
 		recursiveCallParentCL(cl);
-		Class<?> clazz = cl.loadClass("com.keepthinker.example.SystemProperty");
+		Class<?> clazz = cl.loadClass("com.keepthinker.learn.SystemProperty");
 		Object sp = clazz.newInstance();
 		System.out.println(sp);
 		clazz.getDeclaredMethod("doStuff").invoke(sp);
