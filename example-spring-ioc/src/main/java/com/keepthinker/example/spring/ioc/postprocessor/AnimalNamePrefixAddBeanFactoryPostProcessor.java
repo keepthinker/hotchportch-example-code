@@ -1,6 +1,7 @@
 package com.keepthinker.example.spring.ioc.postprocessor;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.MutablePropertyValues;
 import org.springframework.beans.factory.config.BeanDefinition;
@@ -9,7 +10,7 @@ import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 import org.springframework.beans.factory.config.TypedStringValue;
 
 public class AnimalNamePrefixAddBeanFactoryPostProcessor implements BeanFactoryPostProcessor {
-    private static Logger logger = Logger.getLogger(AnimalNamePrefixAddBeanFactoryPostProcessor.class);
+    private static Logger logger = LoggerFactory.getLogger(AnimalNamePrefixAddBeanFactoryPostProcessor.class);
 
     @Override
     public void postProcessBeanFactory(ConfigurableListableBeanFactory configurableListableBeanFactory) throws BeansException {
@@ -21,6 +22,6 @@ public class AnimalNamePrefixAddBeanFactoryPostProcessor implements BeanFactoryP
                 values.add("name", "animal:" + ((TypedStringValue)val).getValue());
             }
         }
-        logger.info("postProcessBeanFactory");
+        logger.info("postProcessBeanFactory|configurableListableBeanFactory:{}", configurableListableBeanFactory);
     }
 }

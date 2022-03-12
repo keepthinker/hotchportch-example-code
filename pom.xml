@@ -82,7 +82,8 @@
 		<module>example-spring-webmvc</module>
 		<module>example-netty</module>
 		<module>example-zookeeper</module>
-	</modules>
+        <module>example-spring-lifecircle</module>
+    </modules>
 
 	<build>
 		<plugins>

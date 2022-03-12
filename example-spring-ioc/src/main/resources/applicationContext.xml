@@ -52,4 +52,17 @@
 
 	<bean class="com.keepthinker.example.spring.ioc.BeanLifeCircleObserver" init-method="xmlInitMethod" destroy-method="xmlDestroyMethod"/>
 
+	<bean class="com.keepthinker.example.spring.ioc.GeneralConfig">
+		<property name="databaseUrl" value="${database.url}"/>
+	</bean>
+
+	<bean id="propertySourcesPlaceholderConfigurer" class="org.springframework.context.support.PropertySourcesPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath:config-xml-load.properties</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean class="com.keepthinker.example.spring.ioc.Zoo" />
 </beans>

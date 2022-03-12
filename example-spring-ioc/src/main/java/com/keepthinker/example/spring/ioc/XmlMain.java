@@ -11,7 +11,10 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
+import org.springframework.core.env.ConfigurableEnvironment;
+import org.springframework.core.env.Environment;
 import org.springframework.core.env.PropertySource;
+import org.springframework.core.env.StandardEnvironment;
 import org.springframework.stereotype.Component;
 
 import java.util.Map;
@@ -34,8 +37,15 @@ public class XmlMain{
 
 	private static String XMLPath = "classpath:applicationContext.xml";
 	public static void main(String[] args) {
+//, new StandardEnvironment()
+		AbstractApplicationContext context = new ClassPathXmlApplicationContext(new String[]{XMLPath}, false);
 
-		AbstractApplicationContext context = new ClassPathXmlApplicationContext(XMLPath);
+		ConfigurableEnvironment environment = new StandardEnvironment();
+		//setRequiredProperties要求需要在jvm启动参数设置（java -Dmy-required-config=my-required-value）或者操作系统环境变量设置export my-required-config=my-required-value
+		environment.setRequiredProperties("my-required-config");
+		context.setEnvironment(environment);
+		context.refresh();
+
 		configurationAnnotation(context);
 		nameOfClass(context);
 		scopeAndAutowired(context);
