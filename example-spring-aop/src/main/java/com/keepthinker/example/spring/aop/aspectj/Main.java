@@ -8,7 +8,7 @@ public class Main {
 		AbstractApplicationContext context = new AnnotationConfigApplicationContext(AspectJContext.class);
 		StringService service = context.getBean(StringService.class);
 
-		System.out.println("main string:" + service.getStr("suffix"));
+		System.out.println("main string: " + service.getStr("suffix"));
 		
 		context.registerShutdownHook();
 		context.close();

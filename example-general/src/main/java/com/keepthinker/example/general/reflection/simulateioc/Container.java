@@ -59,7 +59,7 @@ public class Container {
 		try{
 			for(Object obj : componentCache.values()){
 				for(Field field : obj.getClass().getDeclaredFields()){
-					if(false == fileldInjection(obj, field)){
+					if(!fieldInjection(obj, field)){
 						throw new RuntimeException(field.getName() + " Autowired failure");
 					}
 				}
@@ -69,7 +69,7 @@ public class Container {
 		}
 	}
 	
-	public boolean fileldInjection(Object obj, Field field){
+	public boolean fieldInjection(Object obj, Field field){
 		if(field.getAnnotation(Autowired.class) != null){
 			field.setAccessible(true);
 			for(Object ins : componentCache.values()){

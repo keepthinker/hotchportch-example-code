@@ -9,13 +9,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.context.EnvironmentAware;
+import org.springframework.context.Lifecycle;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
-public class BeanLifeCircleObserver implements BeanNameAware, BeanClassLoaderAware, EnvironmentAware, BeanFactoryAware, ApplicationContextAware, InitializingBean, DisposableBean {
+public class BeanLifeCircleObserver implements BeanNameAware, BeanClassLoaderAware, EnvironmentAware, BeanFactoryAware, ApplicationContextAware, InitializingBean, DisposableBean, Lifecycle {
 
     private static Logger logger = LoggerFactory.getLogger(BeanLifeCircleObserver.class);
 
@@ -118,6 +119,22 @@ public class BeanLifeCircleObserver implements BeanNameAware, BeanClassLoaderAwa
 
     public void xmlDestroyMethod() {
         logger.info("-------xmlDestroyMethod");
+    }
+
+    @Override
+    public void start() {
+        logger.info("Lifecycle.start()");
+    }
+
+    @Override
+    public void stop() {
+        logger.info("Lifecycle.stop()");
+    }
+
+    @Override
+    public boolean isRunning() {
+        logger.info("Lifecycle.isRunning()");
+        return false;
     }
 
     /*
