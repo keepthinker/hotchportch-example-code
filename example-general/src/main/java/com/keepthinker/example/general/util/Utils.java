@@ -2,9 +2,14 @@ package com.keepthinker.example.general.util;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import java.text.SimpleDateFormat;
+
 public class Utils {
 
 	private static ObjectMapper mapper = new ObjectMapper();
+	static {
+		mapper.setDateFormat(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss"));
+	}
 
 	public static ClassLoader getContextClassloader(){
 		return Thread.currentThread().getContextClassLoader();

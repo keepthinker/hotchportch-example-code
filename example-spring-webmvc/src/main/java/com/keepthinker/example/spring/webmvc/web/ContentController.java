@@ -81,7 +81,7 @@ public class ContentController {
 				Cell cell= row.createCell(cellid ++);
 				Font font = workbook.createFont();
 				font.setBold(true);
-				font.setColor(HSSFColor.BLUE.index);
+				font.setColor(Font.COLOR_RED);
 				XSSFCellStyle cellStyle = workbook.createCellStyle();
 				cellStyle.setFont(font);
 				cell.setCellStyle(cellStyle);
