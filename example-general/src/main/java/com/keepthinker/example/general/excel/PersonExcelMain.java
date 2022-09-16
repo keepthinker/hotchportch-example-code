@@ -3,7 +3,6 @@ package com.keepthinker.example.general.excel;
 import com.alibaba.excel.EasyExcel;
 import com.alibaba.excel.ExcelReader;
 import com.alibaba.excel.ExcelWriter;
-import com.alibaba.excel.read.builder.ExcelReaderBuilder;
 import com.alibaba.excel.read.metadata.ReadSheet;
 import com.alibaba.excel.write.metadata.WriteSheet;
 import com.keepthinker.example.general.util.Utils;
@@ -19,8 +18,8 @@ public class PersonExcelMain {
 
 
     public static void main(String[] args) {
-//        readExcel();
-        readMultipleSheet();
+        readExcel();
+//        readMultipleSheet();
 //        writeExcel();
     }
 
@@ -81,6 +80,7 @@ public class PersonExcelMain {
         person.setSalary(80000);
         person.setSex("Male");
         person.setWeight(70);
+        person.setTaxRate(0.3f);
         return person;
     }
 
@@ -98,6 +98,7 @@ public class PersonExcelMain {
         person.setSalary(70000);
         person.setSex("Male");
         person.setWeight(69);
+        person.setTaxRate(0.2f);
         return person;
     }
 }

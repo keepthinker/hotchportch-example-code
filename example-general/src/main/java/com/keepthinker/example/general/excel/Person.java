@@ -1,10 +1,11 @@
 package com.keepthinker.example.general.excel;
 
-import java.util.Date;
-
 import com.alibaba.excel.annotation.ExcelIgnore;
 import com.alibaba.excel.annotation.ExcelProperty;
 import com.alibaba.excel.annotation.format.DateTimeFormat;
+import com.alibaba.excel.annotation.format.NumberFormat;
+
+import java.util.Date;
 
 public class Person {
     @ExcelProperty({"Person", "name"})
@@ -34,6 +35,9 @@ public class Person {
     private int id;
     @ExcelProperty(value = {"Person", "country"}, converter = RegionConvertor.class)
     private String region;
+    @NumberFormat("0.00%")
+    @ExcelProperty({"Person", "tax rate"})
+    private Float taxRate;
 
     public String getName() {
         return name;
@@ -137,5 +141,13 @@ public class Person {
 
     public void setRegion(String region) {
         this.region = region;
+    }
+
+    public Float getTaxRate() {
+        return taxRate;
+    }
+
+    public void setTaxRate(Float taxRate) {
+        this.taxRate = taxRate;
     }
 }

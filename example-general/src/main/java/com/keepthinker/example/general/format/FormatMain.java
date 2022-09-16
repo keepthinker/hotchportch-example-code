@@ -28,12 +28,12 @@ public class FormatMain {
 				"The disk \"{1}\" contains {0} file(s).");
 		System.out.println(form.format(testArgs));
 
-		MessageFormat myform = new MessageFormat("I like {0}");
+		MessageFormat myform = new MessageFormat("I like {0} --1");
 		System.out.println(myform.format(new Object[]{"Reading"}));
 
 		//the bellowing is not good, because everytime it's invoked, it'll new a new MessageFormat object
-		System.out.println(MessageFormat.format("I like {0}", 
-				new Object[]{"Reading"}));
+		System.out.println(MessageFormat.format("I like {0}",
+				"Reading --2"));
 	}
 
 	private static void dateFormat() throws ParseException{

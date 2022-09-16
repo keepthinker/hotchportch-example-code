@@ -8,8 +8,6 @@ import com.keepthinker.example.general.util.Utils;
 
 import java.io.File;
 import java.io.FileOutputStream;
-import java.net.URLEncoder;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
 
