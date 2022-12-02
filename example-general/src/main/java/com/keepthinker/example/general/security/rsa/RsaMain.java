@@ -14,9 +14,11 @@ public class RsaMain {
 
         EncodeType encodeType = EncodeType.HEX;
         StringKeyPair keyPair = RsaUtils.generateKeyPair(encodeType);
+        System.out.printf("private key(%d): %s\n", keyPair.getPrivateKey().length(), keyPair.getPrivateKey());
+        System.out.printf("public key(%d): %s\n", keyPair.getPublicKey().length(), keyPair.getPublicKey());
         for (int i = 0; i < 50; i++) {
             executorService.execute(() -> {
-                for (int j = 0; j < 100; j++) {
+                for (int j = 0; j < 2; j++) {
                     try {
 						byte[] encryptedData = RsaUtils.encrypt(encodeType, keyPair.getPublicKey(), "hell world!".getBytes());
                         byte[] decryptedData = RsaUtils.decrypt(encodeType, keyPair.getPrivateKey(), encryptedData);

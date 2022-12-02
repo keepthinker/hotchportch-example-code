@@ -36,26 +36,26 @@ public class EccUtils {
         KeyPair keyPair = keyPairGenerator.generateKeyPair();
         byte[] privateKey = keyPair.getPrivate().getEncoded();
         byte[] publicKey = keyPair.getPublic().getEncoded();
-        StringKeyPair base64KeyPair = new StringKeyPair();
+        StringKeyPair stringKeyPair = new StringKeyPair();
         switch (encodeType) {
             case HEX:
-                base64KeyPair.setPrivateKey(Hex.encodeHexString(privateKey));
-                base64KeyPair.setPublicKey(Hex.encodeHexString((publicKey)));
+                stringKeyPair.setPrivateKey(Hex.encodeHexString(privateKey));
+                stringKeyPair.setPublicKey(Hex.encodeHexString((publicKey)));
                 break;
             case BASE64:
-                base64KeyPair.setPrivateKey(Base64.getEncoder().encodeToString(privateKey));
-                base64KeyPair.setPublicKey(Base64.getEncoder().encodeToString(publicKey));
+                stringKeyPair.setPrivateKey(Base64.getEncoder().encodeToString(privateKey));
+                stringKeyPair.setPublicKey(Base64.getEncoder().encodeToString(publicKey));
                 break;
             case BASE64_MIME:
-                base64KeyPair.setPrivateKey(Base64.getMimeEncoder().encodeToString(privateKey));
-                base64KeyPair.setPublicKey(Base64.getMimeEncoder().encodeToString(publicKey));
+                stringKeyPair.setPrivateKey(Base64.getMimeEncoder().encodeToString(privateKey));
+                stringKeyPair.setPublicKey(Base64.getMimeEncoder().encodeToString(publicKey));
                 break;
             case BASE64_URL_SAFE:
-                base64KeyPair.setPrivateKey(Base64.getUrlEncoder().encodeToString(privateKey));
-                base64KeyPair.setPublicKey(Base64.getUrlEncoder().encodeToString(publicKey));
+                stringKeyPair.setPrivateKey(Base64.getUrlEncoder().encodeToString(privateKey));
+                stringKeyPair.setPublicKey(Base64.getUrlEncoder().encodeToString(publicKey));
                 break;
         }
-        return base64KeyPair;
+        return stringKeyPair;
     }
 
     //公钥加密
