@@ -1,6 +1,10 @@
 package com.keepthinker.example.general.util;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.keepthinker.example.general.security.EncodeType;
+import org.apache.commons.codec.binary.Hex;
+
+import java.util.Base64;
 
 import java.text.SimpleDateFormat;
 
@@ -25,5 +29,33 @@ public class Utils {
 		} catch (Exception e) {
 			return "";
 		}
+	}
+
+	public static byte[] decode(EncodeType keyEncodeType, String data) throws Exception {
+		switch (keyEncodeType){
+			case HEX:
+				return Hex.decodeHex(data.toCharArray());
+			case BASE64:
+				return Base64.getDecoder().decode(data);
+			case BASE64_MIME:
+				return Base64.getMimeDecoder().decode(data);
+			case BASE64_URL_SAFE:
+				return Base64.getUrlDecoder().decode(data);
+		}
+		return null;
+	}
+
+	public static String encode(EncodeType keyEncodeType, byte[] data) throws Exception {
+		switch (keyEncodeType){
+			case HEX:
+				return Hex.encodeHexString(data);
+			case BASE64:
+				return Base64.getEncoder().encodeToString(data);
+			case BASE64_MIME:
+				return Base64.getMimeEncoder().encodeToString(data);
+			case BASE64_URL_SAFE:
+				return Base64.getUrlEncoder().encodeToString(data);
+		}
+		return null;
 	}
 }
