@@ -13,8 +13,8 @@ public class LambdaMain {
     }
 
     private static void map() {
-        List<Integer> numbers = Arrays.asList(1, 2, 3, 4);
-        List<Integer> squares = numbers.stream().map(x -> x * x).collect(Collectors.toList());
+        List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 4, 5, 5);
+        List<Integer> squares = numbers.stream().distinct().map(x -> x * x).collect(Collectors.toList());
         System.out.println("map: " + squares);
     }
 
@@ -37,6 +37,10 @@ public class LambdaMain {
                 }
         );
         System.out.println();
+
+        new Random().ints().limit(10).forEach(x -> {System.out.print(x + ":");});
+        System.out.println();
+
     }
 
     private static void reduce() {

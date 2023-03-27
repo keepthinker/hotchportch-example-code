@@ -14,9 +14,9 @@
         </commentGenerator>
 
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://192.168.0.104:3306/test?useUnicode=true"
-                        userId="test"
-                        password="test">
+                        connectionURL="jdbc:mysql://172.18.18.1:3306/learning?useUnicode=true"
+                        userId="root"
+                        password="root123">
         </jdbcConnection>
 
         <javaTypeResolver >
@@ -33,7 +33,7 @@
         <javaClientGenerator type="XMLMAPPER" targetPackage="com.keepthinker.dao"  targetProject="src">
         </javaClientGenerator>
 
-        <table schema="test" tableName="person" domainObjectName="Person"
+        <table schema="learning" tableName="sys_user_role" domainObjectName="SysUserRole"
                enableCountByExample="false" enableDeleteByExample="false"
                enableSelectByExample="false" enableUpdateByExample="false">
             <generatedKey column="ID" sqlStatement="MySQL" identity="true" />
