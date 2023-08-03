@@ -4,7 +4,12 @@ import java.lang.ref.PhantomReference;
 import java.lang.ref.Reference;
 import java.lang.ref.ReferenceQueue;
 import java.lang.reflect.Field;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.math.RoundingMode;
+import java.time.LocalDate;
 import java.util.concurrent.*;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.LockSupport;
@@ -17,10 +22,23 @@ public class HotchpotchMain {
 	private static Lock lock = new ReentrantLock();
 	private static final BlockingQueue queue = new LinkedBlockingQueue();
 	public static void main(String[] args){
+		BigDecimal number = new BigDecimal(19891);
+		System.out.println(number);
+		number = new BigDecimal("0.01").multiply(number);
+		System.out.println("number:" + number);
 
-		System.out.println(new String(new char[]{'2', '3'}));
+		System.out.println("number:" + number.divide(new BigDecimal(100), 0, RoundingMode.DOWN).intValue());
 
 
+	}
+
+	public static void atomicInteger(){
+		AtomicInteger counter = new AtomicInteger(1);
+		for (int i = 0; i < 10; i++) {
+			counter.getAndUpdate(x -> x * 2);
+			System.out.println(counter.get());
+		}
+		System.out.println(counter.get());
 	}
 
 	private static void foo1(){

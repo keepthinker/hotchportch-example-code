@@ -1,4 +1,4 @@
-package com.keepthinker.example.mq;
+package com.keepthinker.example.mq.activemq;
 
 import org.apache.activemq.ActiveMQConnectionFactory;
 

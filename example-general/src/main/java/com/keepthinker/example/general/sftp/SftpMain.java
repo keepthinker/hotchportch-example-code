@@ -29,7 +29,7 @@ public class SftpMain {
     }
 
     public static void checkExist() throws SftpException {
-        SftpUtil sftp = new SftpUtil("sftpuser", "sftpuser", "172.28.40.234", 22);
+        SftpUtil sftp = new SftpUtil("sftp", "sftp", "172.18.85.95", 2222);
         sftp.login();
         System.out.println(sftp.isExistFile("sftpuser/test/test_sftp.jpg"));
         sftp.logout();
