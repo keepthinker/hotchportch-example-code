@@ -1,12 +1,13 @@
 package com.keepthinker.example.general;
 
+import cn.hutool.core.date.LocalDateTimeUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.lang.ref.PhantomReference;
 import java.lang.ref.Reference;
 import java.lang.ref.ReferenceQueue;
 import java.lang.reflect.Field;
-import java.math.BigDecimal;
-import java.math.BigInteger;
-import java.math.RoundingMode;
 import java.time.LocalDate;
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -19,18 +20,26 @@ import java.util.concurrent.locks.ReentrantLock;
  * @author keshengkai
  */
 public class HotchpotchMain {
+	private static Logger logger = LoggerFactory.getLogger(HotchpotchMain.class);
 	private static Lock lock = new ReentrantLock();
 	private static final BlockingQueue queue = new LinkedBlockingQueue();
 	public static void main(String[] args){
-		BigDecimal number = new BigDecimal(19891);
-		System.out.println(number);
-		number = new BigDecimal("0.01").multiply(number);
-		System.out.println("number:" + number);
+//		System.out.println("uuid : " + UUID.randomUUID().toString().replace("-", ""));
+//		System.out.println(JSONUtil.toJsonPrettyStr());
 
-		System.out.println("number:" + number.divide(new BigDecimal(100), 0, RoundingMode.DOWN).intValue());
+//		System.out.println(UUID.randomUUID().getMostSignificantBits());
+//		System.out.println(UUID.randomUUID().getLeastSignificantBits());
 
+//		String data = Utils.urlEncode("+++%242joi0/9!@#$&%^*(", "utf-8");
+//		System.out.println(data);
+//		System.out.println(Utils.urlDecode(data, "utf-8"));
 
+//		LocalDate localDate = LocalDateTimeUtil.parseDate("2020-02-02", "yyyy-MM-dd");
+//		System.out.println(localDate.minusDays(1));
+
+		logger.error("asdfasf:{}", "hello", new RuntimeException());
 	}
+
 
 	public static void atomicInteger(){
 		AtomicInteger counter = new AtomicInteger(1);

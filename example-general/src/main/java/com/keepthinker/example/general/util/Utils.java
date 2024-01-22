@@ -4,6 +4,9 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.keepthinker.example.general.security.EncodeType;
 import org.apache.commons.codec.binary.Hex;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
+import java.net.URLEncoder;
 import java.util.Base64;
 
 import java.text.SimpleDateFormat;
@@ -57,5 +60,21 @@ public class Utils {
 				return Base64.getUrlEncoder().encodeToString(data);
 		}
 		return null;
+	}
+
+	public static String urlEncode(String str, String charSet) {
+		try {
+			return URLEncoder.encode(str, charSet);
+		} catch (UnsupportedEncodingException e) {
+			throw new RuntimeException(e);
+		}
+	}
+
+	public static String urlDecode(String str, String charSet) {
+		try {
+			return URLDecoder.decode(str, charSet);
+		} catch (UnsupportedEncodingException e) {
+			throw new RuntimeException(e);
+		}
 	}
 }

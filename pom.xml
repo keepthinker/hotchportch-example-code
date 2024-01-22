@@ -22,7 +22,7 @@
 		<jsp.version>2.2</jsp.version>
 		<poi.version>4.1.2</poi.version>
 		<aspectj.version>1.8.6</aspectj.version>
-		<jackson.version>2.12.3</jackson.version>
+		<jackson.version>2.15.3</jackson.version>
 	</properties>
 
 	<dependencies>

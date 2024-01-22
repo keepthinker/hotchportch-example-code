@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:bookstore xmlns:ns2="com.keepthinker.example.general.xml.jaxb">
+    <bookList>
+        <book>
+            <id>1231</id>
+            <author>Joshua Bloch</author>
+            <title>Effective Java</title>
+            <publisher>Amazon</publisher>
+            <isbn>978-0134685991</isbn>
+            <publish_date>2023-11-07</publish_date>
+        </book>
+        <book>
+            <id>2345</id>
+            <author>Kathy Sierra</author>
+            <title>Head First Java, 2nd Edition</title>
+            <publisher>amazon</publisher>
+            <isbn>978-0596009205</isbn>
+            <publish_date>2023-11-02</publish_date>
+        </book>
+    </bookList>
+    <location>Newyorkt</location>
+    <name>Amazon Bookstore</name>
+</ns2:bookstore>
