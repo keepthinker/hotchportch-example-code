@@ -1,6 +1,7 @@
 package com.keepthinker.example.general.xml.jackson;
 
 import com.keepthinker.example.general.util.Utils;
+import com.keepthinker.example.general.xml.vo.Bookstore;
 import org.apache.commons.io.FileUtils;
 
 import java.io.File;
@@ -17,5 +18,9 @@ public class JacksonXmlMain {
         TreeMap map = JacksonXmlUtils.xmlToObject(xmlStr, TreeMap.class);
 
         System.out.println(map);
+
+        Bookstore bookstore = JacksonXmlUtils.xmlToObject(xmlStr, Bookstore.class);
+        System.out.println(Utils.toJsonString(bookstore));
+
     }
 }

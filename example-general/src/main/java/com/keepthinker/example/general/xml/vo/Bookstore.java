@@ -1,4 +1,4 @@
-package com.keepthinker.example.general.xml.jaxb;
+package com.keepthinker.example.general.xml.vo;
 
 import java.util.List;
 
@@ -11,7 +11,7 @@ public class Bookstore {
 
     @XmlElementWrapper(name = "bookList")
     @XmlElement(name = "book")
-    private List < Book > bookList;
+    private List <Book> bookList;
     private String name;
     private String location;
 

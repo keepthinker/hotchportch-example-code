@@ -1,6 +1,8 @@
 package com.keepthinker.example.general.xml.jaxb;
 
 import com.keepthinker.example.general.util.Utils;
+import com.keepthinker.example.general.xml.vo.Book;
+import com.keepthinker.example.general.xml.vo.Bookstore;
 
 import java.io.File;
 import java.io.IOException;
@@ -21,7 +23,7 @@ public class BookMain {
 
     public static void main(String[] args) throws JAXBException, IOException {
 
-        List < Book > bookList = new ArrayList < Book > ();
+        List <Book> bookList = new ArrayList < Book > ();
 
         // create books
         Book book1 = new Book();

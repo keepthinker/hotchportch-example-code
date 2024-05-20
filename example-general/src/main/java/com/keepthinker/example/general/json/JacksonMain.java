@@ -13,12 +13,17 @@ import java.util.Map;
 
 public class JacksonMain {
 	private static ObjectMapper mapper = new ObjectMapper();
-	public static void main(String[] args){
-		hotchpotch2();
+	public static void main(String[] args) throws JsonProcessingException {
+		parseStringArray();
+	}
+
+	public static void parseStringArray() throws JsonProcessingException {
+		List<String> strs = mapper.readValue("[\"asdfasf\", \"ajiodfds\"]", List.class);
+		System.out.println(mapper.writeValueAsString(strs));
 	}
 
 	public static void writeToJsonStr(){
-		List<Map<String, String>> listMap = new ArrayList<Map<String, String>>(); 
+		List<Map<String, String>> listMap = new ArrayList<Map<String, String>>();
 		Map<String, String> map = new HashMap<String, String>();
 		map.put("name", "John");
 		listMap.add(map);

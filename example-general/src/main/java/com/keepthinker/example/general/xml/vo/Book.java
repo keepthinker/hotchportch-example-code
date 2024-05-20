@@ -1,4 +1,6 @@
-package com.keepthinker.example.general.xml.jaxb;
+package com.keepthinker.example.general.xml.vo;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -12,6 +14,7 @@ import javax.xml.bind.annotation.XmlType;
         "isbn",
         "publishDate"
 })
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Book {
 
     private String name;

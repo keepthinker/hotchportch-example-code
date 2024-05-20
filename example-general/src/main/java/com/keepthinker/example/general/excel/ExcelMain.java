@@ -13,8 +13,8 @@ import java.util.Date;
 
 public class ExcelMain {
     public static void main(String[] args) {
-//        writeExcelInherit();
-        readExcelInherit();
+        writeExcelInherit();
+//        readExcelInherit();
     }
 
 
