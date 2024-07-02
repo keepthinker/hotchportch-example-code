@@ -5,6 +5,8 @@ import cn.hutool.crypto.SecureUtil;
 import cn.hutool.crypto.SmUtil;
 import cn.hutool.crypto.asymmetric.KeyType;
 import cn.hutool.crypto.asymmetric.SM2;
+import com.keepthinker.example.general.security.EncodeType;
+import com.keepthinker.example.general.util.Utils;
 import org.apache.commons.codec.binary.Hex;
 
 import java.security.KeyPair;
@@ -14,7 +16,16 @@ import java.security.KeyPair;
  */
 public class Sm2Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
+        SM2 sm2 = new SM2();
+        System.out.println(Utils.encode(EncodeType.HEX, sm2.getPrivateKey().getEncoded()));
+        System.out.println(Utils.encode(EncodeType.HEX, sm2.getPublicKey().getEncoded()));
+
+
+    }
+
+    private void sm2Test() {
+
         String data = "certification is Certification(id=5fb5e11958371b3e7362d7fc, portEntry=470605, entryDate=2020-10-10, orderNo=22011191052041380(9622), province=广东省, weight=80.0, consignee=深圳市龙华区永嘉鑫冻品批发行, consigner=深圳市龙岗区新锦华冻品批发行, batchInfoList=[BatchInfo(id=null, batchNo=20200817, countryOfOrigin=303, productName=无, customName=猪小排, specification=10公斤/件, productType=LIS, weight=40.0)], updateTime=Thu Nov 19 11:06:01 CST 2020)";
 
         //使用自定义密钥对加密或解密
@@ -42,6 +53,5 @@ public class Sm2Main {
         // 公钥加密，私钥解密
         String encryptHexStr = sm2.encryptHex(data, KeyType.PublicKey);
         System.out.println("encryptHexStr:" + encryptHexStr);
-
     }
 }

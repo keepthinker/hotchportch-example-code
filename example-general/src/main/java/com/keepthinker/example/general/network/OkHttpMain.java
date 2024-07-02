@@ -12,7 +12,9 @@ public class OkHttpMain {
 
     private static OkHttpClient client = new OkHttpClient(
             new OkHttpClient.Builder()
-                    .connectTimeout(Duration.ofSeconds(3)));
+                    .connectTimeout(Duration.ofSeconds(3))
+                    .readTimeout(Duration.ofSeconds(3))
+                    .writeTimeout(Duration.ofSeconds(3)));
 
 
     public static void main(String[] args) {

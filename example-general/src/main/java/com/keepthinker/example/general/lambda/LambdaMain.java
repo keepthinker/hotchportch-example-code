@@ -42,7 +42,7 @@ public class LambdaMain {
             return valueObjects;
         }).flatMap(Arrays::stream).peek(x -> {System.out.println("consume field1:" + x.getField1());}).collect(Collectors.toList()));
 
-
+        System.out.println("sum: " + valueObjectList.stream().collect(Collectors.groupingBy(ValueObject::getField1, Collectors.toList())));
 
     }
 

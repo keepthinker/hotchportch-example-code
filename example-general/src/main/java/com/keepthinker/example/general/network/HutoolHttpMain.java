@@ -5,7 +5,7 @@ import cn.hutool.http.HttpUtil;
 public class HutoolHttpMain {
     public static void main(String[] args) {
 
-        String resp = HttpUtil.post("http://localhost:8080/123", "{\"name\": \"my-name\"}");
+        String resp = HttpUtil.post("http://localhost:8080/123", "{\"name\": \"my-name\"}", 1000);
         System.out.println("response: " + resp);
     }
 }
