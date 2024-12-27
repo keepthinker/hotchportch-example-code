@@ -4,11 +4,15 @@ import cn.hutool.core.date.LocalDateTimeUtil;
 import org.apache.commons.lang3.time.DurationFormatUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.core.GenericTypeResolver;
 
 import java.lang.ref.PhantomReference;
 import java.lang.ref.Reference;
 import java.lang.ref.ReferenceQueue;
+import java.lang.reflect.AnnotatedType;
 import java.lang.reflect.Field;
+import java.lang.reflect.ParameterizedType;
+import java.lang.reflect.Type;
 import java.net.URLEncoder;
 import java.time.Duration;
 import java.time.LocalDate;
@@ -18,6 +22,7 @@ import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.LockSupport;
 import java.util.concurrent.locks.ReentrantLock;
+import java.util.function.Consumer;
 
 /**
  * @author keshengkai
@@ -27,8 +32,23 @@ public class HotchpotchMain {
 	private static Lock lock = new ReentrantLock();
 	private static final BlockingQueue queue = new LinkedBlockingQueue();
 	public static void main(String[] args){
-		System.out.println(URLEncoder.encode("文件名称.xlsx"));
-		System.out.println(DurationFormatUtils.formatDuration(Duration.ofSeconds(3661).toMillis(), "H小时m分钟", true));
+
+		Class<?> genericType = GenericTypeResolver.resolveTypeArgument(MyService.class, BaseService.class);
+		System.out.println(genericType);
+
+		System.out.println(((ParameterizedType)MyService.class.getGenericSuperclass()).getActualTypeArguments()[0]);
+
+	}
+
+
+
+	public class BaseService<T> {
+		// 一些代码
+	}
+
+	@Deprecated
+	public class MyService extends BaseService<String> {
+		// 一些代码
 	}
 
 

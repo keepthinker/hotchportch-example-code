@@ -26,5 +26,10 @@ public class DateMain {
 		
 		Timestamp timestamp = DateUtils.getTimestamp(cal.getTime(), -1, Calendar.MONTH);
 		System.out.println(timestamp);
+
+		Calendar cl = Calendar.getInstance();
+//		cl.set(Calendar.ERA, GregorianCalendar.BC);
+		cl.set(-100, Calendar.JANUARY, 1, 0, 0, 0);
+		System.out.println(cl.getTime() + " | " + cl.get(Calendar.ERA));
 	}
 }

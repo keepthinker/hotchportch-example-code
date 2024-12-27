@@ -10,5 +10,9 @@ public class MapStructMain {
         car.setNumberOfSeats(4);
         CarDto carDto = CarMapper.INSTANCE.carToCarDto(car);
         System.out.println(Utils.toJsonString(carDto));
+
+        CarVo carVo = new CarVo();
+        CarMapper.INSTANCE.copyCarToVo(car, carVo);
+        System.out.println(Utils.toJsonString(carVo));
     }
 }

@@ -1,6 +1,7 @@
 package com.keepthinker.example.general.xml.hutool;
 
-import javax.xml.bind.annotation.XmlAttribute;
+
+import jakarta.xml.bind.annotation.XmlAttribute;
 
 public class Book {
 

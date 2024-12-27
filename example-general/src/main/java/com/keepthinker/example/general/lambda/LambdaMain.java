@@ -42,7 +42,8 @@ public class LambdaMain {
             return valueObjects;
         }).flatMap(Arrays::stream).peek(x -> {System.out.println("consume field1:" + x.getField1());}).collect(Collectors.toList()));
 
-        System.out.println("sum: " + valueObjectList.stream().collect(Collectors.groupingBy(ValueObject::getField1, Collectors.toList())));
+        Map<String, List<ValueObject>> map = valueObjectList.stream().collect(Collectors.groupingBy(ValueObject::getField1));
+        System.out.println(map);
 
     }
 
@@ -52,6 +53,7 @@ public class LambdaMain {
         valueObjectList.add(makeValueObject("field1", 12));
         valueObjectList.add(makeValueObject("field3", 34));
         valueObjectList.add(makeValueObject("field2", 78));
+        valueObjectList.add(makeValueObject("field2", 90));
         return valueObjectList;
 
     }

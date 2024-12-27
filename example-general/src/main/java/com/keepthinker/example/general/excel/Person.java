@@ -6,6 +6,7 @@ import com.alibaba.excel.annotation.format.DateTimeFormat;
 import com.alibaba.excel.annotation.format.NumberFormat;
 
 import java.util.Date;
+import java.util.Objects;
 
 public class Person {
     @ExcelProperty({"Person", "name"})
@@ -38,6 +39,14 @@ public class Person {
     @NumberFormat("0.00%")
     @ExcelProperty({"Person", "tax rate"})
     private Float taxRate;
+
+    public Person() {
+
+    }
+
+    public Person(String name) {
+        this.name = name;
+    }
 
     public String getName() {
         return name;
@@ -149,5 +158,25 @@ public class Person {
 
     public void setTaxRate(Float taxRate) {
         this.taxRate = taxRate;
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", sex='" + sex + '\'' +
+                ", address='" + address + '\'' +
+                ", phone='" + phone + '\'' +
+                ", height=" + height +
+                ", weight=" + weight +
+                ", age=" + age +
+                ", profession='" + profession + '\'' +
+                ", salary=" + salary +
+                ", race='" + race + '\'' +
+                ", birthday=" + birthday +
+                ", id=" + id +
+                ", region='" + region + '\'' +
+                ", taxRate=" + taxRate +
+                '}';
     }
 }
