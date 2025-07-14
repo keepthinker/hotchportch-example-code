@@ -2,11 +2,13 @@ package com.keepthinker.example.general;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.core.GenericTypeResolver;
 
 import java.lang.ref.PhantomReference;
 import java.lang.ref.Reference;
 import java.lang.ref.ReferenceQueue;
 import java.lang.reflect.Field;
+import java.lang.reflect.ParameterizedType;
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.Condition;
@@ -46,6 +48,23 @@ public class HotchpotchMain {
 			System.out.println(e.getStackTrace());
 			throw new RuntimeException(e);
 		}
+
+		Class<?> genericType = GenericTypeResolver.resolveTypeArgument(MyService.class, BaseService.class);
+		System.out.println(genericType);
+
+		System.out.println(((ParameterizedType)MyService.class.getGenericSuperclass()).getActualTypeArguments()[0]);
+
+	}
+
+
+
+	public class BaseService<T> {
+		// 一些代码
+	}
+
+	@Deprecated
+	public class MyService extends BaseService<String> {
+		// 一些代码
 	}
 
 	private static void invalid() {

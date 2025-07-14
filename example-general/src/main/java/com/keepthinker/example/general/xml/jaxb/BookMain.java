@@ -3,15 +3,16 @@ package com.keepthinker.example.general.xml.jaxb;
 import com.keepthinker.example.general.util.Utils;
 import com.keepthinker.example.general.xml.vo.Book;
 import com.keepthinker.example.general.xml.vo.Bookstore;
+import jakarta.xml.bind.JAXBContext;
+import jakarta.xml.bind.JAXBException;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.JAXBException;
-import javax.xml.bind.Unmarshaller;
+
+import jakarta.xml.bind.Unmarshaller;
 
 /**
  * Unmarshaller Class - Convert XML to Object in Java
