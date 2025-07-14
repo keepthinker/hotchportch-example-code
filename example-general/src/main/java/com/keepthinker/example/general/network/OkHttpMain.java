@@ -2,9 +2,9 @@ package com.keepthinker.example.general.network;
 
 import kotlin.Pair;
 import okhttp3.*;
-import okhttp3.internal.http2.Header;
 
 import java.io.IOException;
+import java.nio.charset.Charset;
 import java.time.Duration;
 import java.util.Iterator;
 
@@ -45,10 +45,12 @@ public class OkHttpMain {
     }
 
     public static void post(){
+
         Request request = new Request.Builder()
                 .url("http://localhost:8080/http-detail")
                 .header("Content-Type", "application/json;charset=utf-8")
-                .post(RequestBody.create("{\"name\": \"my-name\"}", MediaType.get("application/json")))
+//                .post(RequestBody.create("{\"name\": \"my-name\"}", MediaType.get("application/json")))
+                .post(RequestBody.create("{\"name\": \"my-name\"}".getBytes(Charset.forName("utf-8"))))
                 .build();
 
         try (Response response = client.newCall(request).execute()) {

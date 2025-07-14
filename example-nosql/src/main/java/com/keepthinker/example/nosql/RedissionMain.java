@@ -22,6 +22,7 @@ public class RedissionMain {
                 .setAddress("redis://127.0.0.1:6379");
         // connects to 127.0.0.1:6379 by default
         redisson = Redisson.create(config);
+        redisson.getLock("lockName").lock();
     }
 
     public static void main(String[] args) throws InterruptedException {

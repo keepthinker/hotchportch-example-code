@@ -1,7 +1,5 @@
 package com.keepthinker.example.general;
 
-import cn.hutool.core.date.LocalDateTimeUtil;
-import org.apache.commons.lang3.time.DurationFormatUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -9,9 +7,6 @@ import java.lang.ref.PhantomReference;
 import java.lang.ref.Reference;
 import java.lang.ref.ReferenceQueue;
 import java.lang.reflect.Field;
-import java.net.URLEncoder;
-import java.time.Duration;
-import java.time.LocalDate;
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.Condition;
@@ -27,10 +22,35 @@ public class HotchpotchMain {
 	private static Lock lock = new ReentrantLock();
 	private static final BlockingQueue queue = new LinkedBlockingQueue();
 	public static void main(String[] args){
-		System.out.println(URLEncoder.encode("文件名称.xlsx"));
-		System.out.println(DurationFormatUtils.formatDuration(Duration.ofSeconds(3661).toMillis(), "H小时m分钟", true));
+//		Set<Object> set = new ArrayList<>().stream().collect(Collectors.toSet());
+//		System.out.println(set);
+//		System.out.println(LocalDateTimeUtil.parse("2024-01-02 12:00:00", "yyyy-MM-dd HH:mm:ss"));
+		System.out.println("adsf" + null);
+		try {
+			testExceptionCause();
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+			System.out.println(e.getCause());
+			System.out.println(e.getStackTrace());
+			logger.error("错误", e);
+		}
 	}
 
+
+	public static void testExceptionCause() {
+		try {
+			invalid();
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+			System.out.println(e.getCause());
+			System.out.println(e.getStackTrace());
+			throw new RuntimeException(e);
+		}
+	}
+
+	private static void invalid() {
+		int a = 1 / 0;
+	}
 
 	public static void atomicInteger(){
 		AtomicInteger counter = new AtomicInteger(1);
