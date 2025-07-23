@@ -9,6 +9,7 @@ import java.lang.ref.Reference;
 import java.lang.ref.ReferenceQueue;
 import java.lang.reflect.Field;
 import java.lang.reflect.ParameterizedType;
+import java.util.UUID;
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.Condition;
@@ -24,18 +25,7 @@ public class HotchpotchMain {
 	private static Lock lock = new ReentrantLock();
 	private static final BlockingQueue queue = new LinkedBlockingQueue();
 	public static void main(String[] args){
-//		Set<Object> set = new ArrayList<>().stream().collect(Collectors.toSet());
-//		System.out.println(set);
-//		System.out.println(LocalDateTimeUtil.parse("2024-01-02 12:00:00", "yyyy-MM-dd HH:mm:ss"));
-		System.out.println("adsf" + null);
-		try {
-			testExceptionCause();
-		} catch (Exception e) {
-			System.out.println(e.getMessage());
-			System.out.println(e.getCause());
-			System.out.println(e.getStackTrace());
-			logger.error("错误", e);
-		}
+		System.out.println(UUID.randomUUID().toString().replace("-", ""));
 	}
 
 
